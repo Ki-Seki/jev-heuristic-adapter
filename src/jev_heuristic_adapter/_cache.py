@@ -30,15 +30,18 @@ class ProgramStore:
 
     def save(self, program: CompiledQuestion) -> Path:
         path = self._path(program.artifact_id)
-        self.directory.mkdir(parents=True, exist_ok=True)
-        fd, name = tempfile.mkstemp(dir=self.directory, suffix=".tmp")
+        self._write(path, asdict(program))
+        return path
+
+    def _write(self, path: Path, data: dict[str, str]) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        fd, name = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
         try:
             with os.fdopen(fd, "w", encoding="utf-8") as stream:
-                json.dump(asdict(program), stream, ensure_ascii=False, allow_nan=False)
+                json.dump(data, stream, ensure_ascii=False, allow_nan=False)
             Path(name).replace(path)
         finally:
             Path(name).unlink(missing_ok=True)
-        return path
 
     def load(self, artifact_id: str) -> CompiledQuestion:
         data = json.loads(self._path(artifact_id).read_text(encoding="utf-8"))
@@ -56,3 +59,18 @@ class ProgramStore:
         ):
             raise ValueError("Artifact content or validation marker is inconsistent")
         return saved
+
+    def lookup(self, key: str) -> CompiledQuestion | None:
+        """Only an absent index entry is a cache miss; corrupt records raise."""
+        path = self.directory / "index" / self._path(key).name
+        try:
+            artifact_id = json.loads(path.read_text(encoding="utf-8"))["artifact_id"]
+        except FileNotFoundError:
+            return None
+        return self.load(artifact_id)
+
+    def bind(self, key: str, program: CompiledQuestion) -> None:
+        """Write the artifact before atomically publishing its recipe index."""
+        path = self.directory / "index" / self._path(key).name
+        self.save(program)
+        self._write(path, {"artifact_id": program.artifact_id})

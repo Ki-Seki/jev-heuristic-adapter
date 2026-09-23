@@ -4,9 +4,11 @@ import ast
 import hashlib
 import json
 from collections.abc import Mapping, Sequence
+from copy import deepcopy
 from dataclasses import asdict
 from typing import Any
 
+from ._cache import ProgramStore
 from ._program import CompiledQuestion
 from ._prompt import SYSTEM_PROMPT
 from ._runtime import OutputValidator
@@ -142,3 +144,24 @@ def compile_key(
         "prompt": SYSTEM_PROMPT,
     }
     return hashlib.sha256(_canonical_json(identity).encode()).hexdigest()
+
+
+def compile_or_load(
+    provider: Provider,
+    *,
+    question: Mapping[str, Any],
+    examples: Sequence[Mapping[str, Any]] = (),
+    store: ProgramStore | None = None,
+    force: bool = False,
+) -> CompiledQuestion:
+    """Reuse a recipe's artifact or generate one; execution checks remain pending."""
+    question, examples = deepcopy(dict(question)), deepcopy(list(examples))
+    store = ProgramStore() if store is None else store
+    key = compile_key(provider, question=question, examples=examples)
+    if not force:
+        cached = store.lookup(key)
+        if cached is not None:
+            return cached
+    program = compile_question(provider, question=question, examples=examples)
+    store.bind(key, program)
+    return program
