@@ -51,16 +51,6 @@ def build_messages(
     ]
 
 
-def request_program(
-    provider: Provider,
-    *,
-    question: Mapping[str, Any],
-    examples: Sequence[Mapping[str, Any]] = (),
-) -> ProviderResult:
-    """Request one program returning {"answer": value}; source validation follows."""
-    return provider.request(build_messages(question, examples))
-
-
 class ProgramValidationError(ValueError):
     """Keep the provider result so failed generations remain inspectable."""
 
