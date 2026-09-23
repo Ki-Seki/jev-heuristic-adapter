@@ -124,3 +124,21 @@ def compile_question(
     return CompiledQuestion(
         question_id, artifact_id, question_json, source, request_json, generation_json
     )
+
+
+def compile_key(
+    provider: Provider,
+    *,
+    question: Mapping[str, Any],
+    examples: Sequence[Mapping[str, Any]] = (),
+) -> str:
+    """Identify a compilation recipe without invoking the provider."""
+    build_messages(question, examples)  # Validate inputs before cache lookup.
+    identity = {
+        "contract": "predict-answer-v1",
+        "provider": provider.cache_identity(),
+        "question": dict(question),
+        "examples": list(examples),
+        "prompt": SYSTEM_PROMPT,
+    }
+    return hashlib.sha256(_canonical_json(identity).encode()).hexdigest()

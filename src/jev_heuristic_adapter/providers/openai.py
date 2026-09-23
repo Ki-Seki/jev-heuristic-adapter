@@ -1,7 +1,7 @@
 """OpenAI implementation. Install with `uv sync --extra openai`."""
 
 from dataclasses import dataclass
-from typing import cast
+from typing import Any, cast
 
 from openai import OpenAI
 from openai.types.responses import ResponseInputParam
@@ -18,6 +18,21 @@ class OpenAIProvider:
     model: str
     reasoning_effort: ReasoningEffort = "high"
     max_output_tokens: int = 24_000
+
+    def cache_identity(self) -> dict[str, Any]:
+        url = self.client.base_url
+        if url.username or url.password or url.query:
+            raise ValueError(
+                "Cache identity requires a base URL without credentials or query"
+            )
+        return {
+            "provider": "openai",
+            "api": "responses",
+            "base_url": str(url.copy_with(fragment=None)),
+            "model": self.model,
+            "reasoning_effort": self.reasoning_effort,
+            "max_output_tokens": self.max_output_tokens,
+        }
 
     def request(self, messages: list[dict[str, str]]) -> ProviderResult:
         response = self.client.responses.create(

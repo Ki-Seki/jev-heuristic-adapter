@@ -14,4 +14,10 @@ class ProviderResult:
 
 
 class Provider(Protocol):
-    def request(self, messages: list[dict[str, str]]) -> ProviderResult: ...
+    def cache_identity(self) -> dict[str, Any]:
+        """Return JSON-safe, non-secret settings that affect generation."""
+        ...
+
+    def request(self, messages: list[dict[str, str]]) -> ProviderResult:
+        """Send a sequence of messages to the provider and return the result."""
+        ...
