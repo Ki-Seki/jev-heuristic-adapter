@@ -4,8 +4,10 @@ import ast
 import hashlib
 import json
 from collections.abc import Mapping, Sequence
+from concurrent.futures import Future
 from copy import deepcopy
 from dataclasses import asdict
+from threading import Lock
 from typing import Any
 
 from ._cache import ProgramStore
@@ -14,6 +16,9 @@ from ._prompt import SYSTEM_PROMPT
 from ._runtime import OutputValidator
 from ._schema import build_output_schema
 from .providers import Provider, ProviderResult
+
+_IN_FLIGHT: dict[tuple[str, str, bool], Future[CompiledQuestion]] = {}
+_IN_FLIGHT_LOCK = Lock()
 
 
 def build_messages(
@@ -154,14 +159,32 @@ def compile_or_load(
     store: ProgramStore | None = None,
     force: bool = False,
 ) -> CompiledQuestion:
-    """Reuse a recipe's artifact or generate one; execution checks remain pending."""
+    """Reuse or compile, sharing in-process work per directory/key/force mode.
+
+    Concurrent callers share results and failures. Execution checks remain pending.
+    """
     question, examples = deepcopy(dict(question)), deepcopy(list(examples))
     store = ProgramStore() if store is None else store
     key = compile_key(provider, question=question, examples=examples)
-    if not force:
-        cached = store.lookup(key)
-        if cached is not None:
-            return cached
-    program = compile_question(provider, question=question, examples=examples)
-    store.bind(key, program)
-    return program
+    flight_key = (str(store.directory), key, force)
+    with _IN_FLIGHT_LOCK:
+        pending = _IN_FLIGHT.get(flight_key)
+        owner = pending is None
+        if owner:
+            pending = Future()
+            _IN_FLIGHT[flight_key] = pending
+    if not owner:
+        return pending.result()
+    try:
+        program = None if force else store.lookup(key)
+        if program is None:
+            program = compile_question(provider, question=question, examples=examples)
+            store.bind(key, program)
+        pending.set_result(program)
+        return program
+    except BaseException as exc:
+        pending.set_exception(exc)
+        raise
+    finally:
+        with _IN_FLIGHT_LOCK:
+            del _IN_FLIGHT[flight_key]
