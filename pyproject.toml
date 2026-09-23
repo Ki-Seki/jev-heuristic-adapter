@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "jsonschema>=4.26.0",
+    "platformdirs>=4.11.12",
     "referencing>=0.37.0",
 ]
 

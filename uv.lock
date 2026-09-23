@@ -150,6 +150,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "jsonschema" },
+    { name = "platformdirs" },
     { name = "referencing" },
 ]
 
@@ -168,6 +169,7 @@ dev = [
 requires-dist = [
     { name = "jsonschema", specifier = ">=4.26.0" },
     { name = "openai", marker = "extra == 'openai'", specifier = ">=3.19.0" },
+    { name = "platformdirs", specifier = ">=4.11.12" },
     { name = "referencing", specifier = ">=0.37.0" },
 ]
 provides-extras = ["openai"]
