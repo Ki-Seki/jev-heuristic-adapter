@@ -1,6 +1,5 @@
 """Persist compilation artifacts without executing their source."""
 
-import hashlib
 import json
 import os
 import re
@@ -10,7 +9,7 @@ from pathlib import Path
 
 from platformdirs import user_data_path
 
-from ._program import CompiledQuestion, build_question_id, canonical_json
+from ._program import CompiledQuestion
 
 
 class ProgramStore:
@@ -46,17 +45,7 @@ class ProgramStore:
     def load(self, artifact_id: str) -> CompiledQuestion:
         data = json.loads(self._path(artifact_id).read_text(encoding="utf-8"))
         saved = CompiledQuestion(**data)
-        question_id = build_question_id(saved.question_json)
-        content = [question_id, saved.source, saved.request_json, saved.generation_json]
-        serialized = canonical_json(content).encode()
-        expected_id = hashlib.sha256(serialized).hexdigest()
-        if (
-            saved.question_id != question_id
-            or saved.artifact_id != artifact_id
-            or artifact_id != expected_id
-            or saved.validation != "syntax_checked"
-        ):
-            raise ValueError("Artifact content or validation marker is inconsistent")
+        saved.validate_integrity(artifact_id)
         return saved
 
     def lookup(self, key: str) -> CompiledQuestion | None:

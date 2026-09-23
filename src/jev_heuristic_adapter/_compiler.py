@@ -11,7 +11,12 @@ from threading import Lock
 from typing import Any
 
 from ._cache import ProgramStore
-from ._program import CompiledQuestion, build_question_id, canonical_json
+from ._program import (
+    CompiledQuestion,
+    build_artifact_id,
+    build_question_id,
+    canonical_json,
+)
 from ._prompt import SYSTEM_PROMPT
 from ._schema import OutputValidator, build_output_schema
 from .providers import Provider, ProviderResult
@@ -118,9 +123,7 @@ def compile_question(
     source = validate_program(result)
     generation_json = canonical_json(asdict(result))
     question_id = build_question_id(question_json)
-    artifact_id = hashlib.sha256(
-        canonical_json([question_id, source, request_json, generation_json]).encode()
-    ).hexdigest()
+    artifact_id = build_artifact_id(question_id, source, request_json, generation_json)
     return CompiledQuestion(
         question_id, artifact_id, question_json, source, request_json, generation_json
     )

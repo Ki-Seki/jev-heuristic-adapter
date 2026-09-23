@@ -20,6 +20,14 @@ def build_question_id(question_json: str) -> str:
     return hashlib.sha256(question_json.encode()).hexdigest()
 
 
+def build_artifact_id(
+    question_id: str, source: str, request_json: str, generation_json: str
+) -> str:
+    """Identify source and generation snapshots by their content."""
+    content = [question_id, source, request_json, generation_json]
+    return hashlib.sha256(canonical_json(content).encode()).hexdigest()
+
+
 @dataclass(frozen=True)
 class CompiledQuestion:
     question_id: str
@@ -29,6 +37,20 @@ class CompiledQuestion:
     request_json: str
     generation_json: str
     validation: Literal["syntax_checked"] = "syntax_checked"
+
+    def validate_integrity(self, expected_artifact_id: str) -> None:
+        """Check stored IDs and the syntax marker without executing source."""
+        question_id = build_question_id(self.question_json)
+        artifact_id = build_artifact_id(
+            question_id, self.source, self.request_json, self.generation_json
+        )
+        if (
+            self.question_id != question_id
+            or self.artifact_id != expected_artifact_id
+            or self.artifact_id != artifact_id
+            or self.validation != "syntax_checked"
+        ):
+            raise ValueError("Artifact content or validation marker is inconsistent")
 
 
 def load_predictor(program: CompiledQuestion) -> Callable[[Any], dict[str, Any]]:

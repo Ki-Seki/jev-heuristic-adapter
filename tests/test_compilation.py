@@ -1,3 +1,4 @@
+import json
 from tempfile import TemporaryDirectory
 from unittest import TestCase
 from unittest.mock import patch
@@ -69,3 +70,19 @@ class CompilationTests(TestCase):
                 self.assertEqual(client.compile(questions), updated)
             self.assertEqual(client.compile(questions), original)
             self.assertEqual(provider.calls, 2)
+
+    def test_modified_cache_is_rejected_without_regenerating(self):
+        provider = FakeProvider()
+        questions = {"q": {"type": "noul"}}
+        with TemporaryDirectory() as directory:
+            store = ProgramStore(directory)
+            client = HeuristicAdapterClient(provider, store)
+            program = client.compile(questions)["q"]
+            path = store.save(program)
+            data = json.loads(path.read_text())
+            for field in data:
+                with self.subTest(field=field):
+                    path.write_text(json.dumps({**data, field: "modified"}))
+                    with self.assertRaises(ValueError):
+                        client.compile(questions)
+            self.assertEqual(provider.calls, 1)
