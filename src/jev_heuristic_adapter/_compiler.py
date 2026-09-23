@@ -6,21 +6,19 @@ from collections.abc import Mapping, Sequence
 from typing import Any
 
 from ._prompt import SYSTEM_PROMPT
+from ._schema import build_output_schema
 from .providers import Provider, ProviderResult
 
 
 def build_messages(
     questions: Mapping[str, Any],
-    output_schema: Mapping[str, Any],
     examples: Sequence[Mapping[str, Any]] = (),
 ) -> list[dict[str, str]]:
     """Accept JSON-ready questions and zero or more {state, answers} examples."""
-    if not questions:
-        raise ValueError("At least one question is required")
     payload = {
         "task_definition": {
             "questions": dict(questions),
-            "output_schema": dict(output_schema),
+            "output_schema": build_output_schema(questions),
         },
         "examples": list(examples),
     }
@@ -37,11 +35,10 @@ def request_program(
     provider: Provider,
     *,
     questions: Mapping[str, Any],
-    output_schema: Mapping[str, Any],
     examples: Sequence[Mapping[str, Any]] = (),
 ) -> ProviderResult:
     """Request source code through a caller-owned provider; validation follows."""
-    return provider.request(build_messages(questions, output_schema, examples))
+    return provider.request(build_messages(questions, examples))
 
 
 class ProgramValidationError(ValueError):

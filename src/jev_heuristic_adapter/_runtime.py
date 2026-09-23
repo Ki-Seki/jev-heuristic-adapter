@@ -2,11 +2,12 @@
 
 import json
 from collections.abc import Mapping
-from copy import deepcopy
 from typing import Any
 
 from jsonschema import Draft202012Validator
 from referencing import Registry
+
+from ._schema import build_output_schema
 
 
 class OutputValidationError(ValueError):
@@ -16,8 +17,8 @@ class OutputValidationError(ValueError):
 class OutputValidator:
     """Reuse a Draft 2020-12 validator for one fixed task."""
 
-    def __init__(self, schema: Mapping[str, Any]):
-        schema = deepcopy(dict(schema))
+    def __init__(self, questions: Mapping[str, Any]):
+        schema = build_output_schema(questions)
         Draft202012Validator.check_schema(schema)
         self._validator = Draft202012Validator(schema, registry=Registry())
 
