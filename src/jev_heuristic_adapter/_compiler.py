@@ -5,6 +5,7 @@ from collections.abc import Mapping, Sequence
 from typing import Any
 
 from ._prompt import SYSTEM_PROMPT
+from .providers import Provider, ProviderResult
 
 
 def build_messages(
@@ -29,3 +30,14 @@ def build_messages(
             "content": json.dumps(payload, ensure_ascii=False, allow_nan=False),
         },
     ]
+
+
+def request_program(
+    provider: Provider,
+    *,
+    questions: Mapping[str, Any],
+    output_schema: Mapping[str, Any],
+    examples: Sequence[Mapping[str, Any]] = (),
+) -> ProviderResult:
+    """Request source code through a caller-owned provider; validation follows."""
+    return provider.request(build_messages(questions, output_schema, examples))
