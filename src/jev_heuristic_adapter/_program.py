@@ -1,5 +1,6 @@
 """Compiled question artifacts and trusted in-process predictor loading."""
 
+import hashlib
 import json
 from collections.abc import Callable
 from copy import deepcopy
@@ -7,6 +8,16 @@ from dataclasses import dataclass
 from typing import Any, Literal
 
 from ._schema import OutputValidator
+
+
+def canonical_json(value: Any) -> str:
+    """Serialize JSON consistently for snapshots and cache identities."""
+    return json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False)
+
+
+def build_question_id(question_json: str) -> str:
+    """Identify a canonical question snapshot by its content."""
+    return hashlib.sha256(question_json.encode()).hexdigest()
 
 
 @dataclass(frozen=True)

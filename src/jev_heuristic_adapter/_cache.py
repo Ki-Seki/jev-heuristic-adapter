@@ -10,7 +10,7 @@ from pathlib import Path
 
 from platformdirs import user_data_path
 
-from ._program import CompiledQuestion
+from ._program import CompiledQuestion, build_question_id, canonical_json
 
 
 class ProgramStore:
@@ -46,10 +46,9 @@ class ProgramStore:
     def load(self, artifact_id: str) -> CompiledQuestion:
         data = json.loads(self._path(artifact_id).read_text(encoding="utf-8"))
         saved = CompiledQuestion(**data)
-        definition = ("predict-answer-v1\n" + saved.question_json).encode()
-        question_id = hashlib.sha256(definition).hexdigest()
+        question_id = build_question_id(saved.question_json)
         content = [question_id, saved.source, saved.request_json, saved.generation_json]
-        serialized = json.dumps(content, ensure_ascii=False, allow_nan=False).encode()
+        serialized = canonical_json(content).encode()
         expected_id = hashlib.sha256(serialized).hexdigest()
         if (
             saved.question_id != question_id

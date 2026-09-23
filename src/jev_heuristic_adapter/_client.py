@@ -6,8 +6,8 @@ from typing import Any
 from typesafe_sdk import ChoiceAnswer, NoulAnswer, ScoreAnswer, SystemOneResponse, Usage
 
 from ._cache import ProgramStore
-from ._compiler import _canonical_json, compile_or_load
-from ._program import load_predictor
+from ._compiler import compile_or_load
+from ._program import canonical_json, load_predictor
 from ._schema import normalize_questions
 from .providers import Provider
 
@@ -20,7 +20,7 @@ class HeuristicAdapterClient:
 
     def compile(self, questions: Mapping[str, Any], examples=(), *, force=False):
         questions = normalize_questions(questions)
-        keys = {name: _canonical_json(dict(q)) for name, q in questions.items()}
+        keys = {name: canonical_json(dict(q)) for name, q in questions.items()}
         definitions = {keys[name]: q for name, q in questions.items()}
         prepared = {}
         for key, question in definitions.items():
@@ -44,7 +44,7 @@ class HeuristicAdapterClient:
 
     def system_one(self, state: Any, questions: Mapping[str, Any]) -> SystemOneResponse:
         questions = normalize_questions(questions)
-        keys = {name: _canonical_json(dict(q)) for name, q in questions.items()}
+        keys = {name: canonical_json(dict(q)) for name, q in questions.items()}
         if any(key not in self._bindings for key in keys.values()):
             raise LookupError("Compile all requested questions before system_one")
         predictors = {name: self._bindings[key][1] for name, key in keys.items()}

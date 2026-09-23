@@ -1,8 +1,10 @@
 from tempfile import TemporaryDirectory
 from unittest import TestCase
+from unittest.mock import patch
 
 from jev_heuristic_adapter import HeuristicAdapterClient
 from jev_heuristic_adapter._cache import ProgramStore
+from jev_heuristic_adapter._schema import build_output_schema
 from jev_heuristic_adapter.providers import ProviderResult
 
 
@@ -49,3 +51,21 @@ class CompilationTests(TestCase):
             self.assertEqual(provider.calls, 1)
             with self.assertRaisesRegex(RuntimeError, "predict executed"):
                 fresh.system_one("fixture", questions)
+
+    def test_output_schema_change_recompiles_without_a_manual_version(self):
+        provider = FakeProvider()
+        questions = {"q": {"type": "noul", "instructions": "Return true."}}
+        schema = build_output_schema(questions["q"])
+        schema["description"] = "Updated output contract."
+        with TemporaryDirectory() as directory:
+            client = HeuristicAdapterClient(provider, ProgramStore(directory))
+            original = client.compile(questions)
+            with patch(
+                "jev_heuristic_adapter._compiler.build_output_schema",
+                return_value=schema,
+            ):
+                updated = client.compile(questions)
+                self.assertNotEqual(updated, original)
+                self.assertEqual(client.compile(questions), updated)
+            self.assertEqual(client.compile(questions), original)
+            self.assertEqual(provider.calls, 2)

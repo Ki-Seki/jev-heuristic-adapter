@@ -11,7 +11,7 @@ from threading import Lock
 from typing import Any
 
 from ._cache import ProgramStore
-from ._program import CompiledQuestion
+from ._program import CompiledQuestion, build_question_id, canonical_json
 from ._prompt import SYSTEM_PROMPT
 from ._schema import OutputValidator, build_output_schema
 from .providers import Provider, ProviderResult
@@ -41,7 +41,7 @@ def build_messages(
         {"role": "system", "content": SYSTEM_PROMPT},
         {
             "role": "user",
-            "content": json.dumps(payload, ensure_ascii=False, allow_nan=False),
+            "content": canonical_json(payload),
         },
     ]
 
@@ -104,10 +104,6 @@ def validate_program(result: ProviderResult) -> str:
     return result.text
 
 
-def _canonical_json(value: Any) -> str:
-    return json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False)
-
-
 def compile_question(
     provider: Provider,
     *,
@@ -115,17 +111,15 @@ def compile_question(
     examples: Sequence[Mapping[str, Any]] = (),
 ) -> CompiledQuestion:
     """Generate and syntax-check one artifact."""
-    question_json = _canonical_json(dict(question))
+    question_json = canonical_json(dict(question))
     messages = build_messages(json.loads(question_json), examples)
-    request_json = _canonical_json(messages)
+    request_json = canonical_json(messages)
     result = provider.request(json.loads(request_json))
     source = validate_program(result)
-    generation_json = _canonical_json(asdict(result))
-    question_id = hashlib.sha256(
-        ("predict-answer-v1\n" + question_json).encode()
-    ).hexdigest()
+    generation_json = canonical_json(asdict(result))
+    question_id = build_question_id(question_json)
     artifact_id = hashlib.sha256(
-        _canonical_json([question_id, source, request_json, generation_json]).encode()
+        canonical_json([question_id, source, request_json, generation_json]).encode()
     ).hexdigest()
     return CompiledQuestion(
         question_id, artifact_id, question_json, source, request_json, generation_json
@@ -138,16 +132,10 @@ def compile_key(
     question: Mapping[str, Any],
     examples: Sequence[Mapping[str, Any]] = (),
 ) -> str:
-    """Identify a compilation recipe without invoking the provider."""
-    build_messages(question, examples)  # Validate inputs before cache lookup.
-    identity = {
-        "contract": "predict-answer-v1",
-        "provider": provider.cache_identity(),
-        "question": dict(question),
-        "examples": list(examples),
-        "prompt": SYSTEM_PROMPT,
-    }
-    return hashlib.sha256(_canonical_json(identity).encode()).hexdigest()
+    """Identify the complete compilation messages and provider settings."""
+    messages = build_messages(json.loads(canonical_json(dict(question))), examples)
+    identity = {"provider": provider.cache_identity(), "messages": messages}
+    return hashlib.sha256(canonical_json(identity).encode()).hexdigest()
 
 
 def compile_or_load(
