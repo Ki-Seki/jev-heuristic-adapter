@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Compile fixed decision tasks into reusable heuristic programs."
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "jsonschema>=4.26.0",
+    "referencing>=0.37.0",
+]
 
 [project.optional-dependencies]
 openai = ["openai>=3.19.0"]
