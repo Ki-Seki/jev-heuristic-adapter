@@ -7,7 +7,7 @@ from typesafe_sdk import ChoiceAnswer, NoulAnswer, ScoreAnswer, SystemOneRespons
 
 from ._cache import ProgramStore
 from ._compiler import _canonical_json, compile_or_load
-from ._runtime import load_predictor
+from ._program import load_predictor
 from ._schema import normalize_questions
 from .providers import Provider
 
