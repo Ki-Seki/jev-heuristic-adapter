@@ -24,5 +24,8 @@ def build_messages(
     }
     return [
         {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": json.dumps(payload, ensure_ascii=False, allow_nan=False)},
+        {
+            "role": "user",
+            "content": json.dumps(payload, ensure_ascii=False, allow_nan=False),
+        },
     ]
