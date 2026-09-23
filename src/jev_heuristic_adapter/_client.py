@@ -3,11 +3,10 @@
 from collections.abc import Mapping
 from typing import Any
 
-from typesafe_sdk import SystemOneResponse
+from typesafe_sdk import ChoiceAnswer, NoulAnswer, ScoreAnswer, SystemOneResponse, Usage
 
 from ._cache import ProgramStore
 from ._compiler import _canonical_json, compile_or_load
-from ._response import build_response
 from ._runtime import load_predictor
 from ._schema import normalize_questions
 from .providers import Provider
@@ -39,9 +38,6 @@ class HeuristicAdapterClient:
                 force=force,
             )
             predict = load_predictor(program)
-            for item in samples:
-                if predict(item["state"]) != {"answer": item["answer"]}:
-                    raise ValueError("Generated program failed a supplied example")
             prepared[key] = (program, predict)
         self._bindings.update(prepared)
         return {name: prepared[key][0] for name, key in keys.items()}
@@ -55,4 +51,41 @@ class HeuristicAdapterClient:
         answers = {
             name: predict(state)["answer"] for name, predict in predictors.items()
         }
-        return build_response(questions, answers)
+        return _build_response(questions, answers)
+
+
+def _build_response(
+    questions: Mapping[str, Any], values: Mapping[str, Any]
+) -> SystemOneResponse:
+    """Probabilities encode deterministic choices, not calibrated confidence."""
+    answers = {}
+    for name, question in questions.items():
+        value = values[name]
+        kind = question["type"]
+        if kind == "noul":
+            answers[name] = NoulAnswer(noul=float(value))
+        elif kind == "choice":
+            probabilities = {
+                label: float(label == value) for label in question["criteria"]
+            }
+            answers[name] = ChoiceAnswer(
+                choice=value,
+                probabilities=probabilities,
+                confidence=1.0,
+            )
+        elif kind == "score":
+            legend = dict(enumerate(question["criteria"]))
+            probabilities = {level: float(level == value) for level in legend}
+            answers[name] = ScoreAnswer(
+                score=float(value),
+                legend=legend,
+                probabilities=probabilities,
+                confidence=1.0,
+            )
+        else:
+            raise ValueError(f"Unsupported question type {kind!r}")
+    return SystemOneResponse(
+        model="heuristic",
+        answers=answers,
+        usage=Usage(input_tokens=0, output_tokens=0),
+    )

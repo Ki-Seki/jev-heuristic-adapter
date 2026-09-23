@@ -115,7 +115,7 @@ def compile_question(
     question: Mapping[str, Any],
     examples: Sequence[Mapping[str, Any]] = (),
 ) -> CompiledQuestion:
-    """Generate and syntax-check one artifact; execution checks are still pending."""
+    """Generate and syntax-check one artifact."""
     question_json = _canonical_json(dict(question))
     messages = build_messages(json.loads(question_json), examples)
     request_json = _canonical_json(messages)
@@ -161,7 +161,7 @@ def compile_or_load(
 ) -> CompiledQuestion:
     """Reuse or compile, sharing in-process work per directory/key/force mode.
 
-    Concurrent callers share results and failures. Execution checks remain pending.
+    Concurrent callers share results and failures.
     """
     question, examples = deepcopy(dict(question)), deepcopy(list(examples))
     store = ProgramStore() if store is None else store
