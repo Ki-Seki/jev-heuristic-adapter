@@ -3,8 +3,11 @@
 from collections.abc import Mapping
 from typing import Any
 
+from typesafe_sdk import SystemOneResponse
+
 from ._cache import ProgramStore
 from ._compiler import _canonical_json, compile_or_load
+from ._response import build_response
 from ._runtime import load_predictor
 from ._schema import normalize_questions
 from .providers import Provider
@@ -43,7 +46,7 @@ class HeuristicAdapterClient:
         self._bindings.update(prepared)
         return {name: prepared[key][0] for name, key in keys.items()}
 
-    def system_one(self, state: Any, questions: Mapping[str, Any]) -> dict[str, Any]:
+    def system_one(self, state: Any, questions: Mapping[str, Any]) -> SystemOneResponse:
         questions = normalize_questions(questions)
         keys = {name: _canonical_json(dict(q)) for name, q in questions.items()}
         if any(key not in self._bindings for key in keys.values()):
@@ -52,4 +55,4 @@ class HeuristicAdapterClient:
         answers = {
             name: predict(state)["answer"] for name, predict in predictors.items()
         }
-        return {"answers": answers}
+        return build_response(questions, answers)
