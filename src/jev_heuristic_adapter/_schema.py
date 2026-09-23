@@ -1,8 +1,11 @@
-"""Normalize question definitions and derive their program-output schemas."""
+"""Normalize question definitions, derive schemas, and validate program outputs."""
 
+import json
 from collections.abc import Mapping
 from typing import Any
 
+from jsonschema import Draft202012Validator
+from referencing import Registry
 from typesafe_sdk import Choice, Noul, Score
 
 _QUESTION_TYPES = {"noul": Noul, "choice": Choice, "score": Score}
@@ -52,3 +55,31 @@ def normalize_questions(questions: Mapping[str, Any]) -> dict[str, dict[str, Any
         build_output_schema(value)
         normalized[name] = value
     return normalized
+
+
+class OutputValidationError(ValueError):
+    """The program returned a value that violates its output contract."""
+
+
+class OutputValidator:
+    """Validate the {"answer": value} output of one fixed question."""
+
+    def __init__(self, question: Mapping[str, Any]):
+        schema = build_output_schema(question)
+        Draft202012Validator.check_schema(schema)
+        self._validator = Draft202012Validator(schema, registry=Registry())
+
+    def validate(self, output: Any) -> dict[str, Any]:
+        """Check a decoded JSON result without changing or coercing its values."""
+        if not isinstance(output, dict):
+            raise OutputValidationError("predict must return a JSON object")
+        try:
+            json.dumps(output, ensure_ascii=False, allow_nan=False).encode("utf-8")
+        except (TypeError, ValueError) as exc:
+            raise OutputValidationError(f"Output is not valid JSON: {exc}") from exc
+        error = next(self._validator.iter_errors(output), None)
+        if error is not None:
+            raise OutputValidationError(
+                f"{error.json_path}: {error.message}"
+            ) from error
+        return output

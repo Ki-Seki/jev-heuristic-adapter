@@ -13,8 +13,7 @@ from typing import Any
 from ._cache import ProgramStore
 from ._program import CompiledQuestion
 from ._prompt import SYSTEM_PROMPT
-from ._runtime import OutputValidator
-from ._schema import build_output_schema
+from ._schema import OutputValidator, build_output_schema
 from .providers import Provider, ProviderResult
 
 _IN_FLIGHT: dict[tuple[str, str, bool], Future[CompiledQuestion]] = {}
