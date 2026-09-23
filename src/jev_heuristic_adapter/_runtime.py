@@ -15,10 +15,10 @@ class OutputValidationError(ValueError):
 
 
 class OutputValidator:
-    """Reuse a Draft 2020-12 validator for one fixed task."""
+    """Validate the {"answer": value} output of one fixed question."""
 
-    def __init__(self, questions: Mapping[str, Any]):
-        schema = build_output_schema(questions)
+    def __init__(self, question: Mapping[str, Any]):
+        schema = build_output_schema(question)
         Draft202012Validator.check_schema(schema)
         self._validator = Draft202012Validator(schema, registry=Registry())
 

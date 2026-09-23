@@ -1,24 +1,33 @@
 """Build compilation requests from task definitions and examples."""
 
 import ast
+import hashlib
 import json
 from collections.abc import Mapping, Sequence
+from dataclasses import asdict
 from typing import Any
 
+from ._program import CompiledQuestion
 from ._prompt import SYSTEM_PROMPT
+from ._runtime import OutputValidator
 from ._schema import build_output_schema
 from .providers import Provider, ProviderResult
 
 
 def build_messages(
-    questions: Mapping[str, Any],
+    question: Mapping[str, Any],
     examples: Sequence[Mapping[str, Any]] = (),
 ) -> list[dict[str, str]]:
-    """Accept JSON-ready questions and zero or more {state, answers} examples."""
+    """Accept one JSON-ready question and zero or more {state, answer} examples."""
+    validator = OutputValidator(question)
+    for example in examples:
+        if not isinstance(example, Mapping) or set(example) != {"state", "answer"}:
+            raise ValueError("Each example must contain exactly state and answer")
+        validator.validate({"answer": example["answer"]})
     payload = {
         "task_definition": {
-            "questions": dict(questions),
-            "output_schema": build_output_schema(questions),
+            "question": dict(question),
+            "output_schema": build_output_schema(question),
         },
         "examples": list(examples),
     }
@@ -34,11 +43,11 @@ def build_messages(
 def request_program(
     provider: Provider,
     *,
-    questions: Mapping[str, Any],
+    question: Mapping[str, Any],
     examples: Sequence[Mapping[str, Any]] = (),
 ) -> ProviderResult:
-    """Request source code through a caller-owned provider; validation follows."""
-    return provider.request(build_messages(questions, examples))
+    """Request one program returning {"answer": value}; source validation follows."""
+    return provider.request(build_messages(question, examples))
 
 
 class ProgramValidationError(ValueError):
@@ -87,3 +96,31 @@ def validate_program(result: ProviderResult) -> str:
             "predict must take only state, with no defaults or decorators", result
         )
     return result.text
+
+
+def _canonical_json(value: Any) -> str:
+    return json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False)
+
+
+def compile_question(
+    provider: Provider,
+    *,
+    question: Mapping[str, Any],
+    examples: Sequence[Mapping[str, Any]] = (),
+) -> CompiledQuestion:
+    """Generate and syntax-check one artifact; execution checks are still pending."""
+    question_json = _canonical_json(dict(question))
+    messages = build_messages(json.loads(question_json), examples)
+    request_json = _canonical_json(messages)
+    result = provider.request(json.loads(request_json))
+    source = validate_program(result)
+    generation_json = _canonical_json(asdict(result))
+    question_id = hashlib.sha256(
+        ("predict-answer-v1\n" + question_json).encode()
+    ).hexdigest()
+    artifact_id = hashlib.sha256(
+        _canonical_json([question_id, source, request_json, generation_json]).encode()
+    ).hexdigest()
+    return CompiledQuestion(
+        question_id, artifact_id, question_json, source, request_json, generation_json
+    )
