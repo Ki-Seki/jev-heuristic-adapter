@@ -6,6 +6,7 @@ from typing import Any
 from ._cache import ProgramStore
 from ._compiler import _canonical_json, compile_or_load
 from ._runtime import load_predictor
+from ._schema import normalize_questions
 from .providers import Provider
 
 
@@ -16,6 +17,7 @@ class HeuristicAdapterClient:
         self._bindings = {}
 
     def compile(self, questions: Mapping[str, Any], examples=(), *, force=False):
+        questions = normalize_questions(questions)
         keys = {name: _canonical_json(dict(q)) for name, q in questions.items()}
         definitions = {keys[name]: q for name, q in questions.items()}
         prepared = {}
@@ -42,6 +44,7 @@ class HeuristicAdapterClient:
         return {name: prepared[key][0] for name, key in keys.items()}
 
     def system_one(self, state: Any, questions: Mapping[str, Any]) -> dict[str, Any]:
+        questions = normalize_questions(questions)
         keys = {name: _canonical_json(dict(q)) for name, q in questions.items()}
         if any(key not in self._bindings for key in keys.values()):
             raise LookupError("Compile all requested questions before system_one")
