@@ -12,3 +12,10 @@ wheels/
 .env
 .env.*
 .ruff_cache/
+
+# Tests and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
