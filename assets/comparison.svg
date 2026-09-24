@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="928" viewBox="0 0 1280 928" role="img" aria-labelledby="title desc">
+<title id="title">Jev, direct LLM calls, and compiled heuristics</title>
+<desc id="desc">For fixed questions with changing inputs, Jev and System One Adapter invoke a model for each input. This adapter pays for LLM code generation upfront, then executes saved Python locally. First-call costs, repeat latency, marginal costs, accuracy, and best-fit tasks are compared. Accuracy has no universal ranking.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#243548}.title{font-size:38px;font-weight:700;letter-spacing:-.7px}.subtitle{font-size:18px;fill:#627186}.cardTitle{font-size:25px;font-weight:700;letter-spacing:-.3px}.tag{font-size:18px;fill:#627186}.label{font-size:18px;letter-spacing:1.1px;font-weight:700;fill:#68778a}.body{font-size:20px}.heading{font-size:22px;font-weight:600}.small{font-size:18px;fill:#627186}.metric{font-size:36px;font-weight:700;letter-spacing:-.7px}.metricLong{font-size:27px;font-weight:600;letter-spacing:-.4px}.accent{fill:#087b58}.nodeText{font-size:18px;font-weight:600;text-anchor:middle}.lightText{fill:#fff}.rule{stroke:#e0e6ec;stroke-width:1}.arrow{stroke:#9aa7b5;stroke-width:1.5;marker-end:url(#arrow)}.footer{font-size:18px;fill:#627186}</style>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#9aa7b5"/></marker></defs>
+<rect width="1280" height="928" fill="#f8fafc"/>
+<g><text x="32" y="62" class="title" >One question. Three execution paths.</text><text x="32" y="99" class="subtitle" >Fixed question definitions. New input states.</text></g>
+<g transform="translate(32 0)">
+<rect x="0" y="130" width="384" height="708" rx="16" fill="#ffffff" stroke="#dde4ec"/>
+<g><text x="24" y="172" class="cardTitle" >Jev API</text><text x="24" y="199" class="tag" >Hosted model</text><line x1="24" x2="360" y1="217" y2="217" class="rule"/></g>
+<g><text x="24" y="248" class="label" >FIRST-CALL COST</text><text x="24" y="279" class="heading" >One Jev API call</text><text x="24" y="306" class="small" >Inference cost on the first input</text></g>
+<text x="24" y="344" class="label" >EACH NEW INPUT</text>
+<g><rect x="24" y="363" width="68" height="44" rx="8" fill="#eef2f6"/><text x="58" y="391" class="nodeText" >State</text><line x1="97" x2="109" y1="385" y2="385" class="arrow"/><rect x="114" y="363" width="130" height="44" rx="8" fill="#35495f"/><text x="179" y="391" class="nodeText lightText" >Jev API</text><line x1="249" x2="265" y1="385" y2="385" class="arrow"/><rect x="270" y="363" width="90" height="44" rx="8" fill="#eef2f6"/><text x="315" y="391" class="nodeText" >Answer</text></g>
+<text x="24" y="435" class="small" >Network + model inference</text>
+<g><text x="24" y="475" class="label" >REPEAT-CALL LATENCY</text><text x="24" y="516" class="metric" >~70–500 ms</text></g>
+<g><line x1="24" x2="360" y1="540" y2="540" class="rule"/><text x="24" y="568" class="label" >MARGINAL COST</text><text x="24" y="599" class="heading" >Jev API fees</text><text x="24" y="626" class="small" >Charged for each input</text></g>
+<g><text x="24" y="665" class="label" >ACCURACY</text><text x="24" y="692" class="body" >Learned decisions;</text><text x="24" y="717" class="body" >task-dependent.</text></g>
+<g><text x="24" y="760" class="label" >BEST FIT</text><text x="24" y="787" class="body" >Fast, typed decisions</text></g>
+</g>
+<g transform="translate(448 0)">
+<rect x="0" y="130" width="384" height="708" rx="16" fill="#ffffff" stroke="#dde4ec"/>
+<g><text x="24" y="172" class="cardTitle" >System One Adapter</text><text x="24" y="199" class="tag" >LLM</text><line x1="24" x2="360" y1="217" y2="217" class="rule"/></g>
+<g><text x="24" y="248" class="label" >FIRST-CALL COST</text><text x="24" y="279" class="heading" >One LLM inference</text><text x="24" y="306" class="small" >Inference cost on the first input</text></g>
+<text x="24" y="344" class="label" >EACH NEW INPUT</text>
+<g><rect x="24" y="363" width="68" height="44" rx="8" fill="#eef2f6"/><text x="58" y="391" class="nodeText" >State</text><line x1="97" x2="109" y1="385" y2="385" class="arrow"/><rect x="114" y="363" width="130" height="44" rx="8" fill="#35495f"/><text x="179" y="391" class="nodeText lightText" >LLM API</text><line x1="249" x2="265" y1="385" y2="385" class="arrow"/><rect x="270" y="363" width="90" height="44" rx="8" fill="#eef2f6"/><text x="315" y="391" class="nodeText" >Answer</text></g>
+<text x="24" y="435" class="small" >Network + LLM response</text>
+<g><text x="24" y="475" class="label" >REPEAT-CALL LATENCY</text><text x="24" y="516" class="metricLong" >Model-dependent</text></g>
+<g><line x1="24" x2="360" y1="540" y2="540" class="rule"/><text x="24" y="568" class="label" >MARGINAL COST</text><text x="24" y="599" class="heading" >LLM token charges</text><text x="24" y="626" class="small" >Charged for each input</text></g>
+<g><text x="24" y="665" class="label" >ACCURACY</text><text x="24" y="692" class="body" >Depends on the model</text><text x="24" y="717" class="body" >and the task.</text></g>
+<g><text x="24" y="760" class="label" >BEST FIT</text><text x="24" y="787" class="body" >Flexible language</text><text x="24" y="812" class="body" >and semantic tasks</text></g>
+</g>
+<g transform="translate(864 0)">
+<rect x="0" y="130" width="384" height="708" rx="16" fill="#edf9f2" stroke="#b5dcc8"/>
+<g><text x="24" y="172" class="cardTitle" >This adapter</text><text x="24" y="199" class="tag accent" >LLM + Compile</text><line x1="24" x2="360" y1="217" y2="217" class="rule"/></g>
+<g><text x="24" y="248" class="label" >FIRST-CALL COST</text><text x="24" y="279" class="heading" >LLM code generation</text><text x="24" y="306" class="small" >Upfront, once per question</text></g>
+<text x="24" y="344" class="label" >EACH NEW INPUT</text>
+<g><rect x="24" y="363" width="68" height="44" rx="8" fill="#eef2f6"/><text x="58" y="391" class="nodeText" >State</text><line x1="97" x2="109" y1="385" y2="385" class="arrow"/><rect x="114" y="363" width="130" height="44" rx="8" fill="#087b58"/><text x="179" y="391" class="nodeText lightText" >Python</text><line x1="249" x2="265" y1="385" y2="385" class="arrow"/><rect x="270" y="363" width="90" height="44" rx="8" fill="#eef2f6"/><text x="315" y="391" class="nodeText" >Answer</text></g>
+<text x="24" y="435" class="small accent" >Saved program, executed locally</text>
+<g><text x="24" y="475" class="label" >REPEAT-CALL LATENCY</text><text x="24" y="516" class="metric accent" >µs–ms</text></g>
+<g><line x1="24" x2="360" y1="540" y2="540" class="rule"/><text x="24" y="568" class="label" >MARGINAL COST</text><text x="24" y="599" class="heading accent" >Local compute only</text><text x="24" y="626" class="small accent" >No LLM tokens per input</text></g>
+<g><text x="24" y="665" class="label" >ACCURACY</text><text x="24" y="692" class="body" >Can be exact for explicit logic;</text><text x="24" y="717" class="body" >depends on generated rules.</text></g>
+<g><text x="24" y="760" class="label" >BEST FIT</text><text x="24" y="787" class="body accent" >Stable questions,</text><text x="24" y="812" class="body accent" >high input volume</text></g>
+</g>
+<g><text x="32" y="877" class="footer" >Jev latency: TypeSafe vendor report. Local µs–ms timings apply to simple rules and vary with code and input size.</text><text x="32" y="904" class="footer" >One-time compilation is amortized across repeated inputs. Accuracy depends on the task and generated program.</text></g>
+</svg>
