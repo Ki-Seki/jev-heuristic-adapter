@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint and format
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: "0.12.13"
+          python-version: "3.14"
+          enable-cache: true
+      - run: uv sync --locked --only-dev
+      - run: uv run --locked --only-dev ruff check .
+      - run: uv run --locked --only-dev ruff format --check .
+
+  test:
+    name: Python ${{ matrix.python }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+        os: [ubuntu-latest]
+        include:
+          - python: "3.14"
+            os: macos-latest
+          - python: "3.14"
+            os: windows-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: "0.12.13"
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - run: uv sync --locked --all-extras
+      - run: uv run --locked --all-extras pytest --cov --cov-report=term-missing --cov-report=xml
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: ${{ always() }}
+        with:
+          name: coverage-${{ matrix.os }}-${{ matrix.python }}
+          path: coverage.xml
+          if-no-files-found: warn
+          retention-days: 7
+
+  build:
+    name: Build and install wheel
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: "0.12.13"
+          python-version: "3.14"
+          enable-cache: true
+      - run: uv build --no-sources
+      - name: Import installed wheel without the OpenAI extra
+        run: |
+          uv venv /tmp/jev-wheel
+          uv pip install --python /tmp/jev-wheel/bin/python dist/*.whl
+          cd /tmp
+          /tmp/jev-wheel/bin/python -c "import importlib.util; from jev_heuristic_adapter import HeuristicAdapterClient, Noul, Choice, Score; assert importlib.util.find_spec('openai') is None"

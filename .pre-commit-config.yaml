@@ -5,9 +5,9 @@ repos:
         name: Ruff lint
         entry: uv run --locked ruff check --fix
         language: system
-        types_or: [python, pyi]
+        types_or: [python, pyi, jupyter]
       - id: ruff-format
         name: Ruff format
         entry: uv run --locked ruff format
         language: system
-        types_or: [python, pyi]
+        types_or: [python, pyi, jupyter]
