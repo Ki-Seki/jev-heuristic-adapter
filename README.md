@@ -21,6 +21,12 @@ Compared with [System One Adapter](https://github.com/typesafe-ai/system-one-ada
 
 ## Quickstart
 
+Install with the OpenAI provider:
+
+```sh
+uv add "jev-heuristic-adapter[openai]"
+```
+
 Open [example.ipynb](https://github.com/Ki-Seki/jev-heuristic-adapter/blob/main/example.ipynb) for an annotated walkthrough with generated source, predictions, and cache reuse.
 
 ## Acknowledgments
