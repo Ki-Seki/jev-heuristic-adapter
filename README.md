@@ -16,12 +16,12 @@ Compared with [System One Adapter](https://github.com/typesafe-ai/system-one-ada
 
 ## Comparison
 
-![Jev and direct LLM calls pay for remote inference on each input; this adapter pays for code generation upfront and reuses local Python. Jev reports 70–500 ms, LLM latency depends on the model, and simple local rules can run in µs–ms. Accuracy remains task-dependent.](assets/comparison.svg)
+![Jev and direct LLM calls pay for remote inference on each input; this adapter pays for code generation upfront and reuses local Python. Jev reports 70–500 ms, LLM latency depends on the model, and simple local rules can run in µs–ms. Accuracy remains task-dependent.](https://raw.githubusercontent.com/Ki-Seki/jev-heuristic-adapter/main/assets/comparison.svg)
 
 
 ## Quickstart
 
-Open [example.ipynb](example.ipynb) for an annotated walkthrough with generated source, predictions, and cache reuse.
+Open [example.ipynb](https://github.com/Ki-Seki/jev-heuristic-adapter/blob/main/example.ipynb) for an annotated walkthrough with generated source, predictions, and cache reuse.
 
 ## Acknowledgments
 
