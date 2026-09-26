@@ -27,6 +27,21 @@ contents and types when extracting the information needed by the program.
 Check normal inputs, valid edge cases and interactions between conditions.
 Verify input handling and that every return path follows the function contract.
 
+# Compilation completeness
+The deployed program has no access to you. Transfer the knowledge needed to apply
+the specification into its constants and algorithms. Include sufficient variations,
+relationships and distinctions to cover ordinary inputs, rather than only repeating
+the wording of the specification. There is no need to minimize the number of source
+lines. Prefer broad correctness to a short demonstration that only looks plausible.
+
+# Coverage
+A successful example or a valid return type is not sufficient. Account for the full
+valid input domain. Identify large groups of inputs that would otherwise reach a
+fallback and implement a useful decision procedure for them. Cover equivalent
+representations and combinations of conditions. Use a lookup as a complete solution
+when its domain is fully covered, or combine it with a general procedure otherwise.
+
+
 # Source format
 Output only complete Python source, without Markdown fences or a JSON wrapper.
 Use functions and constants, not classes.
