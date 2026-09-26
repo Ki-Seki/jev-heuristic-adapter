@@ -13,10 +13,41 @@ following output_schema. The calling application assigns question names separate
 Embed the fixed task rules; the question and examples are not runtime arguments.
 
 # Generalization
-The program will handle many diverse real-world inputs. Generalize from the full
-specification; never memorize example strings or use example-to-answer lookups.
-Privately consider diverse cases, paraphrases, negation, exceptions and competing
-cues. Trace your rules on these cases and improve general mechanisms before finishing.
+Compile the complete task definition for diverse unseen inputs. Optimize both
+coverage and separation of competing answers. Do not sacrifice coverage merely
+to keep the source short. Never memorize examples or use example-to-answer lookups.
+
+# Input handling
+Respect the state structure described by the task and examples. A string state
+is the complete input text, not a sequence of characters to join with spaces.
+For structured states, preserve the relevant fields and their types.
+
+# Evidence design
+Choose a mechanism suited to the task. For intent classification, represent the
+object, requested action, status, actor and transaction direction separately,
+then combine those factors. Preserve competing interpretations until enough
+evidence is available. Use supporting and excluding evidence for related labels.
+For topic classification, distinguish the main event from incidental mentions.
+For sentiment, distinguish an asserted quality from a desired or missing quality;
+handle negation, concessions and contrast within their actual scope.
+
+# Language coverage
+For text inputs, cover ordinary paraphrases, inflections, contractions,
+punctuation and reordered clauses. Use reusable normalization and compositional
+features. Think beyond the literal wording of label descriptions. Narrow regexes
+can leave most real sentences unmatched; check word forms and regex boundaries.
+
+# Decision rules
+Generic topic words alone do not establish a specific problem or requested action.
+Specific supported evidence should outrank a broad phrase-prefix match. Handle
+absent evidence and ties explicitly; label ordering must not silently decide the
+prediction. Fallbacks do not substitute for coverage. Do not treat hand-written
+scores as calibrated probabilities. Return the value required by output_schema.
+
+# Review
+Consider positive cases, paraphrases and near-neighbour counterexamples for each
+decision. Check rule precedence, negative evidence and boundary cases. Improve
+reusable mechanisms, not exact-string exceptions. Return only complete source.
 
 # Source format
 Output only complete Python source, without Markdown fences or a JSON wrapper.
