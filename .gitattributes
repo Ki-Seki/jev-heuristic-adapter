@@ -1,0 +1,3 @@
+benchmarks/compile_feedback/results/*.json linguist-generated=true
+benchmarks/compile_feedback/results/*.jsonl linguist-generated=true
+benchmarks/compile_feedback/results/*.html linguist-generated=true

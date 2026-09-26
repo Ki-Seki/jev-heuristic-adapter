@@ -125,6 +125,9 @@ def collect(output, data):
     physical_calls = list(output.glob("**/response.json"))
     return {
         "rows": rows,
+        "observations": read(output / "observations.json")
+        if (output / "observations.json").exists()
+        else [],
         "programs": programs,
         "predictions": predictions,
         "physical_requests": len(physical_calls),
@@ -134,7 +137,9 @@ def collect(output, data):
         "protocol": read(output / "protocol.json"),
         "environment": read(output / "environment.json"),
         "synthetic": {
-            name: read(output / "synthesis" / name / "checks.json") for name in specs
+            name: read(output / "synthesis" / name / "checks.json")
+            for name in specs
+            if (output / "synthesis" / name / "checks.json").exists()
         },
     }
 
@@ -146,7 +151,7 @@ def table(rows, references):
         "准确率",
         "较原 prompt",
         "Macro-F1",
-        "错误",
+        "运行错误",
         "编译 API 费",
         "编译秒数",
         "推理 p50 / p95 ms",
@@ -203,7 +208,11 @@ def table(rows, references):
 
 def export(bundle, destination, arm=None):
     destination.mkdir(parents=True, exist_ok=True)
-    keep = {"baseline", arm} if arm else {"baseline", "prompt", "feedback"}
+    keep = (
+        {"baseline", "prompt"}
+        if arm == "prompt"
+        else {"baseline", "prompt", "feedback"}
+    )
     rows = [r for r in bundle["rows"] if r["arm"] in keep]
     conditions = {r["condition"] for r in rows}
     summary = {
@@ -222,12 +231,13 @@ def export(bundle, destination, arm=None):
         )
     columns, values = table(rows, bundle["references"])
     notes = (
-        "每个模型/任务/方案生成一次，high；3 个任务各 300 条新样本，排除上一轮 500 条及重复文本。"
+        "每个模型/任务/方案各运行一轮实验，high；3 个任务各 300 条新样本，排除上一轮 500 条及重复文本。"
         "反馈方案从同一个改进 prompt 程序出发，最多修订两轮，只按合成 selection 集选程序。"
         "编译费用和时延包含该方案独立冷启动所需的合成数据、初始程序和全部修订；合成数据在本次实验中共享，表中每次冷启动均全额计入。"
         "推理为本地 adapter 串行实测；零模型 API 费，CPU 成本未定价。Jev 为上游不同样本/环境的历史参考。"
-        "费用回本不代表准确率相同。单次生成无法估计生成波动；JSON 中的区间仅对冻结程序按测试输入进行 paired bootstrap。"
+        "费用回本不代表准确率相同。每种方案只运行一次，无法估计生成过程的波动；JSON 中的区间仅对冻结程序按测试输入进行 paired bootstrap。"
     )
+    notes += " " + " ".join(bundle.get("observations", []))
     md = "# Compile experiment\n\n" + notes + "\n\n"
     md += (
         "| "
@@ -237,7 +247,7 @@ def export(bundle, destination, arm=None):
         + " |\n"
     )
     md += "\n".join("| " + " | ".join(row) + " |" for row in values) + "\n"
-    md += f"\n共享实验总计 {bundle['physical_requests']} 次 API 请求，实付用量估算 ${bundle['actual_experiment_fee']['usd']:.5f}。这不是把上表重复计入的冷启动费用相加。\n"
+    md += f"\n共享实验总计 {bundle['physical_requests']} 次 API 请求，API 用量费用估算 ${bundle['actual_experiment_fee']['usd']:.5f}。这不是把上表重复计入的冷启动费用相加。\n"
     md += f"\n[Jev 历史结果]({bundle['references']['sst2']['source']}) · [API 价格](https://developers.openai.com/api/docs/pricing)\n"
     (destination / "RESULTS.md").write_text(md)
     markup = "<!doctype html><html lang='zh-CN'><meta charset='utf-8'><title>Compile benchmark</title><style>body{font:14px system-ui;margin:28px;color:#18232e}p{max-width:1400px;line-height:1.65}table{border-collapse:collapse;white-space:nowrap}th,td{padding:10px 13px;border:1px solid #dce2e8;text-align:right}th{background:#eef2f6;position:sticky;top:0}td:nth-child(-n+2){text-align:left}tr:nth-child(even){background:#f8fafb}</style><h2>Compile benchmark</h2>"

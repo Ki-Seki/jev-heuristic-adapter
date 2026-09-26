@@ -204,13 +204,15 @@ def synthesize(calls, output, specs, workers):
     )
 
 
-def compile_one(calls, output, name, spec, model, repeat):
+def compile_one(calls, output, name, spec, model, repeat, method="feedback"):
     directory = output / "trials" / f"{model}--{name}--{repeat}"
-    checks = read(output / "synthesis" / name / "checks.json")
-    if sha256(checks) != read(output / "synthetic-freeze.json")[name]:
-        raise ValueError("Synthetic checks changed after freezing")
+    checks = None
+    if method == "feedback":
+        checks = read(output / "synthesis" / name / "checks.json")
+        if sha256(checks) != read(output / "synthetic-freeze.json")[name]:
+            raise ValueError("Synthetic checks changed after freezing")
     question = spec["question"]
-    for arm in ARMS:
+    for arm in ARMS if method == "feedback" else ARMS[:2]:
         target = directory / arm / "trial.json"
         if target.exists():
             continue
@@ -244,12 +246,12 @@ def compile_one(calls, output, name, spec, model, repeat):
         )
 
 
-def compile_all(calls, output, specs, workers):
+def compile_all(calls, output, specs, workers, method="feedback"):
     jobs = [
         (
             f"compile {model}/{name}/{repeat}",
             compile_one,
-            (calls, output, name, spec, model, repeat),
+            (calls, output, name, spec, model, repeat, method),
         )
         for repeat in range(REPEATS)
         for name, spec in specs.items()
@@ -257,7 +259,8 @@ def compile_all(calls, output, specs, workers):
     ]
     parallel(jobs, workers)
     trials = sorted((output / "trials").glob("*/*/trial.json"))
-    if len(trials) != len(MODELS) * len(specs) * REPEATS * len(ARMS):
+    arm_count = 3 if method == "feedback" else 2
+    if len(trials) != len(MODELS) * len(specs) * REPEATS * arm_count:
         raise ValueError("Compilation is incomplete")
     write(
         output / "program-freeze.json",
@@ -356,7 +359,9 @@ def evaluate_one(trial, spec, inputs):
 
 def evaluate_all(output, data, specs):
     frozen = read(output / "program-freeze.json")
-    expected = len(MODELS) * len(specs) * REPEATS * len(ARMS)
+    method = read(output / "protocol.json").get("method", "feedback")
+    arms = ARMS if method == "feedback" else ARMS[:2]
+    expected = len(MODELS) * len(specs) * REPEATS * len(arms)
     if len(frozen) != expected:
         raise ValueError("Freeze every condition before reading evaluation inputs")
     for relative, expected_hash in frozen.items():
@@ -368,7 +373,8 @@ def evaluate_all(output, data, specs):
         inputs = read(data / f"{name}.json")
         if sha256(inputs) != manifest["datasets"][name]["sha256"]:
             raise ValueError("Evaluation inputs changed")
-        checks = read(output / "synthesis" / name / "checks.json")
+        checks_path = output / "synthesis" / name / "checks.json"
+        checks = read(checks_path) if method == "feedback" else {}
         synthetic = {text_key(x["state"]) for group in checks.values() for x in group}
         overlaps = [
             item["id"] for item in inputs if text_key(item["state"]) in synthetic
@@ -380,7 +386,7 @@ def evaluate_all(output, data, specs):
             )
         for model in MODELS:
             for repeat in range(REPEATS):
-                for arm in ARMS:
+                for arm in arms:
                     directory = output / "trials" / f"{model}--{name}--{repeat}" / arm
                     target = directory / "evaluation.json"
                     if target.exists():
@@ -397,13 +403,17 @@ def evaluate_all(output, data, specs):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("stage", choices=("synthesize", "compile", "evaluate"))
+    parser.add_argument("--method", choices=("prompt", "feedback"), default="feedback")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--data", type=Path, required=True)
     parser.add_argument("--workers", type=int, default=6)
     args = parser.parse_args()
+    if args.stage == "synthesize" and args.method != "feedback":
+        parser.error("The prompt-only experiment does not require synthetic examples")
     specs = read(HERE / "specs.json")
     args.output.mkdir(parents=True, exist_ok=True)
     protocol = {
+        "method": args.method,
         "models": MODELS,
         "repeats": REPEATS,
         "rounds": 2,
@@ -451,7 +461,7 @@ def main():
         if args.stage == "synthesize":
             synthesize(calls, args.output, specs, args.workers)
         else:
-            compile_all(calls, args.output, specs, args.workers)
+            compile_all(calls, args.output, specs, args.workers, args.method)
 
 
 if __name__ == "__main__":

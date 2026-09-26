@@ -9,6 +9,7 @@ Each model/task/method runs once. Models are `gpt-6-luna` and `gpt-6-sol`, both
 using Responses, `high`, a 24,000-token output limit and SDK retries disabled.
 The experiment uses the public classification tasks and label descriptions from
 [dhruvmehra/jevbench](https://github.com/dhruvmehra/jevbench/tree/c983cc4a7dd9fc142ca3b6c7a813cae0e963c902).
+The reused task definitions retain their upstream [MIT notice](UPSTREAM_LICENSE).
 
 ## Protocol
 
@@ -47,11 +48,14 @@ The experiment uses the public classification tasks and label descriptions from
 
 ## Run
 
+For the branch-specific experiment, see [EXPERIMENT.md](../EXPERIMENT.md).
+The full feedback ablation can be run explicitly:
+
 ```sh
 uv run --locked --extra openai --with datasets==5.0.1 python -m benchmarks.compile_feedback.prepare --output .local/feedback-data
-uv run --locked --extra openai python -m benchmarks.compile_feedback.run synthesize --data .local/feedback-data --output .local/feedback-run
-uv run --locked --extra openai python -m benchmarks.compile_feedback.run compile --data .local/feedback-data --output .local/feedback-run
-uv run --locked --extra openai python -m benchmarks.compile_feedback.run evaluate --data .local/feedback-data --output .local/feedback-run
+uv run --locked --extra openai python -m benchmarks.compile_feedback.run synthesize --method feedback --data .local/feedback-data --output .local/feedback-run
+uv run --locked --extra openai python -m benchmarks.compile_feedback.run compile --method feedback --data .local/feedback-data --output .local/feedback-run
+uv run --locked --extra openai python -m benchmarks.compile_feedback.run evaluate --method feedback --data .local/feedback-data --output .local/feedback-run
 uv run --locked --extra openai python -m benchmarks.compile_feedback.report --run .local/feedback-run --data .local/feedback-data --output .local/feedback-report
 ```
 

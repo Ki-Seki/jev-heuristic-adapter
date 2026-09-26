@@ -16,6 +16,7 @@ from benchmarks.compile_feedback.prepare import normalized_label_names, select_i
 from benchmarks.compile_feedback.report import break_even, paired_delta
 from benchmarks.compile_feedback.run import (
     Calls,
+    compile_one,
     evaluate_one,
     request_cost,
     score_rows,
@@ -241,3 +242,23 @@ def test_paired_delta_matches_inputs_and_rejects_unpaired_results():
     assert observed["conditional_95ci_pp"] == [100, 100]
     with pytest.raises(AssertionError):
         paired_delta(baseline, [{**improved[0], "id": "different"}])
+
+
+def test_prompt_only_experiment_never_loads_synthetic_data_or_refines(tmp_path):
+    class FakeCalls:
+        def __init__(self):
+            self.count = 0
+
+        def request(self, model, messages, directory):
+            self.count += 1
+            assert model == "gpt-6-luna"
+            return result()
+
+    calls = FakeCalls()
+    compile_one(
+        calls, tmp_path, "task", {"question": QUESTION}, "gpt-6-luna", 0, "prompt"
+    )
+    assert calls.count == 2  # One baseline and one alternative prompt.
+    assert len(list(tmp_path.glob("trials/*/*/trial.json"))) == 2
+    assert not (tmp_path / "synthesis").exists()
+    assert not list(tmp_path.glob("trials/*/feedback"))
