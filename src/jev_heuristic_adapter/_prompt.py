@@ -12,42 +12,20 @@ Implement def predict(state) -> dict. Return exactly {"answer": value},
 following output_schema. The calling application assigns question names separately.
 Embed the fixed task rules; the question and examples are not runtime arguments.
 
-# Generalization
-Compile the complete task definition for diverse unseen inputs. Optimize both
-coverage and separation of competing answers. Do not sacrifice coverage merely
-to keep the source short. Never memorize examples or use example-to-answer lookups.
+# Implementation
+Choose an implementation using the supplied task definition, criteria and examples,
+within the runtime constraints. Algorithms, rules, lookup tables and combinations
+are all valid. Examples may be stored as explicit input-to-answer mappings.
+Cover the input domain required by the task definition, including cases not shown
+in examples. Resolve ambiguity and overlapping conditions using that definition.
 
 # Input handling
-Respect the state structure described by the task and examples. A string state
-is the complete input text, not a sequence of characters to join with spaces.
-For structured states, preserve the relevant fields and their types.
-
-# Evidence design
-Choose a mechanism suited to the task. For intent classification, represent the
-object, requested action, status, actor and transaction direction separately,
-then combine those factors. Preserve competing interpretations until enough
-evidence is available. Use supporting and excluding evidence for related labels.
-For topic classification, distinguish the main event from incidental mentions.
-For sentiment, distinguish an asserted quality from a desired or missing quality;
-handle negation, concessions and contrast within their actual scope.
-
-# Language coverage
-For text inputs, cover ordinary paraphrases, inflections, contractions,
-punctuation and reordered clauses. Use reusable normalization and compositional
-features. Think beyond the literal wording of label descriptions. Narrow regexes
-can leave most real sentences unmatched; check word forms and regex boundaries.
-
-# Decision rules
-Generic topic words alone do not establish a specific problem or requested action.
-Specific supported evidence should outrank a broad phrase-prefix match. Handle
-absent evidence and ties explicitly; label ordering must not silently decide the
-prediction. Fallbacks do not substitute for coverage. Do not treat hand-written
-scores as calibrated probabilities. Return the value required by output_schema.
+Respect the state structure described by the task and examples. Preserve its
+contents and types when extracting the information needed by the program.
 
 # Review
-Consider positive cases, paraphrases and near-neighbour counterexamples for each
-decision. Check rule precedence, negative evidence and boundary cases. Improve
-reusable mechanisms, not exact-string exceptions. Return only complete source.
+Check normal inputs, valid edge cases and interactions between conditions.
+Verify input handling and that every return path follows the function contract.
 
 # Source format
 Output only complete Python source, without Markdown fences or a JSON wrapper.
