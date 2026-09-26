@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-26",
+  "currency": "USD",
+  "unit": "per_1m_tokens",
+  "service_tier": "Standard",
+  "maximum_input_tokens_for_these_rates": 272000,
+  "sources": [
+    "https://developers.openai.com/api/docs/pricing",
+    "https://developers.openai.com/api/docs/guides/prompt-caching"
+  ],
+  "models": {
+    "gpt-6-luna": {"input": 0.1, "cached_input": 0.01, "cache_write": 0.125, "output": 0.5},
+    "gpt-6-sol": {"input": 2.0, "cached_input": 0.2, "cache_write": 2.5, "output": 10.0}
+  }
+}

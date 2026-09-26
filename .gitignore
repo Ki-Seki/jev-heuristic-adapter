@@ -19,3 +19,6 @@ wheels/
 .coverage.*
 coverage.xml
 htmlcov/
+
+# Local benchmark inputs and full provider traces
+.local/

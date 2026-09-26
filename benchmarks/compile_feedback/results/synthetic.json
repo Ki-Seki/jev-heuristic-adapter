@@ -1,0 +1,2828 @@
+{
+  "sst2": {
+    "feedback": [
+      {
+        "state": "The sequel repeats the first film's ideas without any of its charm.",
+        "answer": "negative"
+      },
+      {
+        "state": "The battle scenes are enormous, but I never felt anything was at stake.",
+        "answer": "negative"
+      },
+      {
+        "state": "This drama treats its characters like arguments to be delivered, not people to be understood.",
+        "answer": "negative"
+      },
+      {
+        "state": "The story races through important moments and lingers on scenes that go nowhere.",
+        "answer": "negative"
+      },
+      {
+        "state": "What should be a playful adventure turns into a tedious checklist of obstacles.",
+        "answer": "negative"
+      },
+      {
+        "state": "The jokes are so predictable that the pauses before them become uncomfortable.",
+        "answer": "negative"
+      },
+      {
+        "state": "The ending asks for tears the preceding two hours never earned.",
+        "answer": "negative"
+      },
+      {
+        "state": "The trailers promise a sharp comedy, but the jokes land with a thud.",
+        "answer": "negative"
+      },
+      {
+        "state": "What begins as a tense chase soon becomes a repetitive tour of narrow escapes.",
+        "answer": "negative"
+      },
+      {
+        "state": "I admired the sets more than I enjoyed a single scene.",
+        "answer": "negative"
+      },
+      {
+        "state": "The camera captures every detail except a reason to care.",
+        "answer": "negative"
+      },
+      {
+        "state": "It looks expensive, yet somehow feels cheap whenever the characters speak.",
+        "answer": "negative"
+      },
+      {
+        "state": "I left the theater wondering how such a lively cast ended up in such a lifeless film.",
+        "answer": "negative"
+      },
+      {
+        "state": "An excellent opening image leads into a remarkably forgettable movie.",
+        "answer": "negative"
+      },
+      {
+        "state": "Although the premise is original, the film plays out in disappointingly familiar ways.",
+        "answer": "negative"
+      },
+      {
+        "state": "By the final act, I cared less about the characters than about how soon it would end.",
+        "answer": "negative"
+      },
+      {
+        "state": "The soundtrack is memorable; I wish the film around it were, too.",
+        "answer": "negative"
+      },
+      {
+        "state": "Every scene seems designed to set up the next trailer moment rather than tell a coherent story.",
+        "answer": "negative"
+      },
+      {
+        "state": "Even the action scenes feel sluggish under the choppy editing.",
+        "answer": "negative"
+      },
+      {
+        "state": "The child actors bring warmth, but the adults are stuck delivering wooden exposition.",
+        "answer": "negative"
+      },
+      {
+        "state": "The movie introduces a fascinating conflict, then resolves it with a lazy coincidence.",
+        "answer": "negative"
+      },
+      {
+        "state": "There are clever ideas buried here, though the clumsy pacing never lets them breathe.",
+        "answer": "negative"
+      },
+      {
+        "state": "I kept waiting for the mystery to become interesting, and then the credits rolled.",
+        "answer": "negative"
+      },
+      {
+        "state": "I laughed once, mostly because the supposedly moving finale was so overdone.",
+        "answer": "negative"
+      },
+      {
+        "state": "A few amusing lines aren't enough to rescue this exhausting comedy.",
+        "answer": "negative"
+      },
+      {
+        "state": "I appreciated the unusual setting, even as the story bored me.",
+        "answer": "negative"
+      },
+      {
+        "state": "I wanted to enjoy this romance, but the leads have no believable chemistry.",
+        "answer": "negative"
+      },
+      {
+        "state": "Its attempts at satire are too timid to be funny and too obvious to be insightful.",
+        "answer": "negative"
+      },
+      {
+        "state": "The central twist is easy to guess and makes the earlier scenes less convincing.",
+        "answer": "negative"
+      },
+      {
+        "state": "For a thriller, it offers remarkably little tension.",
+        "answer": "negative"
+      },
+      {
+        "state": "Its stylish lighting is the only thing that kept me watching.",
+        "answer": "negative"
+      },
+      {
+        "state": "I found the film's message admirable and its storytelling painfully heavy-handed.",
+        "answer": "negative"
+      },
+      {
+        "state": "The film has an intriguing premise and almost no idea what to do with it.",
+        "answer": "negative"
+      },
+      {
+        "state": "The leads do their best, but the script keeps forcing them into unbelievable choices.",
+        "answer": "negative"
+      },
+      {
+        "state": "The finale tries to be uplifting, but its sudden change of heart feels unearned.",
+        "answer": "negative"
+      },
+      {
+        "state": "Its beautiful locations make the dull plot all the more frustrating.",
+        "answer": "negative"
+      },
+      {
+        "state": "The final confrontation is loud, long, and strangely weightless.",
+        "answer": "negative"
+      },
+      {
+        "state": "Despite a talented cast, the film never gives anyone a character worth playing.",
+        "answer": "negative"
+      },
+      {
+        "state": "The opening scene grabbed me; everything after it felt like a slow retreat from that promise.",
+        "answer": "negative"
+      },
+      {
+        "state": "Its spectacular visuals can't hide a story that makes little sense.",
+        "answer": "negative"
+      },
+      {
+        "state": "I loved how the unusual setting shaped the story rather than merely decorating it.",
+        "answer": "positive"
+      },
+      {
+        "state": "The movie finds genuine drama in conversations that could have seemed ordinary.",
+        "answer": "positive"
+      },
+      {
+        "state": "The natural dialogue lets the actors make these friendships feel lived-in.",
+        "answer": "positive"
+      },
+      {
+        "state": "The film makes its point with grace, trusting the story to speak for itself.",
+        "answer": "positive"
+      },
+      {
+        "state": "The action is easy to follow and thrilling without becoming exhausting.",
+        "answer": "positive"
+      },
+      {
+        "state": "The young cast brings such energy that every family scene feels alive.",
+        "answer": "positive"
+      },
+      {
+        "state": "The humor catches you off guard without ever feeling forced.",
+        "answer": "positive"
+      },
+      {
+        "state": "I believed in this romance from the leads' first awkward conversation.",
+        "answer": "positive"
+      },
+      {
+        "state": "I left the theater smiling and already wanting to watch it again.",
+        "answer": "positive"
+      },
+      {
+        "state": "Although the premise sounds familiar, the film takes it somewhere wonderfully unexpected.",
+        "answer": "positive"
+      },
+      {
+        "state": "The movie finds an elegant answer to the conflict it sets up.",
+        "answer": "positive"
+      },
+      {
+        "state": "The cast's easy chemistry carries the film through its few slower stretches.",
+        "answer": "positive"
+      },
+      {
+        "state": "The battle scenes are thrilling because the movie never loses sight of the people within them.",
+        "answer": "positive"
+      },
+      {
+        "state": "I was disappointed when the credits arrived because I wanted more time with these characters.",
+        "answer": "positive"
+      },
+      {
+        "state": "The gorgeous visuals serve a story with real heart.",
+        "answer": "positive"
+      },
+      {
+        "state": "The many subplots come together with an ease I didn't see coming.",
+        "answer": "positive"
+      },
+      {
+        "state": "By allowing its characters to fail and learn, the movie makes their triumph feel earned.",
+        "answer": "positive"
+      },
+      {
+        "state": "I came for the elaborate sets and stayed for the captivating story.",
+        "answer": "positive"
+      },
+      {
+        "state": "Its ending brought me to tears because the film had earned every one of them.",
+        "answer": "positive"
+      },
+      {
+        "state": "The film expands a simple idea into a rich and engaging feature.",
+        "answer": "positive"
+      },
+      {
+        "state": "Instead of explaining every mystery, the film lets its eerie atmosphere work on you.",
+        "answer": "positive"
+      },
+      {
+        "state": "I expected a routine mystery but found myself delighted by its inventive clues.",
+        "answer": "positive"
+      },
+      {
+        "state": "The final confrontation is gripping because we understand exactly what each character stands to lose.",
+        "answer": "positive"
+      },
+      {
+        "state": "What begins as a simple chase becomes an exhilarating test of the characters' loyalties.",
+        "answer": "positive"
+      },
+      {
+        "state": "For a thriller, it's remarkably patient, and that patience makes the suspense pay off.",
+        "answer": "positive"
+      },
+      {
+        "state": "The documentary asks difficult questions and makes its subjects' answers compelling.",
+        "answer": "positive"
+      },
+      {
+        "state": "It looks magnificent, and the writing gives that spectacle a purpose.",
+        "answer": "positive"
+      },
+      {
+        "state": "A few jokes miss, but the comedy's warmth and wit won me over.",
+        "answer": "positive"
+      },
+      {
+        "state": "The quiet moments carry more emotion than most films manage with a grand speech.",
+        "answer": "positive"
+      },
+      {
+        "state": "This caper moves briskly and gives every member of its ensemble a chance to shine.",
+        "answer": "positive"
+      },
+      {
+        "state": "The opening scene drew me in, and the film held my attention until the last frame.",
+        "answer": "positive"
+      },
+      {
+        "state": "The romance grows through small, convincing moments rather than grand declarations.",
+        "answer": "positive"
+      },
+      {
+        "state": "This drama gives every character enough room to feel like a whole person.",
+        "answer": "positive"
+      },
+      {
+        "state": "Its clever ideas unfold at just the right pace.",
+        "answer": "positive"
+      },
+      {
+        "state": "A remarkable central performance anchors this thoughtful, absorbing film.",
+        "answer": "positive"
+      },
+      {
+        "state": "This adventure keeps finding fresh ways to surprise and entertain.",
+        "answer": "positive"
+      },
+      {
+        "state": "The scenery is lovely, but the characters' journey is what stayed with me.",
+        "answer": "positive"
+      },
+      {
+        "state": "Even its biggest spectacle grows naturally from the characters' choices.",
+        "answer": "positive"
+      },
+      {
+        "state": "The jokes arrive with impeccable timing, and even the small ones made me grin.",
+        "answer": "positive"
+      },
+      {
+        "state": "The imaginative camera work brings us closer to the characters rather than distracting from them.",
+        "answer": "positive"
+      }
+    ],
+    "selection": [
+      {
+        "state": "Its ambitious structure only makes the thin story more apparent.",
+        "answer": "negative"
+      },
+      {
+        "state": "The romance depends on coincidences rather than anything the characters actually share.",
+        "answer": "negative"
+      },
+      {
+        "state": "By refusing to let its characters make mistakes, the movie drains all interest from their journey.",
+        "answer": "negative"
+      },
+      {
+        "state": "No amount of clever camera work can make these flat characters compelling.",
+        "answer": "negative"
+      },
+      {
+        "state": "I was relieved when the credits arrived, not eager to see more.",
+        "answer": "negative"
+      },
+      {
+        "state": "Each new revelation makes the plot harder to believe.",
+        "answer": "negative"
+      },
+      {
+        "state": "The villain gets a grand entrance and then disappears into a muddled script.",
+        "answer": "negative"
+      },
+      {
+        "state": "The movie mistakes constant shouting for dramatic intensity.",
+        "answer": "negative"
+      },
+      {
+        "state": "The performances are earnest, but the dialogue sounds painfully unnatural.",
+        "answer": "negative"
+      },
+      {
+        "state": "The director piles on subplots until the main story is lost.",
+        "answer": "negative"
+      },
+      {
+        "state": "Every emotional moment is announced by swelling music instead of earned by the script.",
+        "answer": "negative"
+      },
+      {
+        "state": "The scares rely on sudden noise rather than anything genuinely unsettling.",
+        "answer": "negative"
+      },
+      {
+        "state": "The documentary raises important questions and then settles for shallow answers.",
+        "answer": "negative"
+      },
+      {
+        "state": "The film stretches a decent short-story idea far beyond its limits.",
+        "answer": "negative"
+      },
+      {
+        "state": "The humor feels as though it was tested until every trace of surprise disappeared.",
+        "answer": "negative"
+      },
+      {
+        "state": "This should have been a brisk caper; instead, it drags from one labored gag to the next.",
+        "answer": "negative"
+      },
+      {
+        "state": "A strong performance at the center cannot overcome the film's wandering script.",
+        "answer": "negative"
+      },
+      {
+        "state": "The cast's chemistry occasionally shines through, but not often enough to save the film.",
+        "answer": "negative"
+      },
+      {
+        "state": "Instead of building suspense, the film keeps explaining what I can already see.",
+        "answer": "negative"
+      },
+      {
+        "state": "A promising first half gives way to an ending that barely holds together.",
+        "answer": "negative"
+      },
+      {
+        "state": "The story moves quickly without rushing its important emotional beats.",
+        "answer": "positive"
+      },
+      {
+        "state": "By the final act, I was rooting for characters I'd only just met.",
+        "answer": "positive"
+      },
+      {
+        "state": "The camera finds beauty in ordinary details, and the story makes them matter.",
+        "answer": "positive"
+      },
+      {
+        "state": "This sequel deepens the characters without losing the first film's sense of fun.",
+        "answer": "positive"
+      },
+      {
+        "state": "Each revelation adds depth to the mystery instead of merely complicating it.",
+        "answer": "positive"
+      },
+      {
+        "state": "The scares grow naturally out of the story, making them linger long after the screening.",
+        "answer": "positive"
+      },
+      {
+        "state": "The film takes a strange premise and turns it into an unexpectedly moving story.",
+        "answer": "positive"
+      },
+      {
+        "state": "An unforgettable opening image sets the tone for a film full of rewarding choices.",
+        "answer": "positive"
+      },
+      {
+        "state": "Its stylish lighting draws you into a story that proves just as captivating.",
+        "answer": "positive"
+      },
+      {
+        "state": "The trailers barely hinted at how funny and tender this film would be.",
+        "answer": "positive"
+      },
+      {
+        "state": "Its unusual structure rewards attention with a deeply satisfying payoff.",
+        "answer": "positive"
+      },
+      {
+        "state": "A measured first half blossoms into a remarkably satisfying conclusion.",
+        "answer": "positive"
+      },
+      {
+        "state": "The leads make even their most difficult choices feel believable.",
+        "answer": "positive"
+      },
+      {
+        "state": "The finale is uplifting without pretending the characters' troubles were easy to solve.",
+        "answer": "positive"
+      },
+      {
+        "state": "The central twist surprised me and made the earlier scenes richer in hindsight.",
+        "answer": "positive"
+      },
+      {
+        "state": "Its satire is sharp enough to sting and playful enough to enjoy.",
+        "answer": "positive"
+      },
+      {
+        "state": "I laughed throughout, then found the finale unexpectedly touching.",
+        "answer": "positive"
+      },
+      {
+        "state": "Even when the plot takes a familiar turn, the cast makes every scene a pleasure.",
+        "answer": "positive"
+      },
+      {
+        "state": "The soundtrack is wonderful, and the film knows exactly when to let it take over.",
+        "answer": "positive"
+      },
+      {
+        "state": "The villain is frightening precisely because the script allows them to seem human.",
+        "answer": "positive"
+      }
+    ]
+  },
+  "agnews": {
+    "feedback": [
+      {
+        "state": "Freight Operator Raises Shipping Rates — The company pointed to rising demand for refrigerated cargo.",
+        "answer": "business"
+      },
+      {
+        "state": "Restaurant Chain Plans More Outlets — The company said customer traffic has recovered in city centres.",
+        "answer": "business"
+      },
+      {
+        "state": "Home Sales Slow — Estate agents reported fewer purchases as mortgage rates rose.",
+        "answer": "business"
+      },
+      {
+        "state": "Gold Prices Reach a Monthly High — Investors bought the metal as the currency weakened.",
+        "answer": "business"
+      },
+      {
+        "state": "Exporters Gain as Currency Falls — A weaker exchange rate made locally produced goods cheaper abroad.",
+        "answer": "business"
+      },
+      {
+        "state": "Supermarket Chain Reports Sales Growth — Discounts helped draw more shoppers into its stores.",
+        "answer": "business"
+      },
+      {
+        "state": "Investment Firm Buys Pharmacy Chain — The takeover will put hundreds of stores under new ownership.",
+        "answer": "business"
+      },
+      {
+        "state": "Copper Miner Expands Operations — The company approved spending on a new processing facility.",
+        "answer": "business"
+      },
+      {
+        "state": "Clothing Manufacturer Closes Plant — The company is shifting production to a less costly facility.",
+        "answer": "business"
+      },
+      {
+        "state": "Central Bank Holds Rates Steady — Officials said they need more evidence that inflation is easing.",
+        "answer": "business"
+      },
+      {
+        "state": "Two Steelmakers Agree to Merge — The companies expect the deal to reduce production costs.",
+        "answer": "business"
+      },
+      {
+        "state": "Consumer Spending Picks Up — New figures show households bought more clothing and furniture last month.",
+        "answer": "business"
+      },
+      {
+        "state": "Bond Yields Rise — Traders reassessed the timing of a possible interest-rate cut.",
+        "answer": "business"
+      },
+      {
+        "state": "Wheat Futures Fall — A larger harvest forecast pushed grain prices lower in afternoon trading.",
+        "answer": "business"
+      },
+      {
+        "state": "Factory Activity Contracts Again — A survey found that manufacturers received fewer new orders.",
+        "answer": "business"
+      },
+      {
+        "state": "Automaker Cuts Annual Outlook — Higher factory costs are squeezing the company's margins.",
+        "answer": "business"
+      },
+      {
+        "state": "Hotel Group Reports Higher Room Revenue — Conference bookings helped fill properties during the quarter.",
+        "answer": "business"
+      },
+      {
+        "state": "Retail Shares Slide — Department store chains fell after reporting weaker holiday sales than investors expected.",
+        "answer": "business"
+      },
+      {
+        "state": "Airline Raises Profit Forecast — Fuller planes and lower fuel costs lifted the carrier's outlook for the year.",
+        "answer": "business"
+      },
+      {
+        "state": "Crude Prices Climb — Oil futures rose as traders anticipated tighter supplies next month.",
+        "answer": "business"
+      },
+      {
+        "state": "Video Game Studio Delays Sequel — Developers said they need more time to fix performance problems.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Technology Company Settles Patent Dispute — The agreement covers features used in its smartwatches.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Mars Probe Sends Back Soil Readings — Scientists are examining the measurements for signs of past water.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Online Marketplace Fixes Account Flaw — The vulnerability had allowed access to some customer profiles.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Researchers Test New Malaria Vaccine — Early results suggest it generated a strong immune response.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Browser Update Adds Privacy Controls — Users can now limit how websites track their activity.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Researchers Identify a New Antibiotic Candidate — Laboratory tests showed activity against several resistant bacteria.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Chipmaker Shares Rise on Earnings — Strong demand for processors lifted its quarterly revenue.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Streaming App Introduces Offline Playback — Subscribers can save programmes to watch without an internet connection.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Phone Network Expands Rural Coverage — New towers will bring mobile service to previously uncovered villages.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Chip Designers Demonstrate Smaller Circuit — The prototype uses less power during routine calculations.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Physicists Measure Unusual Magnetic Effect — The finding could help explain how certain materials conduct electricity.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Rocket Team Completes Engine Test — The firing is a key step toward its next launch attempt.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Phone Maker Unveils New Camera System — The latest handset uses redesigned sensors to improve low-light images.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Computer Company Beats Profit Expectations — Sales of its servers grew sharply during the quarter.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Telecom Provider Tests Faster Network — Its trial delivered improved coverage inside crowded stations.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Astronomers Detect a Distant Planet — Measurements suggest it circles its star every twelve days.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Medical Trial Finds Promising Results — An experimental treatment reduced symptoms among participants with a rare disorder.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Computer Maker Recalls Laptop Batteries — The company says some units may overheat while charging.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Social Platform Changes Recommendation System — The update is intended to reduce repetitive posts in users' feeds.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Hockey Team Advances on Penalties — The shootout decided a semifinal that ended level.",
+        "answer": "sports"
+      },
+      {
+        "state": "Relay Team Sets Championship Mark — A strong final leg sealed gold in the 4×100 metres.",
+        "answer": "sports"
+      },
+      {
+        "state": "Lacrosse Team Wins Season Opener — Three fourth-quarter goals broke a tie with the visitors.",
+        "answer": "sports"
+      },
+      {
+        "state": "Cyclist Takes Mountain Stage — A late climb put him ahead of the race leader.",
+        "answer": "sports"
+      },
+      {
+        "state": "Formula Racing Driver Takes Pole — A rapid final lap earned the best starting position for Sunday's race.",
+        "answer": "sports"
+      },
+      {
+        "state": "Tennis Champion Exits in First Round — An unseeded opponent won the match in straight sets.",
+        "answer": "sports"
+      },
+      {
+        "state": "Goalkeeper Signs Three-Year Deal — The club confirmed his transfer ahead of next season.",
+        "answer": "sports"
+      },
+      {
+        "state": "Pitcher Throws Complete Game — He allowed just three hits as his team won 4–0.",
+        "answer": "sports"
+      },
+      {
+        "state": "Marathon Favourite Withdraws — A leg injury will keep the athlete out of Sunday's race.",
+        "answer": "sports"
+      },
+      {
+        "state": "Rugby Side Clinches League Title — A bonus-point win left its nearest rival unable to catch up.",
+        "answer": "sports"
+      },
+      {
+        "state": "Coach Names Tournament Squad — Two newcomers were selected for next week's opening match.",
+        "answer": "sports"
+      },
+      {
+        "state": "Swimmer Qualifies for Final — Her time was the second fastest in the morning heats.",
+        "answer": "sports"
+      },
+      {
+        "state": "Volleyball Final Goes to Five Sets — The defending champions recovered from two sets down.",
+        "answer": "sports"
+      },
+      {
+        "state": "Club Appoints New Head Coach — The former assistant takes charge before the next league fixture.",
+        "answer": "sports"
+      },
+      {
+        "state": "Midfielder Completes Transfer — The player will join his new club when the window opens.",
+        "answer": "sports"
+      },
+      {
+        "state": "Runner Breaks National Record — She finished the 1,500 metres almost two seconds faster than the previous mark.",
+        "answer": "sports"
+      },
+      {
+        "state": "Table Tennis Veteran Wins Title — She came back from a two-game deficit in the final.",
+        "answer": "sports"
+      },
+      {
+        "state": "Cricket Captain Hits Century — His innings guided the visitors to a comfortable win.",
+        "answer": "sports"
+      },
+      {
+        "state": "Defending Champion Survives Match Point — He rallied to reach the tournament semifinals.",
+        "answer": "sports"
+      },
+      {
+        "state": "Basketball Team Wins in Overtime — A three-pointer at the buzzer settled a closely contested game.",
+        "answer": "sports"
+      },
+      {
+        "state": "Border Patrol Rescues Stranded Migrants — Officers found the group after a night in freezing conditions.",
+        "answer": "world"
+      },
+      {
+        "state": "Floods Force Thousands from Homes — Emergency crews moved residents to shelters as river levels rose.",
+        "answer": "world"
+      },
+      {
+        "state": "Authorities Search for Escaped Prisoners — Police set up checkpoints after a breakout at a regional jail.",
+        "answer": "world"
+      },
+      {
+        "state": "Lawmakers Pass Judicial Reform — The legislation changes how senior judges are appointed.",
+        "answer": "world"
+      },
+      {
+        "state": "Earthquake Damages Mountain Towns — Rescue teams searched collapsed buildings for survivors.",
+        "answer": "world"
+      },
+      {
+        "state": "President Meets Neighbouring Leader — Their talks focused on easing a long-running diplomatic rift.",
+        "answer": "world"
+      },
+      {
+        "state": "Wildfire Spreads Toward Villages — Authorities ordered evacuations as strong winds hampered firefighters.",
+        "answer": "world"
+      },
+      {
+        "state": "Prime Minister Survives Confidence Vote — A narrow parliamentary majority backed the government.",
+        "answer": "world"
+      },
+      {
+        "state": "Mayor Resigns After Corruption Inquiry — Prosecutors are examining allegations involving city contracts.",
+        "answer": "world"
+      },
+      {
+        "state": "Opposition Coalition Wins Election — Its leader is expected to form the next government.",
+        "answer": "world"
+      },
+      {
+        "state": "Volcano Eruption Prompts Evacuation — Officials moved nearby residents after ash began falling on homes.",
+        "answer": "world"
+      },
+      {
+        "state": "Hostages Released After Negotiations — Officials said the remaining captives were reunited with their families.",
+        "answer": "world"
+      },
+      {
+        "state": "Government Announces Early Election — The vote will take place after the ruling coalition collapsed.",
+        "answer": "world"
+      },
+      {
+        "state": "Typhoon Makes Landfall — Heavy rain and high winds prompted coastal evacuation orders.",
+        "answer": "world"
+      },
+      {
+        "state": "Storm Surge Breaches Coastal Defences — Emergency crews evacuated low-lying neighbourhoods.",
+        "answer": "world"
+      },
+      {
+        "state": "Peacekeepers Arrive in Conflict Zone — Their mission is to monitor a newly agreed truce.",
+        "answer": "world"
+      },
+      {
+        "state": "Ceasefire Talks Resume — Delegations from the two neighbouring countries met after weeks of border fighting.",
+        "answer": "world"
+      },
+      {
+        "state": "Police Arrest Suspect in Museum Theft — Investigators recovered paintings reported missing on Tuesday.",
+        "answer": "world"
+      },
+      {
+        "state": "Police Investigate Series of Burglaries — Detectives believe the same group entered several homes overnight.",
+        "answer": "world"
+      },
+      {
+        "state": "Constitutional Court Voids Election Result — Judges ordered a new vote after finding serious counting irregularities.",
+        "answer": "world"
+      }
+    ],
+    "selection": [
+      {
+        "state": "Food Producer Faces Cost Pressure — Higher cocoa prices have narrowed its margins on confectionery.",
+        "answer": "business"
+      },
+      {
+        "state": "Cosmetics Group Misses Sales Forecast — Slower demand in its largest overseas market weighed on revenue.",
+        "answer": "business"
+      },
+      {
+        "state": "Soft Drink Maker Raises Prices — Executives cited more expensive packaging and transport.",
+        "answer": "business"
+      },
+      {
+        "state": "Airline Signs Aircraft Order — The carrier plans to replace older planes on its busiest routes.",
+        "answer": "business"
+      },
+      {
+        "state": "Energy Major Reports Quarterly Gain — Stronger refining margins outweighed a drop in oil production.",
+        "answer": "business"
+      },
+      {
+        "state": "Insurer Posts Stronger Profit — Fewer storm-related claims helped offset higher operating expenses.",
+        "answer": "business"
+      },
+      {
+        "state": "Container Carrier Expands Fleet — The shipping company ordered six vessels to meet demand on trade routes.",
+        "answer": "business"
+      },
+      {
+        "state": "Carmaker Warns of Lower Profit — Discounts needed to clear unsold vehicles are cutting into earnings.",
+        "answer": "business"
+      },
+      {
+        "state": "Regional Bank Beats Earnings Estimates — Lending income rose despite a modest increase in defaults.",
+        "answer": "business"
+      },
+      {
+        "state": "Shopping Centre Owner Sells Properties — Proceeds from the sale will be used to reduce debt.",
+        "answer": "business"
+      },
+      {
+        "state": "Scientists Map Deep-Sea Microbes — Samples reveal organisms that survive near volcanic vents.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Study Links Sleep Patterns to Memory — Researchers tracked participants through repeated overnight tests.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "University Lab Develops Flexible Sensor — Its thin material can measure pressure when bent.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "New Satellite Reaches Orbit — Engineers confirmed that its instruments deployed successfully after launch.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Game Developers Release Accessibility Update — Players can now customise subtitles and controller inputs.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Cloud Services Company Reports Revenue Jump — More customers signed up for its data-storage platform.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Search Company Faces Advertising Lawsuit — Regulators allege its online tools unfairly restrict rivals.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Game Console Maker Cuts Price — The company hopes to boost sales before releasing new titles.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Email Provider Restores Service — An outage had prevented users from sending messages for several hours.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Software Firm Releases Security Patch — The update fixes a flaw that could expose users' files.",
+        "answer": "sci_tech"
+      },
+      {
+        "state": "Rowing Crew Claims Gold — The four-person boat held off a late challenge in the final.",
+        "answer": "sports"
+      },
+      {
+        "state": "Wrestler Earns Olympic Berth — Victory in the qualifying final secured a place at the Games.",
+        "answer": "sports"
+      },
+      {
+        "state": "Skier Wins Slalom by Narrow Margin — She edged the runner-up by eight hundredths of a second.",
+        "answer": "sports"
+      },
+      {
+        "state": "Badminton Pair Reaches Final — The doubles team won a tense deciding game.",
+        "answer": "sports"
+      },
+      {
+        "state": "Quarterback Throws Four Touchdowns — His performance carried the visitors to their third straight win.",
+        "answer": "sports"
+      },
+      {
+        "state": "Boxer Retains Championship Belt — The judges awarded her a unanimous decision after twelve rounds.",
+        "answer": "sports"
+      },
+      {
+        "state": "Baseball Club Extends Winning Streak — Four runs in the eighth inning secured its sixth consecutive victory.",
+        "answer": "sports"
+      },
+      {
+        "state": "Golfer Leads After Opening Round — Six birdies put her two strokes clear of the field.",
+        "answer": "sports"
+      },
+      {
+        "state": "Striker Scores Late Winner — The home side advanced to the cup final with a 2–1 victory.",
+        "answer": "sports"
+      },
+      {
+        "state": "Football Rivals Draw 1–1 — Each side scored before halftime but failed to find a late winner.",
+        "answer": "sports"
+      },
+      {
+        "state": "President Names New Cabinet — Several ministers were replaced following last month's election.",
+        "answer": "world"
+      },
+      {
+        "state": "Investigators Identify Arson Suspect — Police say several fires were deliberately set in residential buildings.",
+        "answer": "world"
+      },
+      {
+        "state": "Island Nation Holds Referendum — Voters are deciding whether to change the country's constitution.",
+        "answer": "world"
+      },
+      {
+        "state": "Court Convicts Former Minister — The judge found that he had accepted bribes while in office.",
+        "answer": "world"
+      },
+      {
+        "state": "Diplomats Meet Over Border Dispute — The neighbouring governments agreed to continue negotiations next week.",
+        "answer": "world"
+      },
+      {
+        "state": "Rebels and Government Agree to Talks — Mediators hope the meeting will reduce violence in the region.",
+        "answer": "world"
+      },
+      {
+        "state": "Senate Rejects Proposed Amendment — The measure failed to secure the required two-thirds majority.",
+        "answer": "world"
+      },
+      {
+        "state": "Foreign Ministers Sign Border Agreement — The pact establishes a process for resolving territorial claims.",
+        "answer": "world"
+      },
+      {
+        "state": "Parliament Approves Electoral Changes — Lawmakers voted to redraw districts before the next national election.",
+        "answer": "world"
+      },
+      {
+        "state": "Landslide Cuts Off Remote Community — Rescue workers are clearing the only road into the village.",
+        "answer": "world"
+      }
+    ]
+  },
+  "banking77": {
+    "feedback": [
+      {
+        "state": "Do I need to do anything to enable my card before its first purchase?",
+        "answer": "activate_my_card"
+      },
+      {
+        "state": "Is a chip-and-PIN purchase required to activate my new card?",
+        "answer": "activate_my_card"
+      },
+      {
+        "state": "I’ve received my debit card, but I haven’t activated it yet. What are the steps?",
+        "answer": "activate_my_card"
+      },
+      {
+        "state": "My new card arrived today. How do I make it ready to use?",
+        "answer": "activate_my_card"
+      },
+      {
+        "state": "Does my son have to turn 18 before he can register?",
+        "answer": "age_limit"
+      },
+      {
+        "state": "I’m 17. Am I old enough to open an account?",
+        "answer": "age_limit"
+      },
+      {
+        "state": "Can my 15-year-old daughter sign up for a card?",
+        "answer": "age_limit"
+      },
+      {
+        "state": "Are customers under 18 eligible, or do they need to wait?",
+        "answer": "age_limit"
+      },
+      {
+        "state": "Can I add my card to Apple Wallet to pay in stores?",
+        "answer": "apple_pay_or_google_pay"
+      },
+      {
+        "state": "Are payments through Apple’s phone wallet supported?",
+        "answer": "apple_pay_or_google_pay"
+      },
+      {
+        "state": "Does your debit card work with Google Pay on Android?",
+        "answer": "apple_pay_or_google_pay"
+      },
+      {
+        "state": "Can I use Google Wallet to make payments with this card?",
+        "answer": "apple_pay_or_google_pay"
+      },
+      {
+        "state": "Can I use this card at a cash machine outside my home country?",
+        "answer": "atm_support"
+      },
+      {
+        "state": "Do I have to find a particular ATM network to withdraw cash?",
+        "answer": "atm_support"
+      },
+      {
+        "state": "Which cash machines can I use with this card?",
+        "answer": "atm_support"
+      },
+      {
+        "state": "Can I withdraw cash at any ATM, or only certain machines?",
+        "answer": "atm_support"
+      },
+      {
+        "state": "Where can I change the amount added when my balance runs low?",
+        "answer": "automatic_top_up"
+      },
+      {
+        "state": "I’d like the account to refill itself from my debit card. Is that possible?",
+        "answer": "automatic_top_up"
+      },
+      {
+        "state": "If I enable auto top-up, can I choose which funding card it uses?",
+        "answer": "automatic_top_up"
+      },
+      {
+        "state": "How do I turn off the automatic balance reload I set up?",
+        "answer": "automatic_top_up"
+      },
+      {
+        "state": "The transfer from my other account shows as credited, while the balance at the top of the screen remains unchanged.",
+        "answer": "balance_not_updated_after_bank_transfer"
+      },
+      {
+        "state": "The money I sent from my savings bank is marked as received, but my available balance hasn’t increased.",
+        "answer": "balance_not_updated_after_bank_transfer"
+      },
+      {
+        "state": "My other bank confirms the transfer completed, but my balance here hasn’t changed.",
+        "answer": "balance_not_updated_after_bank_transfer"
+      },
+      {
+        "state": "An incoming bank transfer appears in my transactions, yet the displayed balance is still the old amount.",
+        "answer": "balance_not_updated_after_bank_transfer"
+      },
+      {
+        "state": "The cheque I paid in is marked complete. When will my balance reflect it?",
+        "answer": "balance_not_updated_after_cheque_or_cash_deposit"
+      },
+      {
+        "state": "I deposited cash and got a receipt, but my account balance hasn’t increased.",
+        "answer": "balance_not_updated_after_cheque_or_cash_deposit"
+      },
+      {
+        "state": "The cash I deposited is marked as credited. Why hasn’t my available balance updated?",
+        "answer": "balance_not_updated_after_cheque_or_cash_deposit"
+      },
+      {
+        "state": "My cheque has cleared and appears in my activity, yet the balance still shows the old amount.",
+        "answer": "balance_not_updated_after_cheque_or_cash_deposit"
+      },
+      {
+        "state": "The account details are correct, yet the app refuses to save this person as an approved payee.",
+        "answer": "beneficiary_not_allowed"
+      },
+      {
+        "state": "I’m trying to add my landlord as a transfer recipient, but the app says this beneficiary isn’t permitted.",
+        "answer": "beneficiary_not_allowed"
+      },
+      {
+        "state": "I can transfer to other people, but this recipient is marked as restricted.",
+        "answer": "beneficiary_not_allowed"
+      },
+      {
+        "state": "When I enter my friend’s details as a new recipient, it says that beneficiary is ineligible.",
+        "answer": "beneficiary_not_allowed"
+      },
+      {
+        "state": "I no longer want the transfer I just initiated. Can I withdraw the instruction?",
+        "answer": "cancel_transfer"
+      },
+      {
+        "state": "I entered too much for a transfer and need to cancel it.",
+        "answer": "cancel_transfer"
+      },
+      {
+        "state": "Please halt the payment I set up to my savings account.",
+        "answer": "cancel_transfer"
+      },
+      {
+        "state": "Can I cancel a pending transfer before the recipient gets the money?",
+        "answer": "cancel_transfer"
+      },
+      {
+        "state": "Do I have to request a replacement when my card is close to expiring?",
+        "answer": "card_about_to_expire"
+      },
+      {
+        "state": "The expiry date on my card is coming up. What do I need to do?",
+        "answer": "card_about_to_expire"
+      },
+      {
+        "state": "My debit card expires next month. Will you send a replacement automatically?",
+        "answer": "card_about_to_expire"
+      },
+      {
+        "state": "Will I get a new card when my current one reaches its expiry date?",
+        "answer": "card_about_to_expire"
+      },
+      {
+        "state": "Where can I pay with this card? Will most shops accept it?",
+        "answer": "card_acceptance"
+      },
+      {
+        "state": "Can I use the card to pay at petrol stations?",
+        "answer": "card_acceptance"
+      },
+      {
+        "state": "What kinds of businesses accept your cards for purchases?",
+        "answer": "card_acceptance"
+      },
+      {
+        "state": "Can I use the card at online stores as well as in person?",
+        "answer": "card_acceptance"
+      },
+      {
+        "state": "The app says my card was delivered yesterday, yet there's nothing in my mailbox.",
+        "answer": "card_arrival"
+      },
+      {
+        "state": "I was expecting my new card this week, and it hasn't turned up. Can you help locate it?",
+        "answer": "card_arrival"
+      },
+      {
+        "state": "The tracking page says my card reached me, but I never received it.",
+        "answer": "card_arrival"
+      },
+      {
+        "state": "I ordered my card two weeks ago, but it still hasn't arrived. Can you check where it is?",
+        "answer": "card_arrival"
+      },
+      {
+        "state": "Is there an estimated arrival date for a card ordered this afternoon?",
+        "answer": "card_delivery_estimate"
+      },
+      {
+        "state": "How long should I allow for a replacement card to come in the mail?",
+        "answer": "card_delivery_estimate"
+      },
+      {
+        "state": "I'm traveling soon. About how long does shipping a physical card normally take?",
+        "answer": "card_delivery_estimate"
+      },
+      {
+        "state": "Before I order, can you tell me when the card would likely reach me?",
+        "answer": "card_delivery_estimate"
+      },
+      {
+        "state": "Can I connect this newly issued card to the account I already use?",
+        "answer": "card_linking"
+      },
+      {
+        "state": "I have a replacement card and need to add it to my existing account.",
+        "answer": "card_linking"
+      },
+      {
+        "state": "My card is here, but it isn't attached to my account in the app. How do I connect it?",
+        "answer": "card_linking"
+      },
+      {
+        "state": "My card doesn't appear under my account's cards yet. How do I link it?",
+        "answer": "card_linking"
+      },
+      {
+        "state": "It's not just one shop: no machine seems able to read my card. Can you help?",
+        "answer": "card_not_working"
+      },
+      {
+        "state": "Neither the chip nor the magnetic stripe on my physical card is registering. What can I do?",
+        "answer": "card_not_working"
+      },
+      {
+        "state": "I've tried the card at several places and it won't work in any of their machines.",
+        "answer": "card_not_working"
+      },
+      {
+        "state": "My physical card suddenly stopped working everywhere, both in shops and at cash machines.",
+        "answer": "card_not_working"
+      },
+      {
+        "state": "My card transaction has its own processing charge in the app. Should that have been applied?",
+        "answer": "card_payment_fee_charged"
+      },
+      {
+        "state": "I used my card for an online purchase and was billed an additional payment fee.",
+        "answer": "card_payment_fee_charged"
+      },
+      {
+        "state": "Why did paying by card at the bookstore cost me more than the purchase price? The difference is listed as a fee.",
+        "answer": "card_payment_fee_charged"
+      },
+      {
+        "state": "There's a service charge beside yesterday's card purchase at a local shop. What is it for?",
+        "answer": "card_payment_fee_charged"
+      },
+      {
+        "state": "I can account for all my purchases except this card transaction to a hotel I've never visited.",
+        "answer": "card_payment_not_recognised"
+      },
+      {
+        "state": "My statement lists a card payment made last night that I didn't make. Can you investigate?",
+        "answer": "card_payment_not_recognised"
+      },
+      {
+        "state": "A card payment to Birch Cafe appears on my account, but I've never been there.",
+        "answer": "card_payment_not_recognised"
+      },
+      {
+        "state": "I don't recognize the purchase from a clothing store that appeared in my card activity today.",
+        "answer": "card_payment_not_recognised"
+      },
+      {
+        "state": "The pounds charged for my dollar-denominated card purchase don't match the exchange rate you quoted.",
+        "answer": "card_payment_wrong_exchange_rate"
+      },
+      {
+        "state": "Why does the currency rate applied to my overseas card purchase differ from the rate displayed in the app?",
+        "answer": "card_payment_wrong_exchange_rate"
+      },
+      {
+        "state": "I paid by card abroad and the amount in my home currency is higher than your exchange rate suggests.",
+        "answer": "card_payment_wrong_exchange_rate"
+      },
+      {
+        "state": "A card payment in Swiss francs was converted into dollars at a rate I can't reconcile with yours.",
+        "answer": "card_payment_wrong_exchange_rate"
+      },
+      {
+        "state": "I tried to use a cash machine, and it pulled my card in and won't give it back.",
+        "answer": "card_swallowed"
+      },
+      {
+        "state": "The ATM kept my card instead of returning it after my transaction.",
+        "answer": "card_swallowed"
+      },
+      {
+        "state": "I walked away from the cash machine without my card because it wouldn't eject it.",
+        "answer": "card_swallowed"
+      },
+      {
+        "state": "My card is stuck inside the ATM. What should I do now?",
+        "answer": "card_swallowed"
+      },
+      {
+        "state": "The ATM gave me the full amount I requested, yet I was billed extra for the withdrawal.",
+        "answer": "cash_withdrawal_charge"
+      },
+      {
+        "state": "I was charged a fee when I withdrew cash using my card. Can you explain why?",
+        "answer": "cash_withdrawal_charge"
+      },
+      {
+        "state": "Is there a charge for getting cash out at an ATM with my card?",
+        "answer": "cash_withdrawal_charge"
+      },
+      {
+        "state": "My statement shows an additional charge for taking out cash yesterday. What is it?",
+        "answer": "cash_withdrawal_charge"
+      },
+      {
+        "state": "My app says cash was taken out with my card this morning, and I didn't do that.",
+        "answer": "cash_withdrawal_not_recognised"
+      },
+      {
+        "state": "Why is there a cash withdrawal on my account when I haven't visited an ATM in months?",
+        "answer": "cash_withdrawal_not_recognised"
+      },
+      {
+        "state": "I see an ATM withdrawal in Berlin on my statement, but I wasn't there.",
+        "answer": "cash_withdrawal_not_recognised"
+      },
+      {
+        "state": "A withdrawal from an ATM I've never used has appeared in my activity.",
+        "answer": "cash_withdrawal_not_recognised"
+      },
+      {
+        "state": "I know my current card PIN, but I'd like to set a different one. How?",
+        "answer": "change_pin"
+      },
+      {
+        "state": "For security, I want to change the PIN on my physical card. What steps do I take?",
+        "answer": "change_pin"
+      },
+      {
+        "state": "Where in the app can I update my card's four-digit code?",
+        "answer": "change_pin"
+      },
+      {
+        "state": "I'd like to replace my existing card PIN with one I choose.",
+        "answer": "change_pin"
+      },
+      {
+        "state": "I accidentally gave a stranger my card number and PIN. Can you help me secure the card?",
+        "answer": "compromised_card"
+      },
+      {
+        "state": "I still have my card, but I entered its number and security code on a phishing site. How do I protect it?",
+        "answer": "compromised_card"
+      },
+      {
+        "state": "A scammer got my card information over the phone. I still have the card, but I'm worried they could use it.",
+        "answer": "compromised_card"
+      },
+      {
+        "state": "I found my card details posted online. Can I get a replacement with new details?",
+        "answer": "compromised_card"
+      },
+      {
+        "state": "My new card works when inserted, yet paying by tapping fails every time. Is there something I need to enable?",
+        "answer": "contactless_not_working"
+      },
+      {
+        "state": "I have to insert my card for every purchase because paying by holding it against the reader doesn't work.",
+        "answer": "contactless_not_working"
+      },
+      {
+        "state": "The no-touch payment feature suddenly quit working, while ordinary card payments are fine.",
+        "answer": "contactless_not_working"
+      },
+      {
+        "state": "Readers don't detect my card when I hold it near them, but chip payments go through.",
+        "answer": "contactless_not_working"
+      },
+      {
+        "state": "Can I open an account if I live in Iceland?",
+        "answer": "country_support"
+      },
+      {
+        "state": "Are customers based in Canada eligible to sign up?",
+        "answer": "country_support"
+      },
+      {
+        "state": "Do you offer your banking services to residents of Chile?",
+        "answer": "country_support"
+      },
+      {
+        "state": "Which countries can people reside in and still register for an account?",
+        "answer": "country_support"
+      },
+      {
+        "state": "The restaurant couldn't take my card because the transaction was rejected, even though I have enough money.",
+        "answer": "declined_card_payment"
+      },
+      {
+        "state": "Every attempt to buy a train ticket with my card is being refused at checkout.",
+        "answer": "declined_card_payment"
+      },
+      {
+        "state": "The merchant says my card issuer rejected today's purchase. How can I get the payment approved?",
+        "answer": "declined_card_payment"
+      },
+      {
+        "state": "I tried to pay at a grocery store with my card, but the terminal said the payment was declined. Why?",
+        "answer": "declined_card_payment"
+      },
+      {
+        "state": "The ATM refused my request for cash and said the withdrawal was declined. Why?",
+        "answer": "declined_cash_withdrawal"
+      },
+      {
+        "state": "Why won't the ATM let me take out money when there's enough in my account?",
+        "answer": "declined_cash_withdrawal"
+      },
+      {
+        "state": "I entered my PIN at the cash machine, but it rejected the withdrawal without dispensing anything.",
+        "answer": "declined_cash_withdrawal"
+      },
+      {
+        "state": "The cash machine displayed 'transaction declined' when I asked for £40. No money came out.",
+        "answer": "declined_cash_withdrawal"
+      },
+      {
+        "state": "Why is my payment to another bank account being rejected when I try to confirm it?",
+        "answer": "declined_transfer"
+      },
+      {
+        "state": "I can't complete an outgoing transfer because the app keeps declining it.",
+        "answer": "declined_transfer"
+      },
+      {
+        "state": "I attempted to send money by bank transfer, but your system refused the request immediately.",
+        "answer": "declined_transfer"
+      },
+      {
+        "state": "The app won't let me send a bank transfer; it says the transfer was declined before submission.",
+        "answer": "declined_transfer"
+      },
+      {
+        "state": "I don't recognise the direct debit taken by this gym; I haven't signed a mandate with them.",
+        "answer": "direct_debit_payment_not_recognised"
+      },
+      {
+        "state": "There's a direct debit payment to an unfamiliar company on my account. What is it?",
+        "answer": "direct_debit_payment_not_recognised"
+      },
+      {
+        "state": "A monthly debit was collected through a direct debit instruction I don't remember setting up.",
+        "answer": "direct_debit_payment_not_recognised"
+      },
+      {
+        "state": "Why did an unknown utility provider take money by direct debit from my account?",
+        "answer": "direct_debit_payment_not_recognised"
+      },
+      {
+        "state": "Is there a maximum amount I can spend with one disposable card number?",
+        "answer": "disposable_card_limits"
+      },
+      {
+        "state": "The app says I've reached the cap for generating new one-time card numbers. What is the limit?",
+        "answer": "disposable_card_limits"
+      },
+      {
+        "state": "What's the purchase limit for a card number that changes after each use?",
+        "answer": "disposable_card_limits"
+      },
+      {
+        "state": "I've used several single-use cards today. When will I be allowed to generate another?",
+        "answer": "disposable_card_limits"
+      },
+      {
+        "state": "Where do I edit my personal information after changing my legal address?",
+        "answer": "edit_personal_details"
+      },
+      {
+        "state": "Can you help me change the mobile number associated with my profile?",
+        "answer": "edit_personal_details"
+      },
+      {
+        "state": "I've moved house. Where can I update the address on my account?",
+        "answer": "edit_personal_details"
+      },
+      {
+        "state": "I need to replace the email address listed in my account settings.",
+        "answer": "edit_personal_details"
+      },
+      {
+        "state": "Is there a weekend surcharge for converting currencies in the app?",
+        "answer": "exchange_charge"
+      },
+      {
+        "state": "Before I exchange my pounds for francs, I want to know whether there's a conversion fee.",
+        "answer": "exchange_charge"
+      },
+      {
+        "state": "Will I pay a fee if I exchange euros for pounds in the app?",
+        "answer": "exchange_charge"
+      },
+      {
+        "state": "Why was I charged extra for changing my balance from yen to euros?",
+        "answer": "exchange_charge"
+      },
+      {
+        "state": "I'd like to check the pound-to-euro rate before converting my balance.",
+        "answer": "exchange_rate"
+      },
+      {
+        "state": "What rate would I get today if I converted euros into pounds?",
+        "answer": "exchange_rate"
+      },
+      {
+        "state": "Which exchange rate do you use when I change my dollar balance into Swiss francs?",
+        "answer": "exchange_rate"
+      },
+      {
+        "state": "Does the rate for exchanging currencies update during the day?",
+        "answer": "exchange_rate"
+      },
+      {
+        "state": "How do I convert the euros in my account to pounds in the app?",
+        "answer": "exchange_via_app"
+      },
+      {
+        "state": "Is there an in-app option to exchange the pounds I'm holding for euros?",
+        "answer": "exchange_via_app"
+      },
+      {
+        "state": "Which menu lets me change one currency balance into another?",
+        "answer": "exchange_via_app"
+      },
+      {
+        "state": "I'd rather convert my money myself in the app than wait until I spend it. How?",
+        "answer": "exchange_via_app"
+      },
+      {
+        "state": "Apart from the transactions I expected, my statement has another charge with an unfamiliar label.",
+        "answer": "extra_charge_on_statement"
+      },
+      {
+        "state": "The total on my statement includes a charge I wasn't expecting. Could you look into it?",
+        "answer": "extra_charge_on_statement"
+      },
+      {
+        "state": "My statement shows an unexplained charge separate from my usual transactions. What is it?",
+        "answer": "extra_charge_on_statement"
+      },
+      {
+        "state": "There's an additional line on my statement that I can't account for. Can you explain it?",
+        "answer": "extra_charge_on_statement"
+      },
+      {
+        "state": "My transfer ended with an error message and never went through.",
+        "answer": "failed_transfer"
+      },
+      {
+        "state": "Each time I submit this transfer, I get a failure message instead of a confirmation.",
+        "answer": "failed_transfer"
+      },
+      {
+        "state": "The app stopped processing my money transfer and reported an error. Why didn't it complete?",
+        "answer": "failed_transfer"
+      },
+      {
+        "state": "I submitted a transfer yesterday, but its status now reads 'failed.' Can I try again?",
+        "answer": "failed_transfer"
+      },
+      {
+        "state": "Which government-issued currencies can I hold in my account?",
+        "answer": "fiat_currency_support"
+      },
+      {
+        "state": "Before opening a balance, I need to know which ordinary currencies your service supports.",
+        "answer": "fiat_currency_support"
+      },
+      {
+        "state": "I'm looking for the list of national currencies available for balances.",
+        "answer": "fiat_currency_support"
+      },
+      {
+        "state": "Can I keep a balance in Polish złoty, or isn't that currency supported?",
+        "answer": "fiat_currency_support"
+      },
+      {
+        "state": "Is it possible to create a virtual card intended for just one transaction?",
+        "answer": "get_disposable_virtual_card"
+      },
+      {
+        "state": "How do I create a one-use virtual card for an online purchase?",
+        "answer": "get_disposable_virtual_card"
+      },
+      {
+        "state": "Where's the option to get a single-use virtual card for checkout?",
+        "answer": "get_disposable_virtual_card"
+      },
+      {
+        "state": "I don't want to reuse the same online card details. How can I get a disposable card?",
+        "answer": "get_disposable_virtual_card"
+      },
+      {
+        "state": "Does this account come with the option of a card I can carry in my wallet?",
+        "answer": "get_physical_card"
+      },
+      {
+        "state": "Are physical cards available, or is the service entirely digital?",
+        "answer": "get_physical_card"
+      },
+      {
+        "state": "I only have a digital card. Can I get a plastic one too?",
+        "answer": "get_physical_card"
+      },
+      {
+        "state": "Can customers get a plastic version of the card shown in the app?",
+        "answer": "get_physical_card"
+      },
+      {
+        "state": "How can I request an additional card while keeping my existing one?",
+        "answer": "getting_spare_card"
+      },
+      {
+        "state": "I'd feel better having a backup plastic card. Can you provide one?",
+        "answer": "getting_spare_card"
+      },
+      {
+        "state": "My current card works fine; I'd just like another to keep at home.",
+        "answer": "getting_spare_card"
+      },
+      {
+        "state": "Can I get a second physical card to keep as a backup?",
+        "answer": "getting_spare_card"
+      },
+      {
+        "state": "How can I get a virtual card for online shopping?",
+        "answer": "getting_virtual_card"
+      },
+      {
+        "state": "I don't need a plastic card, but I'd like a digital card in the app. How do I get one?",
+        "answer": "getting_virtual_card"
+      },
+      {
+        "state": "I'm looking for an online-only card I can use regularly. How do I set that up?",
+        "answer": "getting_virtual_card"
+      },
+      {
+        "state": "Can I have card details in the app without waiting for a physical card?",
+        "answer": "getting_virtual_card"
+      },
+      {
+        "state": "My wallet was stolen with my bank card inside. Please help me secure it.",
+        "answer": "lost_or_stolen_card"
+      },
+      {
+        "state": "I can't find my physical card anywhere. What should I do?",
+        "answer": "lost_or_stolen_card"
+      },
+      {
+        "state": "I've searched the house and my card is gone. What are my next steps?",
+        "answer": "lost_or_stolen_card"
+      },
+      {
+        "state": "Someone took my purse, and the card was in it. How do I report this?",
+        "answer": "lost_or_stolen_card"
+      },
+      {
+        "state": "Someone took my phone this morning. What should I do about the app?",
+        "answer": "lost_or_stolen_phone"
+      },
+      {
+        "state": "My phone was stolen, and I'm worried someone could open my banking app.",
+        "answer": "lost_or_stolen_phone"
+      },
+      {
+        "state": "I lost the mobile I use for this account. How can I protect my access?",
+        "answer": "lost_or_stolen_phone"
+      },
+      {
+        "state": "My mobile is missing. Can you help me sign out of the banking app on it?",
+        "answer": "lost_or_stolen_phone"
+      },
+      {
+        "state": "I'm at the card screen but can't see where to order the plastic card.",
+        "answer": "order_physical_card"
+      },
+      {
+        "state": "Which button in the app places an order for a plastic card?",
+        "answer": "order_physical_card"
+      },
+      {
+        "state": "I'm ready to order a physical card. Where do I submit the request?",
+        "answer": "order_physical_card"
+      },
+      {
+        "state": "Can you walk me through submitting a physical-card order?",
+        "answer": "order_physical_card"
+      },
+      {
+        "state": "I normally unlock the app with a passcode, but I don't know it anymore. Can I reset it?",
+        "answer": "passcode_forgotten"
+      },
+      {
+        "state": "What should I do if the six-digit code for accessing my account has slipped my mind?",
+        "answer": "passcode_forgotten"
+      },
+      {
+        "state": "I've forgotten my app login code, and I can't get past the sign-in screen.",
+        "answer": "passcode_forgotten"
+      },
+      {
+        "state": "I can't remember the passcode I use to open the app. How can I get back in?",
+        "answer": "passcode_forgotten"
+      },
+      {
+        "state": "The hotel took payment on my card, and I can see it awaiting completion rather than fully posted.",
+        "answer": "pending_card_payment"
+      },
+      {
+        "state": "A restaurant charge has been sitting as a pending card transaction since Friday. Is that normal?",
+        "answer": "pending_card_payment"
+      },
+      {
+        "state": "My card purchase went through at the till, but the app says the merchant hasn't completed it yet.",
+        "answer": "pending_card_payment"
+      },
+      {
+        "state": "I paid for groceries with my card yesterday, but the purchase is still marked pending. When will it settle?",
+        "answer": "pending_card_payment"
+      },
+      {
+        "state": "Why hasn't my cash machine withdrawal finished processing? It's been listed as pending all day.",
+        "answer": "pending_cash_withdrawal"
+      },
+      {
+        "state": "My ATM withdrawal is showing as an authorization rather than a completed transaction. When will it clear?",
+        "answer": "pending_cash_withdrawal"
+      },
+      {
+        "state": "The ATM gave me the cash, but that withdrawal still says pending in my account.",
+        "answer": "pending_cash_withdrawal"
+      },
+      {
+        "state": "I received the notes from the machine, but the cash withdrawal is still awaiting settlement in the app.",
+        "answer": "pending_cash_withdrawal"
+      },
+      {
+        "state": "How long should I wait for a pending balance reload to clear?",
+        "answer": "pending_top_up"
+      },
+      {
+        "state": "I added money using my debit card, but the top-up is still pending. When will it arrive?",
+        "answer": "pending_top_up"
+      },
+      {
+        "state": "I tried adding £25 from another card, and the top-up has been awaiting completion for hours.",
+        "answer": "pending_top_up"
+      },
+      {
+        "state": "The app shows my account funding request as pending. Will the money become usable today?",
+        "answer": "pending_top_up"
+      },
+      {
+        "state": "The transfer has been pending for several hours; I just want to know when it will finish.",
+        "answer": "pending_transfer"
+      },
+      {
+        "state": "Why is the money I'm sending to my sister still awaiting processing?",
+        "answer": "pending_transfer"
+      },
+      {
+        "state": "I sent money to my landlord, but the transfer is still pending. When will it be sent?",
+        "answer": "pending_transfer"
+      },
+      {
+        "state": "My payment to another account is queued rather than completed. Can you check its status?",
+        "answer": "pending_transfer"
+      },
+      {
+        "state": "The terminal says my PIN is locked. Can you help me unblock it?",
+        "answer": "pin_blocked"
+      },
+      {
+        "state": "I can't use my card PIN anymore after several failed entries. What do I need to do?",
+        "answer": "pin_blocked"
+      },
+      {
+        "state": "An ATM told me the PIN on my card has been blocked following too many tries.",
+        "answer": "pin_blocked"
+      },
+      {
+        "state": "I know the correct card PIN now, but it's been disabled because I mistyped it earlier.",
+        "answer": "pin_blocked"
+      },
+      {
+        "state": "Is there a way to share my payment details so people can send me money?",
+        "answer": "receiving_money"
+      },
+      {
+        "state": "How can a friend send money directly to me through the app?",
+        "answer": "receiving_money"
+      },
+      {
+        "state": "My roommate owes me for dinner. What's the easiest way for them to send it to my account?",
+        "answer": "receiving_money"
+      },
+      {
+        "state": "Can I receive money from another person using just my phone number?",
+        "answer": "receiving_money"
+      },
+      {
+        "state": "The airline processed a refund to my card, but my balance hasn't changed.",
+        "answer": "refund_not_showing_up"
+      },
+      {
+        "state": "The retailer says they issued my refund last week, but it still isn't showing in my account.",
+        "answer": "refund_not_showing_up"
+      },
+      {
+        "state": "My returned shoes were refunded to my card according to the seller, but the money hasn't arrived.",
+        "answer": "refund_not_showing_up"
+      },
+      {
+        "state": "I received a refund receipt from the store, but there's no incoming amount on my statement.",
+        "answer": "refund_not_showing_up"
+      },
+      {
+        "state": "Where do I start if I want to get a card purchase refunded?",
+        "answer": "request_refund"
+      },
+      {
+        "state": "Can you help me ask for a refund on a purchase that the merchant won't put right?",
+        "answer": "request_refund"
+      },
+      {
+        "state": "The headphones I bought arrived broken. How do I request a refund for the purchase?",
+        "answer": "request_refund"
+      },
+      {
+        "state": "The seller cancelled my order but hasn't offered my money back. How do I request a refund?",
+        "answer": "request_refund"
+      },
+      {
+        "state": "The store took my card payment, but the app shows it was undone and my balance went back up.",
+        "answer": "reverted_card_payment"
+      },
+      {
+        "state": "A purchase briefly reduced my balance, then the card charge reversed itself. What happened?",
+        "answer": "reverted_card_payment"
+      },
+      {
+        "state": "My card payment went through at first, but now the transaction says 'reverted' and the money is back. Why?",
+        "answer": "reverted_card_payment"
+      },
+      {
+        "state": "The amount for my card purchase was returned automatically after the payment appeared to succeed.",
+        "answer": "reverted_card_payment"
+      },
+      {
+        "state": "Are prepaid cards accepted for adding money, and does the card's currency matter?",
+        "answer": "supported_cards_and_currencies"
+      },
+      {
+        "state": "What combinations of card type and currency are allowed when funding my account?",
+        "answer": "supported_cards_and_currencies"
+      },
+      {
+        "state": "Before I add funds, I'd like to know which card networks and billing currencies you support.",
+        "answer": "supported_cards_and_currencies"
+      },
+      {
+        "state": "Can I fund my account with a credit card billed in Canadian dollars, or are there restrictions on cards and currencies?",
+        "answer": "supported_cards_and_currencies"
+      },
+      {
+        "state": "I don't need the account anymore. Where do I request its closure?",
+        "answer": "terminate_account"
+      },
+      {
+        "state": "Please tell me the steps to shut down my account.",
+        "answer": "terminate_account"
+      },
+      {
+        "state": "Can you close my account and end my banking service?",
+        "answer": "terminate_account"
+      },
+      {
+        "state": "I no longer want to use this account. How do I close it permanently?",
+        "answer": "terminate_account"
+      },
+      {
+        "state": "My bank transfer was meant to add £100 to my account, but less arrived because of a charge. Can you explain it?",
+        "answer": "top_up_by_bank_transfer_charge"
+      },
+      {
+        "state": "I see a fee for the transfer I used to load my account. What is it for?",
+        "answer": "top_up_by_bank_transfer_charge"
+      },
+      {
+        "state": "Do you charge anything when I fund my account with a transfer from another bank?",
+        "answer": "top_up_by_bank_transfer_charge"
+      },
+      {
+        "state": "Is there a cost for adding funds through a bank-to-bank transfer?",
+        "answer": "top_up_by_bank_transfer_charge"
+      },
+      {
+        "state": "Will funding my balance by card cost me anything?",
+        "answer": "top_up_by_card_charge"
+      },
+      {
+        "state": "Why was I charged extra for adding money with my debit card?",
+        "answer": "top_up_by_card_charge"
+      },
+      {
+        "state": "Can you explain the fee on my debit-card balance reload?",
+        "answer": "top_up_by_card_charge"
+      },
+      {
+        "state": "I put £50 into my account using a card, and there's a separate charge for it. What's that?",
+        "answer": "top_up_by_card_charge"
+      },
+      {
+        "state": "Where would I go to put physical cash into my account?",
+        "answer": "top_up_by_cash_or_cheque"
+      },
+      {
+        "state": "Do you accept cheques as a way to add funds?",
+        "answer": "top_up_by_cash_or_cheque"
+      },
+      {
+        "state": "I have a paper cheque made out to me; can I use it to load this account?",
+        "answer": "top_up_by_cash_or_cheque"
+      },
+      {
+        "state": "Can I add money to my account by paying in cash?",
+        "answer": "top_up_by_cash_or_cheque"
+      },
+      {
+        "state": "Every time I try to add funds, I get an error instead of a completed payment.",
+        "answer": "top_up_failed"
+      },
+      {
+        "state": "The app says my attempt to fund the account was unsuccessful. Can you help?",
+        "answer": "top_up_failed"
+      },
+      {
+        "state": "My balance reload didn't go through, even though I submitted it. Why not?",
+        "answer": "top_up_failed"
+      },
+      {
+        "state": "Why couldn't my account be topped up when I tried just now?",
+        "answer": "top_up_failed"
+      },
+      {
+        "state": "How many times am I allowed to add money to my account each day?",
+        "answer": "top_up_limits"
+      },
+      {
+        "state": "I've reached a cap while adding funds. When does my allowance reset?",
+        "answer": "top_up_limits"
+      },
+      {
+        "state": "Is there a daily cap on how much I can load into this account?",
+        "answer": "top_up_limits"
+      },
+      {
+        "state": "What's the maximum amount I can add to my balance in one go?",
+        "answer": "top_up_limits"
+      },
+      {
+        "state": "The £80 I loaded showed up briefly before disappearing as a reversal. What happened?",
+        "answer": "top_up_reverted"
+      },
+      {
+        "state": "My account was credited after I added funds, then that credit was reversed.",
+        "answer": "top_up_reverted"
+      },
+      {
+        "state": "Why did a completed addition of funds get undone?",
+        "answer": "top_up_reverted"
+      },
+      {
+        "state": "I successfully loaded money this morning, but the transaction now says it was reversed.",
+        "answer": "top_up_reverted"
+      },
+      {
+        "state": "I'd like to use my credit card to put money into this account. What are the steps?",
+        "answer": "topping_up_by_card"
+      },
+      {
+        "state": "What card details do I need to enter to add funds?",
+        "answer": "topping_up_by_card"
+      },
+      {
+        "state": "Where in the app can I fund my balance with a card?",
+        "answer": "topping_up_by_card"
+      },
+      {
+        "state": "I don't want to send a bank transfer; can I add money with my card instead?",
+        "answer": "topping_up_by_card"
+      },
+      {
+        "state": "I bought one train ticket, but there are two identical charges. Can you look into it?",
+        "answer": "transaction_charged_twice"
+      },
+      {
+        "state": "My supermarket purchase appears twice on my statement, although I only paid once.",
+        "answer": "transaction_charged_twice"
+      },
+      {
+        "state": "The shop processed a single sale, yet my balance was debited twice for it.",
+        "answer": "transaction_charged_twice"
+      },
+      {
+        "state": "One taxi ride is showing as two completed payments on my account.",
+        "answer": "transaction_charged_twice"
+      },
+      {
+        "state": "How much will it cost to transfer money from my account to someone else's?",
+        "answer": "transfer_fee_charged"
+      },
+      {
+        "state": "Why did you deduct a service charge when I transferred money out?",
+        "answer": "transfer_fee_charged"
+      },
+      {
+        "state": "Is there a charge for sending a bank transfer out of my account?",
+        "answer": "transfer_fee_charged"
+      },
+      {
+        "state": "I noticed a fee after sending funds to my sister's account. What's it for?",
+        "answer": "transfer_fee_charged"
+      },
+      {
+        "state": "Where do I find the routing and account numbers for an incoming transfer?",
+        "answer": "transfer_into_account"
+      },
+      {
+        "state": "Can someone at another bank transfer money directly into my account?",
+        "answer": "transfer_into_account"
+      },
+      {
+        "state": "How can I move money from my other bank into this account by bank transfer?",
+        "answer": "transfer_into_account"
+      },
+      {
+        "state": "I want to fund this account from my savings account at a different bank. How do I send the transfer?",
+        "answer": "transfer_into_account"
+      },
+      {
+        "state": "I transferred money to a friend, and they've checked their account twice with no sign of it.",
+        "answer": "transfer_not_received_by_recipient"
+      },
+      {
+        "state": "The payment shows as completed on my end, yet the person I paid still can't see it.",
+        "answer": "transfer_not_received_by_recipient"
+      },
+      {
+        "state": "My landlord says the rent I sent on Monday hasn't reached her bank account.",
+        "answer": "transfer_not_received_by_recipient"
+      },
+      {
+        "state": "The money has left my account, but the recipient says it never came through.",
+        "answer": "transfer_not_received_by_recipient"
+      },
+      {
+        "state": "I'm planning to send money overseas tomorrow. About when would it arrive?",
+        "answer": "transfer_timing"
+      },
+      {
+        "state": "Does a transfer started on a weekend take longer to go through?",
+        "answer": "transfer_timing"
+      },
+      {
+        "state": "Before I pay my contractor, I'd like to know the usual delivery time for a bank transfer.",
+        "answer": "transfer_timing"
+      },
+      {
+        "state": "Will a transfer I make this afternoon arrive today, or should I expect it later?",
+        "answer": "transfer_timing"
+      },
+      {
+        "state": "I'm stuck at the document upload: it keeps marking my identity check as failed.",
+        "answer": "unable_to_verify_identity"
+      },
+      {
+        "state": "The selfie step fails no matter how many times I retry, so I can't complete verification.",
+        "answer": "unable_to_verify_identity"
+      },
+      {
+        "state": "I've followed the instructions for confirming my identity, and it still tells me the attempt was unsuccessful.",
+        "answer": "unable_to_verify_identity"
+      },
+      {
+        "state": "My ID is valid, but the app says it can't confirm who I am. What should I do?",
+        "answer": "unable_to_verify_identity"
+      },
+      {
+        "state": "Where in the app can I submit my ID to confirm who I am?",
+        "answer": "verify_my_identity"
+      },
+      {
+        "state": "Which documents should I provide to confirm my identity?",
+        "answer": "verify_my_identity"
+      },
+      {
+        "state": "I've just signed up. How do I prove that this account belongs to me?",
+        "answer": "verify_my_identity"
+      },
+      {
+        "state": "I'd like to complete the account's identity check. What steps do I need to follow?",
+        "answer": "verify_my_identity"
+      },
+      {
+        "state": "Will my payslips be enough to demonstrate the origin of these deposits?",
+        "answer": "verify_source_of_funds"
+      },
+      {
+        "state": "The funds came from selling my car. How can I document that for your review?",
+        "answer": "verify_source_of_funds"
+      },
+      {
+        "state": "My account asks for proof of the origin of a large sum. Would bank statements help?",
+        "answer": "verify_source_of_funds"
+      },
+      {
+        "state": "I'm being asked for evidence of how I earned the money I transferred in. What should I send?",
+        "answer": "verify_source_of_funds"
+      },
+      {
+        "state": "There's a request to confirm my recent add-money transaction. Where should I complete it?",
+        "answer": "verify_top_up"
+      },
+      {
+        "state": "How can I prove that the card used to fund my account is mine?",
+        "answer": "verify_top_up"
+      },
+      {
+        "state": "I added money with my debit card and now need to authenticate that top-up. What are the steps?",
+        "answer": "verify_top_up"
+      },
+      {
+        "state": "Where do I enter the confirmation code for my card top-up?",
+        "answer": "verify_top_up"
+      },
+      {
+        "state": "My physical card works, but I can't make a purchase using the separate digital card.",
+        "answer": "virtual_card_not_working"
+      },
+      {
+        "state": "The online store won't accept my virtual card, although I've entered its details correctly.",
+        "answer": "virtual_card_not_working"
+      },
+      {
+        "state": "My digital card keeps getting rejected when I use its details to pay online.",
+        "answer": "virtual_card_not_working"
+      },
+      {
+        "state": "I generated a virtual card for online shopping, and it isn't working at checkout.",
+        "answer": "virtual_card_not_working"
+      },
+      {
+        "state": "Are your cards issued on the Mastercard network, the Visa network, or both?",
+        "answer": "visa_or_mastercard"
+      },
+      {
+        "state": "Does the card run through Visa, or is it a Mastercard?",
+        "answer": "visa_or_mastercard"
+      },
+      {
+        "state": "Which payment network does your physical card use?",
+        "answer": "visa_or_mastercard"
+      },
+      {
+        "state": "My hotel accepts Visa but not Mastercard. Which type of card would I get from you?",
+        "answer": "visa_or_mastercard"
+      },
+      {
+        "state": "I'm not sure why a selfie is required for this account. Can you explain?",
+        "answer": "why_verify_identity"
+      },
+      {
+        "state": "Why can't I use the account without going through an identity check?",
+        "answer": "why_verify_identity"
+      },
+      {
+        "state": "Why do you need a photo of my ID just to open an account?",
+        "answer": "why_verify_identity"
+      },
+      {
+        "state": "What's the reason for asking me to prove who I am?",
+        "answer": "why_verify_identity"
+      },
+      {
+        "state": "I asked for €200 in cash and the ATM dispensed €150. How do I report the missing notes?",
+        "answer": "wrong_amount_of_cash_received"
+      },
+      {
+        "state": "The machine said my withdrawal was for $60, yet I counted only $40 coming out.",
+        "answer": "wrong_amount_of_cash_received"
+      },
+      {
+        "state": "I requested £100 from the ATM, but it only handed me £80 in notes.",
+        "answer": "wrong_amount_of_cash_received"
+      },
+      {
+        "state": "My withdrawal was for $100, but the machine gave me $120 in bills. What should I do?",
+        "answer": "wrong_amount_of_cash_received"
+      },
+      {
+        "state": "Why was my foreign-currency cash withdrawal converted at a different rate than I expected?",
+        "answer": "wrong_exchange_rate_for_cash_withdrawal"
+      },
+      {
+        "state": "My dollar withdrawal overseas was converted to pounds at what looks like the wrong rate.",
+        "answer": "wrong_exchange_rate_for_cash_withdrawal"
+      },
+      {
+        "state": "I withdrew euros abroad, and the conversion rate on that ATM withdrawal looks wrong.",
+        "answer": "wrong_exchange_rate_for_cash_withdrawal"
+      },
+      {
+        "state": "I got all the cash I requested, but the exchange calculation for the withdrawal doesn't add up.",
+        "answer": "wrong_exchange_rate_for_cash_withdrawal"
+      }
+    ],
+    "selection": [
+      {
+        "state": "The app says my replacement card is inactive. Where do I switch it on?",
+        "answer": "activate_my_card"
+      },
+      {
+        "state": "Can you help me activate the physical card I just received?",
+        "answer": "activate_my_card"
+      },
+      {
+        "state": "What’s the minimum age to use your banking service?",
+        "answer": "age_limit"
+      },
+      {
+        "state": "Is there an upper age limit for opening an account?",
+        "answer": "age_limit"
+      },
+      {
+        "state": "How do I set up my card for Apple Pay?",
+        "answer": "apple_pay_or_google_pay"
+      },
+      {
+        "state": "Will I be able to add my virtual card to Google Pay?",
+        "answer": "apple_pay_or_google_pay"
+      },
+      {
+        "state": "Will your card work at ATMs operated by other banks?",
+        "answer": "atm_support"
+      },
+      {
+        "state": "Are there partner ATMs where I can take out money?",
+        "answer": "atm_support"
+      },
+      {
+        "state": "How do I set up recurring top-ups without making each one manually?",
+        "answer": "automatic_top_up"
+      },
+      {
+        "state": "Can my account add money automatically whenever the balance falls below £50?",
+        "answer": "automatic_top_up"
+      },
+      {
+        "state": "My salary arrived by bank transfer and is listed in the app, but the balance hasn’t refreshed.",
+        "answer": "balance_not_updated_after_bank_transfer"
+      },
+      {
+        "state": "A bank-to-bank payment has posted to my account. Why hasn’t the balance updated?",
+        "answer": "balance_not_updated_after_bank_transfer"
+      },
+      {
+        "state": "After my cheque deposit was processed, the app continued to show the same balance.",
+        "answer": "balance_not_updated_after_cheque_or_cash_deposit"
+      },
+      {
+        "state": "My cash deposit has posted to the account, but the total displayed at the top hasn’t changed.",
+        "answer": "balance_not_updated_after_cheque_or_cash_deposit"
+      },
+      {
+        "state": "Why won’t it let me send money to this payee? The message says they’re not allowed.",
+        "answer": "beneficiary_not_allowed"
+      },
+      {
+        "state": "Why can’t this account number be added to my list of permitted transfer recipients?",
+        "answer": "beneficiary_not_allowed"
+      },
+      {
+        "state": "How can I cancel the money transfer I scheduled for tomorrow?",
+        "answer": "cancel_transfer"
+      },
+      {
+        "state": "I sent a bank transfer to the wrong person. Can you stop it?",
+        "answer": "cancel_transfer"
+      },
+      {
+        "state": "My card’s valid-through date is almost here. How do I renew it?",
+        "answer": "card_about_to_expire"
+      },
+      {
+        "state": "My card expires at the end of this month. Can I keep using it until then?",
+        "answer": "card_about_to_expire"
+      },
+      {
+        "state": "Will restaurants that accept standard debit cards take this one?",
+        "answer": "card_acceptance"
+      },
+      {
+        "state": "Is this card accepted by merchants that only take credit cards?",
+        "answer": "card_acceptance"
+      },
+      {
+        "state": "My replacement card hasn't shown up at the address on my account. Could you look into it?",
+        "answer": "card_arrival"
+      },
+      {
+        "state": "I'm waiting for the card I ordered, and the post has already come today. Has it been sent?",
+        "answer": "card_arrival"
+      },
+      {
+        "state": "What's the usual delivery window for a new card sent to my address?",
+        "answer": "card_delivery_estimate"
+      },
+      {
+        "state": "If I order a physical card today, roughly how many days will delivery take?",
+        "answer": "card_delivery_estimate"
+      },
+      {
+        "state": "The app won't let me associate my physical card with my profile. What should I do?",
+        "answer": "card_linking"
+      },
+      {
+        "state": "I've got the card number, but I can't find where to add the card to my account.",
+        "answer": "card_linking"
+      },
+      {
+        "state": "Payment terminals can't read my card's chip at all, even after I clean it.",
+        "answer": "card_not_working"
+      },
+      {
+        "state": "My card doesn't function when I insert it into any reader, although it looks undamaged.",
+        "answer": "card_not_working"
+      },
+      {
+        "state": "Your app shows a fee on top of my restaurant bill after I paid by card. Can you explain it?",
+        "answer": "card_payment_fee_charged"
+      },
+      {
+        "state": "I paid for groceries with my card and see a separate fee for that payment. Why was it added?",
+        "answer": "card_payment_fee_charged"
+      },
+      {
+        "state": "There's a charge from an unfamiliar online merchant on my card, and I didn't order anything.",
+        "answer": "card_payment_not_recognised"
+      },
+      {
+        "state": "Why is there a card purchase at a petrol station on my account when I haven't bought fuel?",
+        "answer": "card_payment_not_recognised"
+      },
+      {
+        "state": "My card purchase in yen was converted to euros at a rate much worse than the one shown in the app.",
+        "answer": "card_payment_wrong_exchange_rate"
+      },
+      {
+        "state": "My restaurant bill was in kroner, but the conversion on the card payment seems to use the wrong rate.",
+        "answer": "card_payment_wrong_exchange_rate"
+      },
+      {
+        "state": "After I entered my PIN, the machine retained my card and ended the session.",
+        "answer": "card_swallowed"
+      },
+      {
+        "state": "The ATM displayed an error and never returned my card.",
+        "answer": "card_swallowed"
+      },
+      {
+        "state": "Why does this morning's cash-machine withdrawal have a service fee attached?",
+        "answer": "cash_withdrawal_charge"
+      },
+      {
+        "state": "I took out $40 and received $40, but my account also shows a withdrawal fee.",
+        "answer": "cash_withdrawal_charge"
+      },
+      {
+        "state": "I don't recognize the cash-machine transaction posted at 2 a.m. Can you investigate?",
+        "answer": "cash_withdrawal_not_recognised"
+      },
+      {
+        "state": "My account lists a cash withdrawal I never made.",
+        "answer": "cash_withdrawal_not_recognised"
+      },
+      {
+        "state": "Can I change my card PIN at an ATM rather than in the app?",
+        "answer": "change_pin"
+      },
+      {
+        "state": "How do I choose a new PIN for my card now that I have the old one?",
+        "answer": "change_pin"
+      },
+      {
+        "state": "My card details were exposed in a retailer's data breach, though I haven't noticed any suspicious payments. What should I do?",
+        "answer": "compromised_card"
+      },
+      {
+        "state": "Someone photographed both sides of my card. Should I replace it before they use the details?",
+        "answer": "compromised_card"
+      },
+      {
+        "state": "Tapping my card at terminals never works, although inserting it and entering my PIN does. Can you help?",
+        "answer": "contactless_not_working"
+      },
+      {
+        "state": "Why has the tap-to-pay feature on my card stopped responding?",
+        "answer": "contactless_not_working"
+      },
+      {
+        "state": "I'm moving to Kenya. Is your service available to people living there?",
+        "answer": "country_support"
+      },
+      {
+        "state": "Can someone with a permanent address in South Africa become a customer?",
+        "answer": "country_support"
+      },
+      {
+        "state": "I inserted my card at the checkout and entered the correct PIN, but the purchase was declined.",
+        "answer": "declined_card_payment"
+      },
+      {
+        "state": "My online purchase was refused when I entered my card details. Can you tell me what happened?",
+        "answer": "declined_card_payment"
+      },
+      {
+        "state": "I've tried two ATMs, and both reject my cash withdrawal request before giving me any notes.",
+        "answer": "declined_cash_withdrawal"
+      },
+      {
+        "state": "My attempt to withdraw cash was refused by the machine. Can you check what's blocking it?",
+        "answer": "declined_cash_withdrawal"
+      },
+      {
+        "state": "My bank transfer was rejected at the approval step, so the money never left my account.",
+        "answer": "declined_transfer"
+      },
+      {
+        "state": "The transfer screen shows 'declined' each time I try to send funds. What is stopping it?",
+        "answer": "declined_transfer"
+      },
+      {
+        "state": "A company collected a direct debit from my account, but I never authorised one with them. Can you investigate?",
+        "answer": "direct_debit_payment_not_recognised"
+      },
+      {
+        "state": "I can see a direct debit collection that isn't mine. How do I report this payment?",
+        "answer": "direct_debit_payment_not_recognised"
+      },
+      {
+        "state": "How many single-use virtual cards can I create in one day?",
+        "answer": "disposable_card_limits"
+      },
+      {
+        "state": "Can I make as many disposable virtual cards as I want, or is there a monthly allowance?",
+        "answer": "disposable_card_limits"
+      },
+      {
+        "state": "There's a typo in my registered name. How can I fix it?",
+        "answer": "edit_personal_details"
+      },
+      {
+        "state": "My surname has changed since I signed up. How do I correct my profile?",
+        "answer": "edit_personal_details"
+      },
+      {
+        "state": "Do you add a fee when I swap one currency balance for another?",
+        "answer": "exchange_charge"
+      },
+      {
+        "state": "I converted money into dollars and noticed a separate currency-conversion charge. What is that for?",
+        "answer": "exchange_charge"
+      },
+      {
+        "state": "Where can I see the current conversion rate between yen and euros?",
+        "answer": "exchange_rate"
+      },
+      {
+        "state": "How many US dollars would one British pound buy through your currency exchange right now?",
+        "answer": "exchange_rate"
+      },
+      {
+        "state": "Can I swap money between my currency balances without leaving the app?",
+        "answer": "exchange_via_app"
+      },
+      {
+        "state": "I have dollars in my account and want them in yen. Where do I make that exchange on my phone?",
+        "answer": "exchange_via_app"
+      },
+      {
+        "state": "What does this additional charge on my statement refer to? I don't recognize the description.",
+        "answer": "extra_charge_on_statement"
+      },
+      {
+        "state": "I was reviewing my monthly statement and found an extra amount listed. Why is it there?",
+        "answer": "extra_charge_on_statement"
+      },
+      {
+        "state": "I tried to send a bank transfer, but the app says it failed. What should I do?",
+        "answer": "failed_transfer"
+      },
+      {
+        "state": "I attempted to send money to another account, but the transfer failed before completion.",
+        "answer": "failed_transfer"
+      },
+      {
+        "state": "Is the Swiss franc among the currencies I can use with my account?",
+        "answer": "fiat_currency_support"
+      },
+      {
+        "state": "Do you support holding Canadian dollars as an account balance?",
+        "answer": "fiat_currency_support"
+      },
+      {
+        "state": "I'd like a temporary card number that changes after I use it. Where can I get one?",
+        "answer": "get_disposable_virtual_card"
+      },
+      {
+        "state": "Can I generate a disposable digital card in the app?",
+        "answer": "get_disposable_virtual_card"
+      },
+      {
+        "state": "I'd prefer a tangible card to use in shops. Can I get one with my account?",
+        "answer": "get_physical_card"
+      },
+      {
+        "state": "I need an actual card rather than just the one on my phone. Is that available?",
+        "answer": "get_physical_card"
+      },
+      {
+        "state": "Is it possible to have a spare card in addition to the one I use daily?",
+        "answer": "getting_spare_card"
+      },
+      {
+        "state": "I already have my card, but I'd like an extra one for emergencies. How do I get it?",
+        "answer": "getting_spare_card"
+      },
+      {
+        "state": "Is there a way to get a digital card number for my account?",
+        "answer": "getting_virtual_card"
+      },
+      {
+        "state": "Where can I create a virtual card that I can keep using for purchases?",
+        "answer": "getting_virtual_card"
+      },
+      {
+        "state": "My physical card has gone missing while I'm travelling. Can you help?",
+        "answer": "lost_or_stolen_card"
+      },
+      {
+        "state": "I left my card somewhere on the train and haven't been able to recover it.",
+        "answer": "lost_or_stolen_card"
+      },
+      {
+        "state": "The phone linked to my account has been stolen; I still have my card.",
+        "answer": "lost_or_stolen_phone"
+      },
+      {
+        "state": "I can't find my handset, which is where I'm signed in to banking.",
+        "answer": "lost_or_stolen_phone"
+      },
+      {
+        "state": "I want to have a new physical card sent to me. How do I place the order?",
+        "answer": "order_physical_card"
+      },
+      {
+        "state": "I've decided to order my first physical card. What steps do I follow?",
+        "answer": "order_physical_card"
+      },
+      {
+        "state": "My phone still has the app installed, but I've forgotten the code it asks for when I open it.",
+        "answer": "passcode_forgotten"
+      },
+      {
+        "state": "I can't sign in because I no longer remember my account passcode. What's the recovery process?",
+        "answer": "passcode_forgotten"
+      },
+      {
+        "state": "How long can a card payment remain on hold before the final amount posts?",
+        "answer": "pending_card_payment"
+      },
+      {
+        "state": "The shop accepted my card, yet the payment hasn't moved beyond processing in the app.",
+        "answer": "pending_card_payment"
+      },
+      {
+        "state": "I took out £40 at an ATM yesterday, and the transaction hasn't posted yet.",
+        "answer": "pending_cash_withdrawal"
+      },
+      {
+        "state": "How long does it take for a pending ATM withdrawal to become final on my statement?",
+        "answer": "pending_cash_withdrawal"
+      },
+      {
+        "state": "The funds I loaded onto my account are stuck on 'processing' instead of being available.",
+        "answer": "pending_top_up"
+      },
+      {
+        "state": "My card was charged for an account top-up this morning, but the app hasn't completed the load.",
+        "answer": "pending_top_up"
+      },
+      {
+        "state": "The bank transfer I initiated this morning hasn't moved past 'processing' in the app.",
+        "answer": "pending_transfer"
+      },
+      {
+        "state": "I submitted a transfer yesterday, and it still says pending instead of completed.",
+        "answer": "pending_transfer"
+      },
+      {
+        "state": "My card's PIN stopped working after three incorrect attempts at the ATM.",
+        "answer": "pin_blocked"
+      },
+      {
+        "state": "I entered the wrong card PIN too many times, and now it says the PIN is blocked. How do I unlock it?",
+        "answer": "pin_blocked"
+      },
+      {
+        "state": "What information should I give someone who wants to pay me?",
+        "answer": "receiving_money"
+      },
+      {
+        "state": "I'd like a client to pay me into this account. What details do they need from me?",
+        "answer": "receiving_money"
+      },
+      {
+        "state": "How long should a merchant refund take to appear? They say they sent it three days ago.",
+        "answer": "refund_not_showing_up"
+      },
+      {
+        "state": "I got confirmation that the shop refunded my purchase, yet I can't see the credit anywhere.",
+        "answer": "refund_not_showing_up"
+      },
+      {
+        "state": "I paid for a service that wasn't provided and would like to seek a refund. What are my options?",
+        "answer": "request_refund"
+      },
+      {
+        "state": "I want my money back for an order I paid for with my card. How can I start that process?",
+        "answer": "request_refund"
+      },
+      {
+        "state": "Why did yesterday's card transaction switch from completed to reversed without me requesting a refund?",
+        "answer": "reverted_card_payment"
+      },
+      {
+        "state": "I paid at a café, but the app later changed that card payment to 'reverted'.",
+        "answer": "reverted_card_payment"
+      },
+      {
+        "state": "Do you have a list of eligible payment cards and their accepted currencies?",
+        "answer": "supported_cards_and_currencies"
+      },
+      {
+        "state": "Which types of cards can I use to add funds, and which currencies can those cards be in?",
+        "answer": "supported_cards_and_currencies"
+      },
+      {
+        "state": "How can I cancel my account altogether, rather than just freeze my card?",
+        "answer": "terminate_account"
+      },
+      {
+        "state": "I'm switching banks and would like to permanently close this account.",
+        "answer": "terminate_account"
+      },
+      {
+        "state": "I added money to my balance by bank transfer, but a fee was deducted. Why?",
+        "answer": "top_up_by_bank_transfer_charge"
+      },
+      {
+        "state": "Before I send money from my other bank to increase this balance, will you take a fee?",
+        "answer": "top_up_by_bank_transfer_charge"
+      },
+      {
+        "state": "Is there a fee if I use a credit card to load my account?",
+        "answer": "top_up_by_card_charge"
+      },
+      {
+        "state": "The card I used to add funds was billed more than the amount I loaded. Why?",
+        "answer": "top_up_by_card_charge"
+      },
+      {
+        "state": "What's the process for depositing a cheque into this account?",
+        "answer": "top_up_by_cash_or_cheque"
+      },
+      {
+        "state": "I'd rather hand over banknotes than use a card. Is there a way to fund my balance?",
+        "answer": "top_up_by_cash_or_cheque"
+      },
+      {
+        "state": "I attempted to load £30 onto my balance, but it was rejected right away.",
+        "answer": "top_up_failed"
+      },
+      {
+        "state": "I tried to add money with my debit card, but the attempt failed. What should I do?",
+        "answer": "top_up_failed"
+      },
+      {
+        "state": "Can I add £5,000 at once, or would that exceed the funding limit?",
+        "answer": "top_up_limits"
+      },
+      {
+        "state": "Is there a minimum amount for a balance reload?",
+        "answer": "top_up_limits"
+      },
+      {
+        "state": "My balance went up after I funded the account and then dropped by the same amount. Can you check the reversal?",
+        "answer": "top_up_reverted"
+      },
+      {
+        "state": "Yesterday's balance reload appeared, but today the money has been taken back. Why?",
+        "answer": "top_up_reverted"
+      },
+      {
+        "state": "Can I load my balance from another bank's debit card?",
+        "answer": "topping_up_by_card"
+      },
+      {
+        "state": "How do I add money to my account using a debit card?",
+        "answer": "topping_up_by_card"
+      },
+      {
+        "state": "I have duplicate charges for one online order. How do I get the extra one fixed?",
+        "answer": "transaction_charged_twice"
+      },
+      {
+        "state": "Why has the same restaurant bill been taken from my account two times?",
+        "answer": "transaction_charged_twice"
+      },
+      {
+        "state": "I sent money to another person's bank account and was charged a transfer fee. Why?",
+        "answer": "transfer_fee_charged"
+      },
+      {
+        "state": "The payment I made to my landlord included an extra bank-transfer fee. Can you explain it?",
+        "answer": "transfer_fee_charged"
+      },
+      {
+        "state": "What information does my friend need to make a bank transfer into my account?",
+        "answer": "transfer_into_account"
+      },
+      {
+        "state": "Which account details should I give my employer to send a bank transfer here?",
+        "answer": "transfer_into_account"
+      },
+      {
+        "state": "Can you trace the bank payment I sent? The receiving account still doesn't show it.",
+        "answer": "transfer_not_received_by_recipient"
+      },
+      {
+        "state": "I sent my brother £80 yesterday, but he says nothing has arrived in his account. Can you check where it went?",
+        "answer": "transfer_not_received_by_recipient"
+      },
+      {
+        "state": "How long do transfers to another bank usually take?",
+        "answer": "transfer_timing"
+      },
+      {
+        "state": "If I send a bank transfer tonight, when should it reach the other person?",
+        "answer": "transfer_timing"
+      },
+      {
+        "state": "I keep submitting my passport photo, but the app rejects it every time. How can I finish the check?",
+        "answer": "unable_to_verify_identity"
+      },
+      {
+        "state": "The camera won't accept a picture of my driving licence during the identity check.",
+        "answer": "unable_to_verify_identity"
+      },
+      {
+        "state": "How do I start the identity check for my new account?",
+        "answer": "verify_my_identity"
+      },
+      {
+        "state": "Can you walk me through the process of submitting my ID and selfie?",
+        "answer": "verify_my_identity"
+      },
+      {
+        "state": "Can I use an inheritance letter to explain where these funds came from?",
+        "answer": "verify_source_of_funds"
+      },
+      {
+        "state": "You've asked me to show where the money in my account came from. What documents can I provide?",
+        "answer": "verify_source_of_funds"
+      },
+      {
+        "state": "The app asks me to confirm the bank card I used to add money. How do I do that?",
+        "answer": "verify_top_up"
+      },
+      {
+        "state": "My card deposit needs confirmation before I can finish it. What do I need to provide?",
+        "answer": "verify_top_up"
+      },
+      {
+        "state": "Why does every website decline payments made with my in-app card?",
+        "answer": "virtual_card_not_working"
+      },
+      {
+        "state": "I tried buying a train ticket with the card shown in the app, but the payment wouldn't go through.",
+        "answer": "virtual_card_not_working"
+      },
+      {
+        "state": "Before I order, can you tell me whether the card has a Visa or Mastercard logo?",
+        "answer": "visa_or_mastercard"
+      },
+      {
+        "state": "Will the card you issue me be a Visa or a Mastercard?",
+        "answer": "visa_or_mastercard"
+      },
+      {
+        "state": "Why does the app ask for personal identification before I can continue?",
+        "answer": "why_verify_identity"
+      },
+      {
+        "state": "What is the purpose of checking my identity when I sign up?",
+        "answer": "why_verify_identity"
+      },
+      {
+        "state": "The ATM gave me three £20 notes even though I selected £80.",
+        "answer": "wrong_amount_of_cash_received"
+      },
+      {
+        "state": "I took out cash and counted it right away; the amount dispensed was less than I requested.",
+        "answer": "wrong_amount_of_cash_received"
+      },
+      {
+        "state": "The ATM dispensed the right number of pesos, but the rate used to convert the withdrawal seems incorrect.",
+        "answer": "wrong_exchange_rate_for_cash_withdrawal"
+      },
+      {
+        "state": "Can you check the currency rate applied when I took out cash in Japan?",
+        "answer": "wrong_exchange_rate_for_cash_withdrawal"
+      }
+    ]
+  }
+}
