@@ -66,7 +66,6 @@ class OutputValidator:
 
     def __init__(self, question: Mapping[str, Any]):
         schema = build_output_schema(question)
-        Draft202012Validator.check_schema(schema)
         self._validator = Draft202012Validator(schema, registry=Registry())
 
     def validate(self, output: Any) -> dict[str, Any]:
