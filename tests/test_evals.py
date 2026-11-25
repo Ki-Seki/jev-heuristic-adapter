@@ -394,14 +394,14 @@ def test_report_is_readable_on_github_and_preserves_unknown_costs(tmp_path, accu
         },
     )
     results.report(output)
-    markdown = (output / "README.md").read_text()
+    markdown = (output / "README.md").read_text(encoding="utf-8")
     assert markdown.startswith("# Heuristic adapter evaluation")
     assert "Run complete: False" in markdown
     assert "| Method | Model | Dataset |" in markdown
     assert f"| compile | {MODEL} | toy | 2 |" in markdown
     assert ("| — | — |" if accuracy is None else "| 90.00% | 90.00% |") in markdown
     assert "0.0000–1.2500" in markdown
-    summary = json.loads((output / "summary.jsonl").read_text())
+    summary = json.loads((output / "summary.jsonl").read_text(encoding="utf-8"))
     assert summary["unknown_cost_attempts"] == 1
     assert summary["cost_upper_usd"] == 1.25
     assert (output / "calls/job/1/request.json").exists()
