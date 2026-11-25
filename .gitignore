@@ -19,3 +19,6 @@ wheels/
 .coverage.*
 coverage.xml
 htmlcov/
+
+# Local evaluation artifacts are published separately to Hugging Face.
+eval-runs/
