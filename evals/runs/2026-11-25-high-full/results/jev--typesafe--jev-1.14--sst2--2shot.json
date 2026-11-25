@@ -1,0 +1,15 @@
+{
+  "job": "jev--typesafe--jev-1.14--sst2--2shot",
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "dataset": "sst2",
+  "shots": 2,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.9633333333333334,
+  "macro_f1": 0.9632152132960283,
+  "errors": 0,
+  "p50_ms": 75.76796899957117,
+  "p95_ms": 104.83507400203962,
+  "inference_seconds": 3.994434618995001
+}

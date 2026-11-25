@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6.2-astra--agnews--1shot",
+  "method": "compile",
+  "model": "gpt-6.2-astra",
+  "dataset": "agnews",
+  "shots": 1,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.89,
+  "macro_f1": 0.8897679953759736,
+  "errors": 0,
+  "p50_ms": 0.2451870241202414,
+  "p95_ms": 0.4137499490752816,
+  "inference_seconds": 0.07712416700087488
+}

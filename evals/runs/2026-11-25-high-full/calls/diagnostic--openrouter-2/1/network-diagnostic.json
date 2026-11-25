@@ -1,0 +1,7 @@
+{
+  "benchmark_sample": false,
+  "body": {
+    "message": "Request path cannot be relayed",
+    "code": 400
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "job": "compile--gpt-6.1-sol--sst2--2shot",
+  "method": "compile",
+  "model": "gpt-6.1-sol",
+  "dataset": "sst2",
+  "shots": 2,
+  "attempts": 1,
+  "error": null
+}

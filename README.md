@@ -29,6 +29,8 @@ uv add "jev-heuristic-adapter[openai]"
 
 Open [example.ipynb](https://github.com/Ki-Seki/jev-heuristic-adapter/blob/main/example.ipynb) for an annotated walkthrough with generated source, predictions, and cache reuse.
 
+See [evals/](evals/README.md) for the reproducible classification evaluation.
+
 ## Releasing
 
 Run `uv run scripts/release.py prepare patch` to open a version PR (`minor` and `major` also work).

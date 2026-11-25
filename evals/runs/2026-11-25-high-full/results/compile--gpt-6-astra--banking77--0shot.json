@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6-astra--banking77--0shot",
+  "method": "compile",
+  "model": "gpt-6-astra",
+  "dataset": "banking77",
+  "shots": 0,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.69,
+  "macro_f1": 0.6341512638113096,
+  "errors": 0,
+  "p50_ms": 0.6337499944493175,
+  "p95_ms": 0.8785000536590815,
+  "inference_seconds": 0.2075737500563264
+}

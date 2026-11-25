@@ -1,0 +1,9 @@
+{
+  "reason": "Initial OpenRouter requests returned 400: Request path cannot be relayed. All direct API baselines were re-evaluated after restoring access.",
+  "reference_api_groups": 9,
+  "final_api_groups": 27,
+  "compiled_groups_reused": 63,
+  "selection_rule": "Use the replacement API pass, selected before observing its scores; preserve the initial pass under reference/.",
+  "cost_accounting": "All calls, including the initial pass, diagnostics, and failed attempts, remain included in the total.",
+  "overall_budget_usd": 50
+}

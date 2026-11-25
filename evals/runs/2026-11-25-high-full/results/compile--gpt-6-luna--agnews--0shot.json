@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6-luna--agnews--0shot",
+  "method": "compile",
+  "model": "gpt-6-luna",
+  "dataset": "agnews",
+  "shots": 0,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.7266666666666667,
+  "macro_f1": 0.7295147470121798,
+  "errors": 0,
+  "p50_ms": 0.40052045369520783,
+  "p95_ms": 0.634124968200922,
+  "inference_seconds": 0.12573375005740672
+}

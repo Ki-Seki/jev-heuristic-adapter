@@ -1,0 +1,15 @@
+{
+  "job": "decisions--gpt-6-luna--agnews--0shot",
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "dataset": "agnews",
+  "shots": 0,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.9266666666666666,
+  "macro_f1": 0.9247862200110316,
+  "errors": 0,
+  "p50_ms": 122.9780679968826,
+  "p95_ms": 164.0234579972457,
+  "inference_seconds": 6.41088702500565
+}

@@ -1,0 +1,22 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "payload": {
+    "model": "typesafe/jev-1.14",
+    "state": "True Colors With  48 editions in 19 different languages available in over 60 countries, Reader #146;s Digest is a publishing phenomenon: the world #146;s top-selling magazine. And wherever you buy your copy, at least one thing will remain constant  #151; the quality and color balance of the images. See how  a Mac-based workflow ensures this color consistency.\\ Nov 09",
+    "questions": {
+      "label": {
+        "criteria": {
+          "business": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector.",
+          "sci_tech": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research.",
+          "sports": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results.",
+          "world": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.\nUse the labeled examples as guidance for classifying only the current input. Examples:\n[{\"state\": \"New virus camouflaged as screensaver A virus that spies on keystrokes and downloads passwords and bank account details is circulating among emails, masquerading as a screensaver designed by internet portal Lycos to attack stammers, a watchdog warned on Thursday.\", \"answer\": \"sci_tech\"}, {\"state\": \"Stock Markets Fall as Oil Nears \\\\$50 a Barrel NEW YORK, Sept. 22 -- A surge in oil prices and a disappointing earnings report from Morgan Stanley were cited as factors in significant stock market losses Wednesday.\", \"answer\": \"business\"}]",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.00025053000000000006,
+  "started_at": 1795601843.9549782
+}

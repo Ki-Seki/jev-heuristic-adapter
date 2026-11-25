@@ -1,0 +1,40 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": "Halloween Means Sales as Adults Join In  NEW YORK (Reuters) - Halloween is expected to scare up  record sales this year as more adults -- and pets -- join in  what was once mainly a children's dress-up event, filling a  void before the key Christmas shopping season."
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "business",
+            "description": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector."
+          },
+          {
+            "value": "sci_tech",
+            "description": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research."
+          },
+          {
+            "value": "sports",
+            "description": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results."
+          },
+          {
+            "value": "world",
+            "description": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.00066725,
+  "started_at": 1795601746.4696038
+}

@@ -1,0 +1,40 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": "Sales aren #39;t making the grade Retailers in Michigan delighted when students returned to the classroom, but the back-to-school sales haven #39;t generated the kind of dollars many projected."
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "business",
+            "description": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector."
+          },
+          {
+            "value": "sci_tech",
+            "description": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research."
+          },
+          {
+            "value": "sports",
+            "description": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results."
+          },
+          {
+            "value": "world",
+            "description": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.000658125,
+  "started_at": 1795601750.0709546
+}

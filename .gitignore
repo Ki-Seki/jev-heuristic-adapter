@@ -19,3 +19,8 @@ wheels/
 .coverage.*
 coverage.xml
 htmlcov/
+
+# Evaluation data is versioned; previews and execution logs stay local.
+evals/runs/**/*.tmp
+evals/runs/**/*.html
+evals/runs/**/*.log

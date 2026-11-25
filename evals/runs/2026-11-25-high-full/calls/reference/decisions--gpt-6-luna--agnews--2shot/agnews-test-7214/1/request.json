@@ -1,0 +1,44 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "developer",
+        "content": "Classify the final input. Labeled examples:\n[{\"state\": \"New virus camouflaged as screensaver A virus that spies on keystrokes and downloads passwords and bank account details is circulating among emails, masquerading as a screensaver designed by internet portal Lycos to attack stammers, a watchdog warned on Thursday.\", \"answer\": \"sci_tech\"}, {\"state\": \"Stock Markets Fall as Oil Nears \\\\$50 a Barrel NEW YORK, Sept. 22 -- A surge in oil prices and a disappointing earnings report from Morgan Stanley were cited as factors in significant stock market losses Wednesday.\", \"answer\": \"business\"}]"
+      },
+      {
+        "role": "user",
+        "content": "Bank of England Says Dollar Decline Increases Risk to Banks The possibility of a further slide in the dollar and a decline in demand for US assets has become one of the potential risks to financial stability, the Bank of England said in its semi-annual Financial Stability Review."
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "business",
+            "description": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector."
+          },
+          {
+            "value": "sci_tech",
+            "description": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research."
+          },
+          {
+            "value": "sports",
+            "description": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results."
+          },
+          {
+            "value": "world",
+            "description": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.000750375,
+  "started_at": 1795601133.760017
+}

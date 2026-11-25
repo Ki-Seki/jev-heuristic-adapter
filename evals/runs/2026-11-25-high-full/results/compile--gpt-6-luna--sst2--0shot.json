@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6-luna--sst2--0shot",
+  "method": "compile",
+  "model": "gpt-6-luna",
+  "dataset": "sst2",
+  "shots": 0,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.6666666666666666,
+  "macro_f1": 0.6571428571428571,
+  "errors": 0,
+  "p50_ms": 0.5807915003970265,
+  "p95_ms": 1.1495420476421714,
+  "inference_seconds": 0.1847843750147149
+}

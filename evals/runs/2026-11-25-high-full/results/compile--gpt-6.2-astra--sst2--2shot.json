@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6.2-astra--sst2--2shot",
+  "method": "compile",
+  "model": "gpt-6.2-astra",
+  "dataset": "sst2",
+  "shots": 2,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.8066666666666666,
+  "macro_f1": 0.7986111111111112,
+  "errors": 0,
+  "p50_ms": 0.21299946820363402,
+  "p95_ms": 0.38645800668746233,
+  "inference_seconds": 0.06799154193140566
+}

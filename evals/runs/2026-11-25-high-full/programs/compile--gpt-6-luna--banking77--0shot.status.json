@@ -1,0 +1,9 @@
+{
+  "job": "compile--gpt-6-luna--banking77--0shot",
+  "method": "compile",
+  "model": "gpt-6-luna",
+  "dataset": "banking77",
+  "shots": 0,
+  "attempts": 1,
+  "error": null
+}

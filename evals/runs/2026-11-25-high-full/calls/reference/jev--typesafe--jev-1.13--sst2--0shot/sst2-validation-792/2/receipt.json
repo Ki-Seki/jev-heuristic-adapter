@@ -1,0 +1,7 @@
+{
+  "seconds": 0.7108014579862356,
+  "cost_usd": null,
+  "cost_upper_usd": 0.000186438,
+  "error": "HTTPStatusError",
+  "http_status": 400
+}

@@ -1,0 +1,336 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "developer",
+        "content": "Classify the final input. Labeled examples:\n[{\"state\": \"I have an outgoing transaction\", \"answer\": \"pending_transfer\"}]"
+      },
+      {
+        "role": "user",
+        "content": "I had a duplicate card and got charged twice. How do I resolve this?"
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "activate_my_card",
+            "description": "Customer asks about: activate my card"
+          },
+          {
+            "value": "age_limit",
+            "description": "Customer asks about: age limit"
+          },
+          {
+            "value": "apple_pay_or_google_pay",
+            "description": "Customer asks about: apple pay or google pay"
+          },
+          {
+            "value": "atm_support",
+            "description": "Customer asks about: atm support"
+          },
+          {
+            "value": "automatic_top_up",
+            "description": "Customer asks about: automatic top up"
+          },
+          {
+            "value": "balance_not_updated_after_bank_transfer",
+            "description": "Customer asks about: balance not updated after bank transfer"
+          },
+          {
+            "value": "balance_not_updated_after_cheque_or_cash_deposit",
+            "description": "Customer asks about: balance not updated after cheque or cash deposit"
+          },
+          {
+            "value": "beneficiary_not_allowed",
+            "description": "Customer asks about: beneficiary not allowed"
+          },
+          {
+            "value": "cancel_transfer",
+            "description": "Customer asks about: cancel transfer"
+          },
+          {
+            "value": "card_about_to_expire",
+            "description": "Customer asks about: card about to expire"
+          },
+          {
+            "value": "card_acceptance",
+            "description": "Customer asks about: card acceptance"
+          },
+          {
+            "value": "card_arrival",
+            "description": "Customer asks about: card arrival"
+          },
+          {
+            "value": "card_delivery_estimate",
+            "description": "Customer asks about: card delivery estimate"
+          },
+          {
+            "value": "card_linking",
+            "description": "Customer asks about: card linking"
+          },
+          {
+            "value": "card_not_working",
+            "description": "Customer asks about: card not working"
+          },
+          {
+            "value": "card_payment_fee_charged",
+            "description": "Customer asks about: card payment fee charged"
+          },
+          {
+            "value": "card_payment_not_recognised",
+            "description": "Customer asks about: card payment not recognised"
+          },
+          {
+            "value": "card_payment_wrong_exchange_rate",
+            "description": "Customer asks about: card payment wrong exchange rate"
+          },
+          {
+            "value": "card_swallowed",
+            "description": "Customer asks about: card swallowed"
+          },
+          {
+            "value": "cash_withdrawal_charge",
+            "description": "Customer asks about: cash withdrawal charge"
+          },
+          {
+            "value": "cash_withdrawal_not_recognised",
+            "description": "Customer asks about: cash withdrawal not recognised"
+          },
+          {
+            "value": "change_pin",
+            "description": "Customer asks about: change pin"
+          },
+          {
+            "value": "compromised_card",
+            "description": "Customer asks about: compromised card"
+          },
+          {
+            "value": "contactless_not_working",
+            "description": "Customer asks about: contactless not working"
+          },
+          {
+            "value": "country_support",
+            "description": "Customer asks about: country support"
+          },
+          {
+            "value": "declined_card_payment",
+            "description": "Customer asks about: declined card payment"
+          },
+          {
+            "value": "declined_cash_withdrawal",
+            "description": "Customer asks about: declined cash withdrawal"
+          },
+          {
+            "value": "declined_transfer",
+            "description": "Customer asks about: declined transfer"
+          },
+          {
+            "value": "direct_debit_payment_not_recognised",
+            "description": "Customer asks about: direct debit payment not recognised"
+          },
+          {
+            "value": "disposable_card_limits",
+            "description": "Customer asks about: disposable card limits"
+          },
+          {
+            "value": "edit_personal_details",
+            "description": "Customer asks about: edit personal details"
+          },
+          {
+            "value": "exchange_charge",
+            "description": "Customer asks about: exchange charge"
+          },
+          {
+            "value": "exchange_rate",
+            "description": "Customer asks about: exchange rate"
+          },
+          {
+            "value": "exchange_via_app",
+            "description": "Customer asks about: exchange via app"
+          },
+          {
+            "value": "extra_charge_on_statement",
+            "description": "Customer asks about: extra charge on statement"
+          },
+          {
+            "value": "failed_transfer",
+            "description": "Customer asks about: failed transfer"
+          },
+          {
+            "value": "fiat_currency_support",
+            "description": "Customer asks about: fiat currency support"
+          },
+          {
+            "value": "get_disposable_virtual_card",
+            "description": "Customer asks about: get disposable virtual card"
+          },
+          {
+            "value": "get_physical_card",
+            "description": "Customer asks about: get physical card"
+          },
+          {
+            "value": "getting_spare_card",
+            "description": "Customer asks about: getting spare card"
+          },
+          {
+            "value": "getting_virtual_card",
+            "description": "Customer asks about: getting virtual card"
+          },
+          {
+            "value": "lost_or_stolen_card",
+            "description": "Customer asks about: lost or stolen card"
+          },
+          {
+            "value": "lost_or_stolen_phone",
+            "description": "Customer asks about: lost or stolen phone"
+          },
+          {
+            "value": "order_physical_card",
+            "description": "Customer asks about: order physical card"
+          },
+          {
+            "value": "passcode_forgotten",
+            "description": "Customer asks about: passcode forgotten"
+          },
+          {
+            "value": "pending_card_payment",
+            "description": "Customer asks about: pending card payment"
+          },
+          {
+            "value": "pending_cash_withdrawal",
+            "description": "Customer asks about: pending cash withdrawal"
+          },
+          {
+            "value": "pending_top_up",
+            "description": "Customer asks about: pending top up"
+          },
+          {
+            "value": "pending_transfer",
+            "description": "Customer asks about: pending transfer"
+          },
+          {
+            "value": "pin_blocked",
+            "description": "Customer asks about: pin blocked"
+          },
+          {
+            "value": "receiving_money",
+            "description": "Customer asks about: receiving money"
+          },
+          {
+            "value": "refund_not_showing_up",
+            "description": "Customer asks about: refund not showing up"
+          },
+          {
+            "value": "request_refund",
+            "description": "Customer asks about: request refund"
+          },
+          {
+            "value": "reverted_card_payment",
+            "description": "Customer asks about: reverted card payment"
+          },
+          {
+            "value": "supported_cards_and_currencies",
+            "description": "Customer asks about: supported cards and currencies"
+          },
+          {
+            "value": "terminate_account",
+            "description": "Customer asks about: terminate account"
+          },
+          {
+            "value": "top_up_by_bank_transfer_charge",
+            "description": "Customer asks about: top up by bank transfer charge"
+          },
+          {
+            "value": "top_up_by_card_charge",
+            "description": "Customer asks about: top up by card charge"
+          },
+          {
+            "value": "top_up_by_cash_or_cheque",
+            "description": "Customer asks about: top up by cash or cheque"
+          },
+          {
+            "value": "top_up_failed",
+            "description": "Customer asks about: top up failed"
+          },
+          {
+            "value": "top_up_limits",
+            "description": "Customer asks about: top up limits"
+          },
+          {
+            "value": "top_up_reverted",
+            "description": "Customer asks about: top up reverted"
+          },
+          {
+            "value": "topping_up_by_card",
+            "description": "Customer asks about: topping up by card"
+          },
+          {
+            "value": "transaction_charged_twice",
+            "description": "Customer asks about: transaction charged twice"
+          },
+          {
+            "value": "transfer_fee_charged",
+            "description": "Customer asks about: transfer fee charged"
+          },
+          {
+            "value": "transfer_into_account",
+            "description": "Customer asks about: transfer into account"
+          },
+          {
+            "value": "transfer_not_received_by_recipient",
+            "description": "Customer asks about: transfer not received by recipient"
+          },
+          {
+            "value": "transfer_timing",
+            "description": "Customer asks about: transfer timing"
+          },
+          {
+            "value": "unable_to_verify_identity",
+            "description": "Customer asks about: unable to verify identity"
+          },
+          {
+            "value": "verify_my_identity",
+            "description": "Customer asks about: verify my identity"
+          },
+          {
+            "value": "verify_source_of_funds",
+            "description": "Customer asks about: verify source of funds"
+          },
+          {
+            "value": "verify_top_up",
+            "description": "Customer asks about: verify top up"
+          },
+          {
+            "value": "virtual_card_not_working",
+            "description": "Customer asks about: virtual card not working"
+          },
+          {
+            "value": "visa_or_mastercard",
+            "description": "Customer asks about: visa or mastercard"
+          },
+          {
+            "value": "why_verify_identity",
+            "description": "Customer asks about: why verify identity"
+          },
+          {
+            "value": "wrong_amount_of_cash_received",
+            "description": "Customer asks about: wrong amount of cash received"
+          },
+          {
+            "value": "wrong_exchange_rate_for_cash_withdrawal",
+            "description": "Customer asks about: wrong exchange rate for cash withdrawal"
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.0014895,
+  "started_at": 1795601188.667298
+}

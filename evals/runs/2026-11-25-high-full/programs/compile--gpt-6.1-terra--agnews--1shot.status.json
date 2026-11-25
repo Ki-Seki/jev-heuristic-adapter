@@ -1,0 +1,9 @@
+{
+  "job": "compile--gpt-6.1-terra--agnews--1shot",
+  "method": "compile",
+  "model": "gpt-6.1-terra",
+  "dataset": "agnews",
+  "shots": 1,
+  "attempts": 1,
+  "error": null
+}

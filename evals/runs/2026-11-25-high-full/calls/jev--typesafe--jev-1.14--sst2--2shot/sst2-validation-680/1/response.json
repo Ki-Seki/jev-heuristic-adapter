@@ -1,0 +1,27 @@
+{
+  "model": "typesafe/jev-1.14-20261014",
+  "answers": {
+    "label": {
+      "type": "choice",
+      "choice": "positive",
+      "probabilities": {
+        "negative": 0.16,
+        "positive": 0.84
+      },
+      "confidence": 0.68
+    }
+  },
+  "usage": {
+    "input_tokens": 427,
+    "output_tokens": 31,
+    "cost": 1.7934e-05,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 1.7934e-05,
+      "upstream_inference_prompt_cost": 1.7934e-05,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "id": "gen-dec-1795601833-ntSeXWHCE9j1azLnwfe3",
+  "provider": "TypeSafe"
+}

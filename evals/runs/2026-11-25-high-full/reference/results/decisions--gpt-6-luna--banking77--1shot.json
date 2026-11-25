@@ -1,0 +1,15 @@
+{
+  "job": "decisions--gpt-6-luna--banking77--1shot",
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "dataset": "banking77",
+  "shots": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.8133333333333334,
+  "macro_f1": 0.7666239958489269,
+  "errors": 0,
+  "p50_ms": 536.5331044886261,
+  "p95_ms": 731.7519159987569,
+  "inference_seconds": 26.972327874973416
+}
