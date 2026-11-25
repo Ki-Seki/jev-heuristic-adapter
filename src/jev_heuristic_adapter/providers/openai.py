@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from typing import Any, cast
 
-from openai import OpenAI
+from openai import OpenAI, omit
 from openai.types.responses import ResponseInputParam
 from openai.types.shared import ReasoningEffort
 
@@ -12,11 +12,14 @@ from . import ProviderResult
 
 @dataclass
 class OpenAIProvider:
-    """The caller owns the SDK client, including retries and lifetime."""
+    """The caller owns the SDK client, including retries and lifetime.
+
+    Unset reasoning effort uses the model's API default.
+    """
 
     client: OpenAI
     model: str
-    reasoning_effort: ReasoningEffort = "high"
+    reasoning_effort: ReasoningEffort | None = None
     max_output_tokens: int = 24_000
 
     def cache_identity(self) -> dict[str, Any]:
@@ -38,7 +41,11 @@ class OpenAIProvider:
         response = self.client.responses.create(
             model=self.model,
             input=cast(ResponseInputParam, messages),
-            reasoning={"effort": self.reasoning_effort},
+            reasoning=(
+                {"effort": self.reasoning_effort}
+                if self.reasoning_effort is not None
+                else omit
+            ),
             max_output_tokens=self.max_output_tokens,
             text={"format": {"type": "text"}},
             store=False,
