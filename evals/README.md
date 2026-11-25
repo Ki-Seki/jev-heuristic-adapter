@@ -2,8 +2,10 @@
 
 Seven GPT-6 / 6.1 / 6.2 models compile one program per task with **explicit `high`**
 reasoning effort. SST-2, AG News, and Banking77 each use 300 fixed test examples
-and 0/1/2 training examples: **63 new programs**, plus **2,700 Decisions API calls**
-using GPT-6 Luna. Prior model outputs are never imported.
+and 0/1/2 training examples: **63 new programs**, **2,700 OpenAI Decisions calls**
+using GPT-6 Luna, and **5,400 OpenRouter Decisions calls** using Jev 1.13 and 1.14.
+The resulting **90 comparison rows** all use the same test inputs and training examples.
+Prior model outputs are never imported.
 
 ```sh
 # Offline: inspect the matrix. This does not generate programs or download data.
@@ -19,6 +21,8 @@ commit that directory to GitHub after the run. The illustrative $50 spend ceilin
 unfinished run; it is not a promise that all retries fit. Re-run the same command
 to resume recorded work. Use one process per run directory; use a new directory
 for a genuinely fresh evaluation. A changed source or lockfile requires a new run.
+`run` requires both `OPENAI_API_KEY` and `OPENROUTER_API_KEY`; it checks for the
+OpenRouter key before starting any model calls. The budget covers both services.
 
 ## Protocol
 
@@ -36,12 +40,17 @@ for a genuinely fresh evaluation. A changed source or lockfile requires a new ru
 - Costs include **all** attempts. Missing usage remains unknown and reserves a
   conservative estimate, rather than being counted as free. Prices are pinned
   in `api.py`; the spend check reserves output caps and a conservative input estimate.
-- The Decisions API returns typed choices directly. Compiler reasoning effort and
-  output-token caps do not apply to this separate endpoint.
+- Direct baselines return typed choices: GPT-6 Luna via OpenAI `/v1/decisions`,
+  Jev 1.13/1.14 via OpenRouter `/api/alpha/decisions`. Jev receives native
+  `state`/`questions`, with training examples appended to the question instructions.
+  Compiler reasoning effort and output-token caps apply only to code generation.
+- OpenRouter's returned `usage.cost` is used when available, including zero charges.
+  Otherwise Jev is estimated at $0.042 per million input tokens with free output;
+  missing usage remains unknown. Direct calls share the three-attempt retry limit.
 
 ## Files
 
-`data.py` prepares inputs; `api.py` records calls and cost; `run.py` runs the two
+`data.py` prepares inputs; `api.py` records calls and cost; `run.py` runs the
 methods; `results.py` writes metrics and a Markdown table. `__main__.py` only handles the CLI.
 
 A run saves a `README.md` comparison table, full metrics in `summary.jsonl`,
@@ -52,5 +61,5 @@ Everything remains readable on GitHub without unpacking an archive. Ruff skips
 `evals/runs/` so committing results never reformats or rejects generated code.
 
 The protocol follows [dhruvmehra/jevbench](https://github.com/dhruvmehra/jevbench/tree/c983cc4a7dd9fc142ca3b6c7a813cae0e963c902).
-Its published Jev results use a different 500-example cohort and remain a historical
-reference, not a fresh result from this runner.
+Its published Jev results use a different 500-example cohort. This runner measures
+Jev again on the same 300-example cohorts as the other methods.

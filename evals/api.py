@@ -1,6 +1,7 @@
 """Recorded API calls, explicit high effort, and a shared spend ceiling."""
 
 import json
+import math
 import time
 from threading import Lock
 
@@ -8,6 +9,7 @@ from .data import read, write
 
 # Standard USD / 1M tokens: input, cached input, 30-minute cache write, output.
 # https://developers.openai.com/api/docs/pricing (2026-11-25)
+# Jev input-only fallback: https://openrouter.ai/provider/typesafe (2026-11-25).
 PRICES = {
     "gpt-6-astra": (10, 1, 12.5, 50),
     "gpt-6-sol": (2, 0.2, 2.5, 10),
@@ -16,6 +18,8 @@ PRICES = {
     "gpt-6.1-terra": (1, 0.05, 1.25, 5),
     "gpt-6.2-astra": (8, 0.4, 10, 40),
     "gpt-6.2-sol": (2, 0.1, 2.5, 10),
+    "typesafe/jev-1.13": (0.042, 0.042, 0.042, 0),
+    "typesafe/jev-1.14": (0.042, 0.042, 0.042, 0),
 }
 
 
@@ -37,6 +41,11 @@ class CallError(RuntimeError):
 def cost(raw, model, method, reserve):
     """Missing usage stays unknown; absent cache-write detail gets a range."""
     usage = raw.get("usage") if raw else None
+    if method == "jev" and usage and usage.get("cost") is not None:
+        billed = usage["cost"]
+        if isinstance(billed, (int, float)) and math.isfinite(billed) and billed >= 0:
+            return billed, billed
+        return None, reserve
     if not usage or usage.get("input_tokens") is None:
         return None, reserve
     if method == "compile" and usage.get("output_tokens") is None:
@@ -64,8 +73,9 @@ def cost(raw, model, method, reserve):
 
 
 class API:
-    def __init__(self, client, output, budget):
+    def __init__(self, client, output, budget, openrouter=None):
         self.client, self.output, self.budget = client, output, budget
+        self.openrouter = openrouter
         self.lock = Lock()
         self.used = 0.0
         for path in output.glob("calls/**/request.json"):
@@ -77,6 +87,8 @@ class API:
             )
 
     def call(self, method, model, payload, folder):
+        if method == "jev" and self.openrouter is None:
+            raise ValueError("An OpenRouter client is required for Jev")
         request = {"method": method, "model": model, "payload": payload}
         input_bound = len(json.dumps(payload, ensure_ascii=False).encode()) + 4096
         reserve = (
@@ -119,6 +131,10 @@ class API:
         try:
             if method == "compile":
                 raw = self.generate(payload, folder)
+            elif method == "jev":
+                raw = self.openrouter.post(
+                    "/alpha/decisions", cast_to=dict, body=payload
+                )
             else:
                 # Public low-level SDK method also works before a typed Decisions client ships.
                 raw = self.client.post("/decisions", cast_to=dict, body=payload)
@@ -225,3 +241,32 @@ def decision_payload(question, examples, state):
             }
         ],
     }
+
+
+def jev_payload(model, question, examples, state):
+    instructions = question["instructions"]
+    if examples:
+        instructions += (
+            "\nUse the labeled examples as guidance for classifying only the current input. Examples:\n"
+            + json.dumps(examples, ensure_ascii=False)
+        )
+    return {
+        "model": model,
+        "state": state,
+        "questions": {"label": {**question, "instructions": instructions}},
+    }
+
+
+def decision_answer(raw, method):
+    answers = raw.get("answers")
+    if method == "jev":
+        answer = answers.get("label") if isinstance(answers, dict) else None
+        if isinstance(answer, dict) and answer.get("type") == "choice":
+            return answer.get("choice")
+    elif isinstance(answers, list):
+        matches = [
+            a for a in answers if isinstance(a, dict) and a.get("name") == "label"
+        ]
+        if len(matches) == 1:
+            return matches[0].get("choice")
+    return None

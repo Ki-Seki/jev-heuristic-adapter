@@ -67,7 +67,7 @@ def sdk_factory():
             )
 
         def post(path, cast_to, body):
-            assert path == "/decisions" and cast_to is dict
+            assert path in ("/decisions", "/alpha/decisions") and cast_to is dict
             return next_response(body)
 
         return SimpleNamespace(
@@ -99,6 +99,8 @@ def test_plan_has_no_api_calls_or_downloads(capsys):
     plan = json.loads(capsys.readouterr().out)
     assert len(plan["models"]) == 7
     assert plan["compile_jobs"] == 63 and plan["decisions_requests"] == 2700
+    assert plan["jev_requests"] == 5400 and plan["result_groups"] == 90
+    assert plan["direct_models"]["jev"] == ["typesafe/jev-1.13", "typesafe/jev-1.14"]
     assert plan["reasoning_effort"] == "high"
     assert plan["token_caps"] == [48000, 96000, 128000]
 
@@ -419,12 +421,25 @@ def test_complete_offline_run_and_resume(tmp_path, monkeypatch, sdk_factory, tas
             },
         ]
     )
+    router = sdk_factory(
+        [
+            {
+                "answers": {"label": {"type": "choice", "choice": "no"}},
+                "usage": {"cost": 0.00001},
+            },
+            {
+                "answers": {"label": {"type": "choice", "choice": "no"}},
+                "usage": {"cost": 0.00002},
+            },
+        ]
+    )
     configs = []
 
     def client(**kwargs):
         configs.append(kwargs)
-        return sdk
+        return router if kwargs["base_url"] == "https://openrouter.ai/api" else sdk
 
+    monkeypatch.setenv("OPENROUTER_API_KEY", "offline-openrouter-key")
     monkeypatch.setitem(sys.modules, "openai", SimpleNamespace(OpenAI=client))
     monkeypatch.setattr(runner, "verify", lambda _: {})
     monkeypatch.setattr(runner, "MODELS", [MODEL])
@@ -437,16 +452,25 @@ def test_complete_offline_run_and_resume(tmp_path, monkeypatch, sdk_factory, tas
         json.loads(line)
         for line in (tmp_path / "summary.jsonl").read_text().splitlines()
     ]
-    assert [row["accuracy"] for row in summary] == [0, 1]
-    assert configs[0]["max_retries"] == 0 and configs[0]["timeout"] == 1800
+    assert [row["accuracy"] for row in summary] == [0, 1, 1, 1]
+    assert [row["model"] for row in summary[-2:]] == [
+        "typesafe/jev-1.13",
+        "typesafe/jev-1.14",
+    ]
+    assert summary[-2]["cost_known_usd"] == 0.00001
+    assert summary[-1]["cost_known_usd"] == 0.00002
+    assert all(c["max_retries"] == 0 and c["timeout"] == 1800 for c in configs)
+    assert configs[1]["api_key"] == "offline-openrouter-key"
+    assert len(list((tmp_path / "results").glob("*.json"))) == 4
     runner.run(tmp_path, 10, 1)
-    assert len(sdk.calls) == 2
+    assert len(sdk.calls) == len(router.calls) == 2
 
 
 def test_budget_stop_writes_partial_report(tmp_path, monkeypatch, sdk_factory, task):
     import evals.run as runner
 
     sdk = sdk_factory([])
+    monkeypatch.setenv("OPENROUTER_API_KEY", "offline-openrouter-key")
     monkeypatch.setitem(
         sys.modules, "openai", SimpleNamespace(OpenAI=lambda **kwargs: sdk)
     )

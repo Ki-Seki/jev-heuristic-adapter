@@ -4,7 +4,7 @@ import json
 import math
 import statistics
 
-from .data import read
+from .data import plan, read
 
 
 def write_rows(path, rows):
@@ -110,7 +110,7 @@ def report(output):
     totals = attempt_totals(output / "calls")
     text = f"""# Heuristic adapter evaluation
 
-Run complete: {read(output / "run.json")["complete"]}. Completed groups: {len(rows)}/72.
+Run complete: {read(output / "run.json")["complete"]}. Completed groups: {len(rows)}/{plan()["result_groups"]}.
 
 {summary_table(rows)}
 
@@ -123,9 +123,12 @@ and 48k initial output limits. Only truncation raises the next limit to 96k, the
 At most three attempts; the first syntactically valid, loadable program is retained.
 No correctness gate and no test-label feedback. Predictions that error count as incorrect;
 uncompilable groups have null accuracy. Macro F1 averages over all declared labels.
+OpenAI Decisions and OpenRouter Jev 1.13/1.14 classify the same test inputs directly,
+using the same 0/1/2-shot training examples. Jev uses native `state`/`questions` requests;
+its reported `usage.cost` takes precedence over token-price estimates.
 
 Program latency includes input copying and output validation, without network calls.
-Decisions latency includes failed request time but excludes retry backoff.
+Direct API latency includes failed request time but excludes retry backoff.
 Cached replay durations come from recorded requests, not current wall time.
 `api_seconds` is summed request time; it is not concurrent wall time.
 

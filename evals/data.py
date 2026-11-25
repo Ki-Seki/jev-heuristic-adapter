@@ -20,8 +20,30 @@ MODELS = (
     "gpt-6.2-astra",
     "gpt-6.2-sol",
 )
+DIRECT_MODELS = {
+    "decisions": ("gpt-6-luna",),
+    "jev": ("typesafe/jev-1.13", "typesafe/jev-1.14"),
+}
 SHOTS = (0, 1, 2)
 CAPS = (48_000, 96_000, 128_000)
+
+
+def plan():
+    groups = len(TASKS) * len(SHOTS)
+    return {
+        "models": MODELS,
+        "direct_models": DIRECT_MODELS,
+        "datasets": list(TASKS),
+        "shots": SHOTS,
+        "reasoning_effort": "high",
+        "token_caps": CAPS,
+        "max_attempts": 3,
+        "test_n": 300,
+        "compile_jobs": len(MODELS) * groups,
+        "decisions_requests": len(DIRECT_MODELS["decisions"]) * groups * 300,
+        "jev_requests": len(DIRECT_MODELS["jev"]) * groups * 300,
+        "result_groups": (len(MODELS) + sum(map(len, DIRECT_MODELS.values()))) * groups,
+    }
 
 
 def read(path):
@@ -129,6 +151,7 @@ def prepare(output):
     write(
         output / "manifest.json",
         {
+            **plan(),
             "created_at": datetime.now(timezone.utc).isoformat(),
             "git_commit": subprocess.check_output(
                 ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
@@ -136,12 +159,6 @@ def prepare(output):
             "source_hashes": source_hashes(),
             "data_hashes": files,
             "tasks": TASKS,
-            "models": MODELS,
-            "shots": SHOTS,
-            "reasoning_effort": "high",
-            "token_caps": CAPS,
-            "max_attempts": 3,
-            "test_n": 300,
             "python": platform.python_version(),
             "packages": {
                 p: version(p)

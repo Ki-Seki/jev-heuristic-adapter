@@ -1,8 +1,10 @@
 """Generate once per task family, then score without feedback to the compiler."""
 
+import os
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import asdict
+from itertools import product
 
 from jev_heuristic_adapter._compiler import compile_question
 from jev_heuristic_adapter._program import CompiledQuestion, load_predictor
@@ -12,11 +14,13 @@ from .api import (
     API,
     BudgetExceeded,
     CallError,
+    decision_answer,
     decision_payload,
     generation_payload,
+    jev_payload,
     output_text,
 )
-from .data import CAPS, MODELS, SHOTS, TASKS, read, verify, write
+from .data import CAPS, DIRECT_MODELS, MODELS, SHOTS, TASKS, read, verify, write
 from .results import report, score, write_rows
 
 
@@ -132,24 +136,31 @@ def evaluate_program(output, compiled, data):
     save_result(output, compiled, data, rows, time.perf_counter() - started)
 
 
-def decision_one(api, job, question, examples, sample):
-    payload = decision_payload(question, examples, sample["state"])
+def decision_one(
+    api, job, question, examples, sample, method="decisions", model="gpt-6-luna"
+):
+    payload = (
+        jev_payload(model, question, examples, sample["state"])
+        if method == "jev"
+        else decision_payload(question, examples, sample["state"])
+    )
     elapsed, unknown_time, answer, error = 0.0, False, None, None
     for attempt in range(1, 4):
         folder = (
             api.output / "calls" / job / sample["id"].replace(":", "-") / str(attempt)
         )
         try:
-            raw, receipt = api.call("decisions", "gpt-6-luna", payload, folder)
+            raw, receipt = api.call(method, model, payload, folder)
         except CallError as exc:
             if not exc.retryable:
                 raise
             receipt, error = exc.receipt, str(exc)
         else:
-            matches = [a for a in raw.get("answers", []) if a.get("name") == "label"]
-            answer = matches[0].get("choice") if len(matches) == 1 else None
+            answer = decision_answer(raw, method)
             error = (
-                None if answer in question["criteria"] else "Invalid decision answer"
+                None
+                if isinstance(answer, str) and answer in question["criteria"]
+                else "Invalid decision answer"
             )
             if error:
                 answer = None
@@ -198,12 +209,25 @@ def run(output, budget, workers):
     from openai import OpenAI
 
     verify(output)
+    key = os.environ.get("OPENROUTER_API_KEY")
+    if not key:
+        raise ValueError("OPENROUTER_API_KEY is required for Jev")
     data = {name: read(output / "data" / f"{name}.json") for name in TASKS}
     # Disable SDK retries so the three-attempt limit counts physical requests.
     client = OpenAI(base_url="https://api.openai.com/v1", max_retries=0, timeout=1800)
-    api = API(client, output, budget)
+    openrouter = None
     started, complete = time.perf_counter(), False
     try:
+        # Use only the SDK's HTTP transport; Jev receives its native Decisions payload.
+        openrouter = OpenAI(
+            api_key=key,
+            base_url="https://openrouter.ai/api",
+            max_retries=0,
+            timeout=1800,
+            organization="",
+            project="",
+        )
+        api = API(client, output, budget, openrouter=openrouter)
         compiled = parallel(
             compile_job,
             (
@@ -217,9 +241,9 @@ def run(output, budget, workers):
         # Freeze every program before scoring any test labels.
         for result in compiled:
             evaluate_program(output, result, data[result["dataset"]])
-        for name in TASKS:
-            for shots in SHOTS:
-                job = f"decisions--gpt-6-luna--{name}--{shots}shot"
+        for method, models in DIRECT_MODELS.items():
+            for model, name, shots in product(models, TASKS, SHOTS):
+                job = f"{method}--{model.replace('/', '--')}--{name}--{shots}shot"
                 if (output / "results" / f"{job}.json").exists():
                     continue
                 samples = [
@@ -230,15 +254,15 @@ def run(output, budget, workers):
                 rows = parallel(
                     decision_one,
                     (
-                        (api, job, data[name]["question"], samples, row)
+                        (api, job, data[name]["question"], samples, row, method, model)
                         for row in data[name]["test"]
                     ),
                     workers,
                 )
                 identity = {
                     "job": job,
-                    "method": "decisions",
-                    "model": "gpt-6-luna",
+                    "method": method,
+                    "model": model,
                     "dataset": name,
                     "shots": shots,
                     "error": None,
@@ -249,6 +273,8 @@ def run(output, budget, workers):
         complete = True
     finally:
         client.close()
+        if openrouter is not None:
+            openrouter.close()
         write(
             output / "run.json",
             {

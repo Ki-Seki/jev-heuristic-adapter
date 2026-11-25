@@ -5,7 +5,7 @@ import json
 import math
 from pathlib import Path
 
-from .data import CAPS, MODELS, SHOTS, TASKS, prepare
+from .data import plan, prepare
 
 
 def main(argv=None):
@@ -20,22 +20,7 @@ def main(argv=None):
             command.add_argument("--workers", type=int, default=6)
     args = parser.parse_args(argv)
     if args.command == "plan":
-        print(
-            json.dumps(
-                {
-                    "models": MODELS,
-                    "datasets": list(TASKS),
-                    "shots": SHOTS,
-                    "reasoning_effort": "high",
-                    "token_caps": CAPS,
-                    "max_attempts": 3,
-                    "compile_jobs": 63,
-                    "decisions_requests": 2700,
-                    "test_n": 300,
-                },
-                indent=2,
-            )
-        )
+        print(json.dumps(plan(), indent=2))
     elif args.command == "prepare":
         prepare(args.output)
     elif args.command == "run":
