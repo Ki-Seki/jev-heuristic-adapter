@@ -10,15 +10,12 @@ using GPT-6 Luna. Prior model outputs are never imported.
 uv run --locked --extra openai --group eval python -m evals plan
 
 # After approving the experiment: freeze datasets, then run with a chosen budget.
-uv run --locked --extra openai --group eval python -m evals prepare --output eval-runs/RUN_NAME
-uv run --locked --extra openai --group eval python -m evals run --output eval-runs/RUN_NAME --budget-usd 50
-
-# Once the HF dataset repository name is chosen and the repository exists:
-uv run --locked --extra openai --group eval python -m evals upload --output eval-runs/RUN_NAME --repo-id OWNER/REPO
+uv run --locked --extra openai --group eval python -m evals prepare --output evals/runs/RUN_NAME
+uv run --locked --extra openai --group eval python -m evals run --output evals/runs/RUN_NAME --budget-usd 50
 ```
 
-Only `run` makes paid calls; only `upload` writes to Hugging Face. Credentials use
-the SDKs' standard configuration. The illustrative $50 spend ceiling can stop an
+Only `run` makes paid calls. Results are ordinary files under `evals/runs/RUN_NAME/`;
+commit that directory to GitHub after the run. The illustrative $50 spend ceiling can stop an
 unfinished run; it is not a promise that all retries fit. Re-run the same command
 to resume recorded work. Use one process per run directory; use a new directory
 for a genuinely fresh evaluation. A changed source or lockfile requires a new run.
@@ -45,14 +42,14 @@ for a genuinely fresh evaluation. A changed source or lockfile requires a new ru
 ## Files
 
 `data.py` prepares inputs; `api.py` records calls and cost; `run.py` runs the two
-methods; `results.py` scores and uploads. `__main__.py` only handles the CLI.
+methods; `results.py` writes metrics and a Markdown table. `__main__.py` only handles the CLI.
 
-A run saves `manifest.json`, generated `programs/`, per-example `predictions/`,
-and a flat `summary.jsonl`. HF uploads put these under `RUN_NAME/`, with raw calls
-compressed into `calls.tar.gz`. This includes failed attempts and partial code;
-no environment files, credential files, or unrelated local directories are uploaded.
-`run.json` states whether the full experiment finished. Raw dataset copies stay local;
-the manifest retains their source revisions and hashes.
+A run saves a `README.md` comparison table, full metrics in `summary.jsonl`,
+generated `programs/`, per-example `predictions/`, and every request/response in
+`calls/`, including failures and partial code. `data/` and `manifest.json` preserve
+the inputs and source revisions; `run.json` states whether the experiment finished.
+Everything remains readable on GitHub without unpacking an archive. Ruff skips
+`evals/runs/` so committing results never reformats or rejects generated code.
 
 The protocol follows [dhruvmehra/jevbench](https://github.com/dhruvmehra/jevbench/tree/c983cc4a7dd9fc142ca3b6c7a813cae0e963c902).
 Its published Jev results use a different 500-example cohort and remain a historical

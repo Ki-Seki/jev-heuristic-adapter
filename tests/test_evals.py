@@ -2,7 +2,6 @@
 
 import json
 import sys
-import tarfile
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import nullcontext
 from threading import Event
@@ -375,36 +374,37 @@ def test_selection_is_deterministic_deduplicated_and_requires_enough_rows():
         data.select_indices(texts[:10])
 
 
-def test_upload_only_approved_artifacts_and_never_creates_repo(tmp_path, monkeypatch):
+@pytest.mark.parametrize("accuracy", [None, 0.9])
+def test_report_is_readable_on_github_and_preserves_unknown_costs(tmp_path, accuracy):
     output = tmp_path / "run-name"
     data.write(output / "run.json", {"complete": False})
-    data.write(output / "calls/job/1/request.json", {"reserve_usd": 1})
-    (output / ".env").write_text("a private value")
-    (output / "calls/job/1/unrelated.txt").write_text("unrelated")
+    data.write(output / "calls/job/1/request.json", {"reserve_usd": 1.25})
+    data.write(
+        output / "results/job.json",
+        {
+            "method": "compile",
+            "model": MODEL,
+            "dataset": "toy",
+            "shots": 2,
+            "accuracy": accuracy,
+            "macro_f1": accuracy,
+            "errors": 1,
+            "p50_ms": None,
+            "p95_ms": None,
+        },
+    )
     results.report(output)
-    uploads = []
-    monkeypatch.setitem(
-        sys.modules,
-        "huggingface_hub",
-        SimpleNamespace(
-            HfApi=lambda: SimpleNamespace(
-                upload_folder=lambda **kwargs: uploads.append(kwargs),
-                file_exists=lambda *args, **kwargs: True,
-            )
-        ),
-    )
-    results.upload(output, "owner/chosen-name")
-    assert uploads[0]["repo_id"] == "owner/chosen-name"
-    assert (
-        uploads[0]["repo_type"] == "dataset"
-        and uploads[0]["path_in_repo"] == "run-name"
-    )
-    assert ".env" not in uploads[0]["allow_patterns"]
-    with tarfile.open(output / "calls.tar.gz") as archive:
-        assert archive.getnames() == ["calls/job/1/request.json"]
-    assert "Run complete: False" in (output / "README.md").read_text()
-    with pytest.raises(ValueError, match="No evaluation"):
-        results.upload(tmp_path / "empty", "owner/unused")
+    markdown = (output / "README.md").read_text()
+    assert markdown.startswith("# Heuristic adapter evaluation")
+    assert "Run complete: False" in markdown
+    assert "| Method | Model | Dataset |" in markdown
+    assert f"| compile | {MODEL} | toy | 2 |" in markdown
+    assert ("| — | — |" if accuracy is None else "| 90.00% | 90.00% |") in markdown
+    assert "0.0000–1.2500" in markdown
+    summary = json.loads((output / "summary.jsonl").read_text())
+    assert summary["unknown_cost_attempts"] == 1
+    assert summary["cost_upper_usd"] == 1.25
+    assert (output / "calls/job/1/request.json").exists()
 
 
 def test_complete_offline_run_and_resume(tmp_path, monkeypatch, sdk_factory, task):
@@ -563,34 +563,16 @@ def test_cli_routes_without_implicitly_running_eval(tmp_path, monkeypatch):
         cli, "prepare", lambda output: actions.append(("prepare", output))
     )
     monkeypatch.setattr(runner, "run", lambda *args: actions.append(("run", args)))
-    monkeypatch.setattr(
-        results, "upload", lambda *args: actions.append(("upload", args))
-    )
     output = str(tmp_path / "new")
     main(["prepare", "--output", output])
     assert [a[0] for a in actions] == ["prepare"]
     main(["run", "--output", output, "--budget-usd", "10"])
-    main(["upload", "--output", output, "--repo-id", "owner/name"])
-    assert [a[0] for a in actions] == ["prepare", "run", "upload"]
+    with pytest.raises(SystemExit):
+        main(["upload", "--output", output, "--repo-id", "owner/name"])
+    assert [a[0] for a in actions] == ["prepare", "run"]
     for value in ("0", "-1", "nan", "inf"):
         with pytest.raises(SystemExit):
             main(["run", "--output", output, "--budget-usd", value])
-
-
-def test_upload_adds_dataset_card_only_when_missing(tmp_path, monkeypatch):
-    (tmp_path / "summary.jsonl").write_text("")
-    uploads = []
-    remote = SimpleNamespace(
-        upload_folder=lambda **kwargs: "commit-url",
-        file_exists=lambda *args, **kwargs: False,
-        upload_file=lambda **kwargs: uploads.append(kwargs),
-    )
-    monkeypatch.setitem(
-        sys.modules, "huggingface_hub", SimpleNamespace(HfApi=lambda: remote)
-    )
-    assert results.upload(tmp_path, "owner/chosen") == "commit-url"
-    assert uploads[0]["path_in_repo"] == "README.md"
-    assert b"*/summary.jsonl" in uploads[0]["path_or_fileobj"]
 
 
 def test_in_flight_calls_reserve_budget_atomically(tmp_path, sdk_factory):

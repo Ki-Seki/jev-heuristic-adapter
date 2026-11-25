@@ -1,9 +1,8 @@
-"""Metrics, complete attempt costs, and a separately invoked HF upload."""
+"""Metrics and readable reports committed alongside the evaluation code."""
 
 import json
 import math
 import statistics
-import tarfile
 
 from .data import read
 
@@ -77,6 +76,31 @@ def attempt_totals(folder):
     return total
 
 
+def summary_table(rows):
+    def fmt(value, spec):
+        return "—" if value is None else format(value, spec)
+
+    lines = [
+        "| Method | Model | Dataset | Shot | Accuracy | Macro F1 | Errors | p50 ms | p95 ms | Cost range, USD |",
+        "|---|---|---|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for row in rows:
+        cells = [
+            row["method"],
+            row["model"],
+            row["dataset"],
+            str(row["shots"]),
+            fmt(row["accuracy"], ".2%"),
+            fmt(row["macro_f1"], ".2%"),
+            str(row["errors"]),
+            fmt(row["p50_ms"], ".3f"),
+            fmt(row["p95_ms"], ".3f"),
+            f"{row['cost_known_usd']:.4f}–{row['cost_upper_usd']:.4f}",
+        ]
+        lines.append("| " + " | ".join(cells) + " |")
+    return "\n".join(lines)
+
+
 def report(output):
     rows = [
         {**read(p), **attempt_totals(output / "calls" / p.stem)}
@@ -84,14 +108,11 @@ def report(output):
     ]
     write_rows(output / "summary.jsonl", rows)
     totals = attempt_totals(output / "calls")
-    text = f"""---
-configs:
-  - config_name: summary
-    data_files: summary.jsonl
----
-# Heuristic adapter evaluation
+    text = f"""# Heuristic adapter evaluation
 
 Run complete: {read(output / "run.json")["complete"]}. Completed groups: {len(rows)}/72.
+
+{summary_table(rows)}
 
 Costs include every attempt, including failures: known ${totals["cost_known_usd"]:.4f};
 conservative upper estimate ${totals["cost_upper_usd"]:.4f};
@@ -110,7 +131,9 @@ Cached replay durations come from recorded requests, not current wall time.
 
 `manifest.json` pins code, dependencies, datasets, training examples and test cohorts.
 `programs/` contains generated source; `predictions/` contains per-example outputs.
-`calls.tar.gz` contains request payloads, responses, partial source and attempt receipts.
+`calls/` contains request payloads, responses, partial source and attempt receipts.
+`data/` contains the frozen inputs, and `summary.jsonl` contains the full metrics.
+Commit this run directory to GitHub with the evaluation code.
 All generations are fresh for this run; resuming the same directory reuses only its records.
 
 Tasks follow [dhruvmehra/jevbench](https://github.com/dhruvmehra/jevbench/tree/c983cc4a7dd9fc142ca3b6c7a813cae0e963c902):
@@ -121,58 +144,3 @@ The fixed 300-example cohorts differ from upstream's historical 500-example Jev 
 no historical score is presented as a fresh measurement.
 """
     (output / "README.md").write_text(text, encoding="utf-8")
-
-
-def upload(output, repo_id):
-    from huggingface_hub import HfApi
-
-    if not (output / "summary.jsonl").exists():
-        raise ValueError("No evaluation report to upload")
-    with tarfile.open(output / "calls.tar.gz", "w:gz") as archive:
-        for path in sorted((output / "calls").rglob("*")):
-            if path.is_file() and path.name in {
-                "request.json",
-                "response.json",
-                "receipt.json",
-                "validation.json",
-                "partial.py",
-            }:
-                archive.add(path, arcname=str(path.relative_to(output)))
-    # The caller chooses/creates the destination and its visibility.
-    api = HfApi()
-    commit = api.upload_folder(
-        repo_id=repo_id,
-        repo_type="dataset",
-        folder_path=output,
-        path_in_repo=output.name,
-        allow_patterns=[
-            "README.md",
-            "manifest.json",
-            "run.json",
-            "summary.jsonl",
-            "calls.tar.gz",
-            "programs/*.json",
-            "programs/*.py",
-            "predictions/*.jsonl",
-        ],
-        commit_message=f"Upload evaluation {output.name}",
-    )
-    if not api.file_exists(repo_id, "README.md", repo_type="dataset"):
-        card = """---
-configs:
-  - config_name: summary
-    data_files: "*/summary.jsonl"
----
-# Heuristic adapter evaluations
-
-Each run directory contains its protocol, generated programs, predictions,
-and all API attempts. See its README for status, costs, and measurement details.
-"""
-        api.upload_file(
-            repo_id=repo_id,
-            repo_type="dataset",
-            path_in_repo="README.md",
-            path_or_fileobj=card.encode(),
-            commit_message="Add evaluation dataset card",
-        )
-    return commit

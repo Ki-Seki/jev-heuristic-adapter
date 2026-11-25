@@ -20,5 +20,5 @@ wheels/
 coverage.xml
 htmlcov/
 
-# Local evaluation artifacts are published separately to Hugging Face.
-eval-runs/
+# Evaluation results are versioned; ignore only interrupted atomic writes.
+evals/runs/**/*.tmp

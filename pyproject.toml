@@ -28,11 +28,13 @@ dev = [
 ]
 eval = [
     "datasets>=3.0",
-    "huggingface-hub>=0.25",
 ]
 
 [tool.ruff]
 target-version = "py310"
+# Preserve generated programs and failed partial source exactly as returned.
+extend-exclude = ["evals/runs"]
+force-exclude = true
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]

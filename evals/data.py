@@ -149,7 +149,6 @@ def prepare(output):
                     "jev-heuristic-adapter",
                     "openai",
                     "datasets",
-                    "huggingface-hub",
                 )
             },
         },
