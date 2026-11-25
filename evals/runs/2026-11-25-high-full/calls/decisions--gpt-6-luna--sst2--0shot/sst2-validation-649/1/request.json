@@ -1,0 +1,32 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": "the film 's few ideas are stretched to the point of evaporation ; the whole central section is one big chase that seems to have no goal and no urgency . "
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "negative",
+            "description": "The sentence expresses negative sentiment about the movie."
+          },
+          {
+            "value": "positive",
+            "description": "The sentence expresses positive sentiment about the movie."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.00058225,
+  "started_at": 1795601720.3251882
+}

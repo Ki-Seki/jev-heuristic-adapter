@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6.1-terra--sst2--2shot",
+  "method": "compile",
+  "model": "gpt-6.1-terra",
+  "dataset": "sst2",
+  "shots": 2,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.6866666666666666,
+  "macro_f1": 0.6457108397406905,
+  "errors": 0,
+  "p50_ms": 0.0462915631942451,
+  "p95_ms": 0.0806670868769288,
+  "inference_seconds": 0.015240374952554703
+}

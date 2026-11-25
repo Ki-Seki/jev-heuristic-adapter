@@ -1,0 +1,32 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": "too slow , too long and too little happens . "
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "negative",
+            "description": "The sentence expresses negative sentiment about the movie."
+          },
+          {
+            "value": "positive",
+            "description": "The sentence expresses positive sentiment about the movie."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.00056875,
+  "started_at": 1795601714.9348617
+}

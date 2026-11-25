@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "payload": {
+    "model": "typesafe/jev-1.14",
+    "state": "an exhilarating futuristic thriller-noir , minority report twists the best of technology around a gripping story , delivering a riveting , pulse intensifying escapist adventure of the first order ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "negative": "The sentence expresses negative sentiment about the movie.",
+          "positive": "The sentence expresses positive sentiment about the movie."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.000193956,
+  "started_at": 1795601825.5116503
+}

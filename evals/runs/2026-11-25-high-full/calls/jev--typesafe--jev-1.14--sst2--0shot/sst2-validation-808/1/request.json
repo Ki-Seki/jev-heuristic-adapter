@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "payload": {
+    "model": "typesafe/jev-1.14",
+    "state": "enormously entertaining for moviegoers of any age . ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "negative": "The sentence expresses negative sentiment about the movie.",
+          "positive": "The sentence expresses positive sentiment about the movie."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.000187908,
+  "started_at": 1795601825.1556795
+}

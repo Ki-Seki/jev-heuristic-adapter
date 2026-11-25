@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.13",
+  "payload": {
+    "model": "typesafe/jev-1.13",
+    "state": "what 's surprising about full frontal is that despite its overt self-awareness , parts of the movie still manage to break past the artifice and thoroughly engage you . ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "negative": "The sentence expresses negative sentiment about the movie.",
+          "positive": "The sentence expresses positive sentiment about the movie."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.00019278,
+  "started_at": 1795601785.386487
+}

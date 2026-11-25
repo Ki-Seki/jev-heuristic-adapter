@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.13",
+  "payload": {
+    "model": "typesafe/jev-1.13",
+    "state": "it 's clear the filmmakers were n't sure where they wanted their story to go , and even more clear that they lack the skills to get us to this undetermined destination . ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "negative": "The sentence expresses negative sentiment about the movie.",
+          "positive": "The sentence expresses positive sentiment about the movie."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.000192864,
+  "started_at": 1795601786.2151213
+}

@@ -1,0 +1,32 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": "the movie is dawn of the dead crossed with john carpenter 's ghosts of mars , with zombies not as ghoulish as the first and trains not as big as the second . "
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "negative",
+            "description": "The sentence expresses negative sentiment about the movie."
+          },
+          {
+            "value": "positive",
+            "description": "The sentence expresses positive sentiment about the movie."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.000582875,
+  "started_at": 1795601013.435648
+}

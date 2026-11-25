@@ -1,0 +1,32 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": "even the finest chef ca n't make a hotdog into anything more than a hotdog , and robert de niro ca n't make this movie anything more than a trashy cop buddy comedy . "
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "negative",
+            "description": "The sentence expresses negative sentiment about the movie."
+          },
+          {
+            "value": "positive",
+            "description": "The sentence expresses positive sentiment about the movie."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.000583875,
+  "started_at": 1795601005.555302
+}

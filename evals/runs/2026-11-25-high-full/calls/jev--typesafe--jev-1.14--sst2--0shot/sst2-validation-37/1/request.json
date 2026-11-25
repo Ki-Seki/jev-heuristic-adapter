@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "payload": {
+    "model": "typesafe/jev-1.14",
+    "state": "( w ) hile long on amiable monkeys and worthy environmentalism , jane goodall 's wild chimpanzees is short on the thrills the oversize medium demands . ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "negative": "The sentence expresses negative sentiment about the movie.",
+          "positive": "The sentence expresses positive sentiment about the movie."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.000192108,
+  "started_at": 1795601823.6174686
+}

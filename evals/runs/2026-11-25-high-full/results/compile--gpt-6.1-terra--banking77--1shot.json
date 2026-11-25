@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6.1-terra--banking77--1shot",
+  "method": "compile",
+  "model": "gpt-6.1-terra",
+  "dataset": "banking77",
+  "shots": 1,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.27666666666666667,
+  "macro_f1": 0.33435374149659863,
+  "errors": 187,
+  "p50_ms": 0.12525002239271998,
+  "p95_ms": 0.2363750245422125,
+  "inference_seconds": 0.0427969170268625
+}

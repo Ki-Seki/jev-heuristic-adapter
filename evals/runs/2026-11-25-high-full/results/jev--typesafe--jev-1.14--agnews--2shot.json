@@ -1,0 +1,15 @@
+{
+  "job": "jev--typesafe--jev-1.14--agnews--2shot",
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "dataset": "agnews",
+  "shots": 2,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.9,
+  "macro_f1": 0.8975021755540784,
+  "errors": 0,
+  "p50_ms": 78.16317199831246,
+  "p95_ms": 114.4429339983617,
+  "inference_seconds": 4.168756503000623
+}

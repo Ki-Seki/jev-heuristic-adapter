@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.13",
+  "payload": {
+    "model": "typesafe/jev-1.13",
+    "state": "the movie has an infectious exuberance that will engage anyone with a passing interest in the skate/surf culture , the l.a. beach scene and the imaginative ( and sometimes illegal ) ways kids can make a playground out of the refuse of adults . ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "negative": "The sentence expresses negative sentiment about the movie.",
+          "positive": "The sentence expresses positive sentiment about the movie."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.\nUse the labeled examples as guidance for classifying only the current input. Examples:\n[{\"state\": \"a much better documentary -- more revealing , more emotional and more surprising -- than its pedestrian english title would have you believe . \", \"answer\": \"positive\"}, {\"state\": \"vaguely interesting , but it 's just too too much \", \"answer\": \"negative\"}]",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.000211638,
+  "started_at": 1795601794.5245895
+}

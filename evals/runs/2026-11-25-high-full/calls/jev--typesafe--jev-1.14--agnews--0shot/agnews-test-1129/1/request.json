@@ -1,0 +1,22 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "payload": {
+    "model": "typesafe/jev-1.14",
+    "state": "Gerrard only a 50-50 chance VIENNA - England midfielder Steven Gerrard is a major doubt to face Austria in today #39;s opening 2006 World Cup qualifier. Gerrard has failed to shake off a groin injury suffered in training on Thursday and ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "business": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector.",
+          "sci_tech": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research.",
+          "sports": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results.",
+          "world": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.00021730800000000001,
+  "started_at": 1795601837.7938974
+}

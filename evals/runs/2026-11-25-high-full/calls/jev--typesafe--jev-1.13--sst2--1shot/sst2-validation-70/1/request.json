@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.13",
+  "payload": {
+    "model": "typesafe/jev-1.13",
+    "state": "for all its impressive craftsmanship , and despite an overbearing series of third-act crescendos , lily chou-chou never really builds up a head of emotional steam . ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "negative": "The sentence expresses negative sentiment about the movie.",
+          "positive": "The sentence expresses positive sentiment about the movie."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.\nUse the labeled examples as guidance for classifying only the current input. Examples:\n[{\"state\": \"a much better documentary -- more revealing , more emotional and more surprising -- than its pedestrian english title would have you believe . \", \"answer\": \"positive\"}]",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.00020433000000000002,
+  "started_at": 1795601789.7040136
+}

@@ -20,5 +20,7 @@ wheels/
 coverage.xml
 htmlcov/
 
-# Evaluation results are versioned; ignore only interrupted atomic writes.
+# Evaluation data is versioned; previews and execution logs stay local.
 evals/runs/**/*.tmp
+evals/runs/**/*.html
+evals/runs/**/*.log

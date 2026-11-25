@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6.1-sol--agnews--2shot",
+  "method": "compile",
+  "model": "gpt-6.1-sol",
+  "dataset": "agnews",
+  "shots": 2,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.87,
+  "macro_f1": 0.8675131858084791,
+  "errors": 0,
+  "p50_ms": 1.0080835199914873,
+  "p95_ms": 1.3638751115649939,
+  "inference_seconds": 0.3063000419642776
+}

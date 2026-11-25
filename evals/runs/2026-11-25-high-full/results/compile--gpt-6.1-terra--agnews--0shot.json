@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6.1-terra--agnews--0shot",
+  "method": "compile",
+  "model": "gpt-6.1-terra",
+  "dataset": "agnews",
+  "shots": 0,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.76,
+  "macro_f1": 0.7600751879699248,
+  "errors": 0,
+  "p50_ms": 0.6032079691067338,
+  "p95_ms": 0.9402080904692411,
+  "inference_seconds": 0.18495554092805833
+}

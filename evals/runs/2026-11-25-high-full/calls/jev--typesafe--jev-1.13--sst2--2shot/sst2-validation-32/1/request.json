@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.13",
+  "payload": {
+    "model": "typesafe/jev-1.13",
+    "state": "a gorgeous , witty , seductive movie . ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "negative": "The sentence expresses negative sentiment about the movie.",
+          "positive": "The sentence expresses positive sentiment about the movie."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.\nUse the labeled examples as guidance for classifying only the current input. Examples:\n[{\"state\": \"a much better documentary -- more revealing , more emotional and more surprising -- than its pedestrian english title would have you believe . \", \"answer\": \"positive\"}, {\"state\": \"vaguely interesting , but it 's just too too much \", \"answer\": \"negative\"}]",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.000203028,
+  "started_at": 1795601793.4675512
+}

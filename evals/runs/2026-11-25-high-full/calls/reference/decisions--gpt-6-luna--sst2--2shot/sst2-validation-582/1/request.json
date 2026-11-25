@@ -1,0 +1,36 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "developer",
+        "content": "Classify the final input. Labeled examples:\n[{\"state\": \"a much better documentary -- more revealing , more emotional and more surprising -- than its pedestrian english title would have you believe . \", \"answer\": \"positive\"}, {\"state\": \"vaguely interesting , but it 's just too too much \", \"answer\": \"negative\"}]"
+      },
+      {
+        "role": "user",
+        "content": "despite all evidence to the contrary , this clunker has somehow managed to pose as an actual feature movie , the kind that charges full admission and gets hyped on tv and purports to amuse small children and ostensible adults . "
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "negative",
+            "description": "The sentence expresses negative sentiment about the movie."
+          },
+          {
+            "value": "positive",
+            "description": "The sentence expresses positive sentiment about the movie."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.000637375,
+  "started_at": 1795601063.286704
+}

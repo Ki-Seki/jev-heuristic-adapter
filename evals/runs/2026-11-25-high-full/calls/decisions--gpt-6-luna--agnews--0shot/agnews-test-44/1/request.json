@@ -1,0 +1,40 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "user",
+        "content": "Erstad's Double Lifts Angels to Win (AP) AP - Darin Erstad doubled in the go-ahead run in the eighth inning, lifting the Anaheim Angels to a 3-2 victory over the Detroit Tigers on Sunday. The win pulled Anaheim within a percentage point of Boston and Texas in the AL wild-card race."
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "business",
+            "description": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector."
+          },
+          {
+            "value": "sci_tech",
+            "description": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research."
+          },
+          {
+            "value": "sports",
+            "description": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results."
+          },
+          {
+            "value": "world",
+            "description": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.00066925,
+  "started_at": 1795601745.3216054
+}

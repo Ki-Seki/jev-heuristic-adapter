@@ -1,0 +1,21 @@
+{
+  "selected_groups": 90,
+  "selected_predictions": 27000,
+  "compiled_result_bytes_unchanged": true,
+  "credential_matches": 0,
+  "generation_requests": 64,
+  "reasoning_effort": "high",
+  "generation_caps": [
+    48000
+  ],
+  "max_generation_output_tokens": 42960,
+  "incomplete_generations": 0,
+  "compile_runtime_errors": 187,
+  "selected_api_prediction_errors": 0,
+  "total_known_usd": 28.545385817,
+  "total_upper_usd": 28.54784895,
+  "unknown_cost_attempts": 11,
+  "total_api_attempts": 10876,
+  "budget_usd": 50,
+  "reference_vs_final_openai_prediction_changes": 0
+}

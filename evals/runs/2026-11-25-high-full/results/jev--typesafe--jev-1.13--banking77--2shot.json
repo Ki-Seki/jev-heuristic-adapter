@@ -1,0 +1,15 @@
+{
+  "job": "jev--typesafe--jev-1.13--banking77--2shot",
+  "method": "jev",
+  "model": "typesafe/jev-1.13",
+  "dataset": "banking77",
+  "shots": 2,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.8266666666666667,
+  "macro_f1": 0.7594473262922461,
+  "errors": 0,
+  "p50_ms": 85.42144099919824,
+  "p95_ms": 131.24710400006734,
+  "inference_seconds": 4.758765243997914
+}

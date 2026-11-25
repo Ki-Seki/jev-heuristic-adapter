@@ -1,0 +1,22 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.13",
+  "payload": {
+    "model": "typesafe/jev-1.13",
+    "state": "Racist Blackburn fan cops five-year ban A SOCCER fan was fined \\$2400 and banned from soccer grounds for the maximum five years yesterday when he pleaded guilty to racially abusing Birmingham City striker Dwight Yorke.",
+    "questions": {
+      "label": {
+        "criteria": {
+          "business": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector.",
+          "sci_tech": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research.",
+          "sports": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results.",
+          "world": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.000216552,
+  "started_at": 1795601799.5781577
+}

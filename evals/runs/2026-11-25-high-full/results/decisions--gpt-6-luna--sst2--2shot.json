@@ -1,0 +1,15 @@
+{
+  "job": "decisions--gpt-6-luna--sst2--2shot",
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "dataset": "sst2",
+  "shots": 2,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.9466666666666667,
+  "macro_f1": 0.9465811965811965,
+  "errors": 0,
+  "p50_ms": 121.51773999721627,
+  "p95_ms": 167.7298049980891,
+  "inference_seconds": 7.066489222997916
+}

@@ -1,0 +1,29 @@
+{
+  "model": "typesafe/jev-1.14-20261014",
+  "answers": {
+    "label": {
+      "type": "choice",
+      "choice": "business",
+      "probabilities": {
+        "business": 0.58,
+        "sci_tech": 0.26,
+        "sports": 0,
+        "world": 0.16
+      },
+      "confidence": 0.44
+    }
+  },
+  "usage": {
+    "input_tokens": 578,
+    "output_tokens": 48,
+    "cost": 2.4276e-05,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 2.4276e-05,
+      "upstream_inference_prompt_cost": 2.4276e-05,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "id": "gen-dec-1795601842-aUyqv3Iqn7mDUik5uLAB",
+  "provider": "TypeSafe"
+}

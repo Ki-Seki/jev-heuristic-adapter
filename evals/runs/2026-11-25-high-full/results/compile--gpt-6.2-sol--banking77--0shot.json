@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6.2-sol--banking77--0shot",
+  "method": "compile",
+  "model": "gpt-6.2-sol",
+  "dataset": "banking77",
+  "shots": 0,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.62,
+  "macro_f1": 0.5885088385852327,
+  "errors": 0,
+  "p50_ms": 0.5076879751868546,
+  "p95_ms": 0.8027090225368738,
+  "inference_seconds": 0.17951437504962087
+}

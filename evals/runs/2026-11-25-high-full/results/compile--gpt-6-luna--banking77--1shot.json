@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6-luna--banking77--1shot",
+  "method": "compile",
+  "model": "gpt-6-luna",
+  "dataset": "banking77",
+  "shots": 1,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.18666666666666668,
+  "macro_f1": 0.21412542028305576,
+  "errors": 0,
+  "p50_ms": 0.09058346040546894,
+  "p95_ms": 0.1597920199856162,
+  "inference_seconds": 0.029889125027693808
+}

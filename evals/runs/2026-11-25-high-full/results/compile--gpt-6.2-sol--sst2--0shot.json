@@ -1,0 +1,16 @@
+{
+  "job": "compile--gpt-6.2-sol--sst2--0shot",
+  "method": "compile",
+  "model": "gpt-6.2-sol",
+  "dataset": "sst2",
+  "shots": 0,
+  "attempts": 1,
+  "error": null,
+  "n": 300,
+  "accuracy": 0.7433333333333333,
+  "macro_f1": 0.7220584519498021,
+  "errors": 0,
+  "p50_ms": 0.16299996059387922,
+  "p95_ms": 0.28020795434713364,
+  "inference_seconds": 0.051739541930146515
+}

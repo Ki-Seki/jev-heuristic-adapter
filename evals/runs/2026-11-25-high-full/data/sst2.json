@@ -1,0 +1,1524 @@
+{
+  "question": {
+    "criteria": {
+      "negative": "The sentence expresses negative sentiment about the movie.",
+      "positive": "The sentence expresses positive sentiment about the movie."
+    },
+    "instructions": "Which category best describes the text? Pick exactly one.",
+    "type": "choice"
+  },
+  "examples": [
+    {
+      "id": "sst2:train:11114",
+      "state": "a much better documentary -- more revealing , more emotional and more surprising -- than its pedestrian english title would have you believe . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:train:20193",
+      "state": "vaguely interesting , but it 's just too too much ",
+      "answer": "negative"
+    }
+  ],
+  "test": [
+    {
+      "id": "sst2:validation:792",
+      "state": "it 's fun lite . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:701",
+      "state": "even the finest chef ca n't make a hotdog into anything more than a hotdog , and robert de niro ca n't make this movie anything more than a trashy cop buddy comedy . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:203",
+      "state": "bad . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:204",
+      "state": "that dogged good will of the parents and ` vain ' jia 's defoliation of ego , make the film touching despite some doldrums . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:338",
+      "state": "it 's of the quality of a lesser harrison ford movie - six days , seven nights , maybe , or that dreadful sabrina remake . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:64",
+      "state": "the script kicks in , and mr. hartley 's distended pace and foot-dragging rhythms follow . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:43",
+      "state": "holm ... embodies the character with an effortlessly regal charisma . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:323",
+      "state": "a painfully funny ode to bad behavior . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:15",
+      "state": "a gorgeous , high-spirited musical from india that exquisitely blends music , dance , song , and high drama . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:59",
+      "state": "it 's just disappointingly superficial -- a movie that has all the elements necessary to be a fascinating , involving character study , but never does more than scratch the surface . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:771",
+      "state": "very special effects , brilliantly bold colors and heightened reality ca n't hide the giant achilles ' heel in `` stuart little 2 `` : there 's just no story , folks . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:444",
+      "state": "the last 20 minutes are somewhat redeeming , but most of the movie is the same teenage american road-trip drek we 've seen before - only this time you have to read the fart jokes ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:93",
+      "state": "if steven soderbergh 's ` solaris ' is a failure it is a glorious failure . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:309",
+      "state": "the second coming of harry potter is a film far superior to its predecessor . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:228",
+      "state": "it provides an honest look at a community striving to anchor itself in new grounds . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:414",
+      "state": "it has charm to spare , and unlike many romantic comedies , it does not alienate either gender in the audience . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:813",
+      "state": "i can take infantile humor ... but this is the sort of infantile that makes you wonder about changing the director and writer 's diapers . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:457",
+      "state": "it inspires a continuing and deeply satisfying awareness of the best movies as monumental ` picture shows . ' ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:133",
+      "state": "the tale of tok ( andy lau ) , a sleek sociopath on the trail of o ( takashi sorimachi ) , the most legendary of asian hitmen , is too scattershot to take hold . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:80",
+      "state": "the draw ( for `` big bad love '' ) is a solid performance by arliss howard . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:627",
+      "state": "nervous breakdowns are not entertaining . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:522",
+      "state": "it has its moments of swaggering camaraderie , but more often just feels generic , derivative and done to death . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:262",
+      "state": "it 's like every bad idea that 's ever gone into an after-school special compiled in one place , minus those daytime programs ' slickness and sophistication ( and who knew they even had any ? ) . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:135",
+      "state": "pumpkin means to be an outrageous dark satire on fraternity life , but its ambitions far exceed the abilities of writer adam larson broder and his co-director , tony r. abrams , in their feature debut . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:756",
+      "state": "something like scrubbing the toilet . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:553",
+      "state": "so unassuming and pure of heart , you ca n't help but warmly extend your arms and yell ` safe ! ' ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:516",
+      "state": "plays like a volatile and overlong w magazine fashion spread . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:762",
+      "state": "it 's a lovely film with lovely performances by buy and accorsi . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:679",
+      "state": "filmmakers who can deftly change moods are treasures and even marvels . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:286",
+      "state": "at its best , queen is campy fun like the vincent price horror classics of the '60s . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:298",
+      "state": "serving sara does n't serve up a whole lot of laughs . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:455",
+      "state": "( chaiken 's ) talent lies in an evocative , accurate observation of a distinctive milieu and in the lively , convincing dialogue she creates for her characters . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:550",
+      "state": "... nothing scary here except for some awful acting and lame special effects . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:751",
+      "state": "one long string of cliches . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:810",
+      "state": "this is a good script , good dialogue , funny even for adults . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:785",
+      "state": "aside from minor tinkering , this is the same movie you probably loved in 1994 , except that it looks even better . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:343",
+      "state": "no way i can believe this load of junk . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:787",
+      "state": "a valueless kiddie paean to pro basketball underwritten by the nba . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:847",
+      "state": "... mafia , rap stars and hood rats butt their ugly heads in a regurgitation of cinematic violence that gives brutal birth to an unlikely , but likable , hero . ' ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:776",
+      "state": "as ` chick flicks ' go , this one is pretty miserable , resorting to string-pulling rather than legitimate character development and intelligent plotting . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:294",
+      "state": "the old-world - meets-new mesh is incarnated in the movie 's soundtrack , a joyful effusion of disco bollywood that , by the end of monsoon wedding , sent my spirit soaring out of the theater . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:281",
+      "state": "chokes on its own depiction of upper-crust decorum . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:640",
+      "state": "an important movie , a reminder of the power of film to move us and to make us examine our values . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:650",
+      "state": "too slow , too long and too little happens . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:82",
+      "state": "it 's one pussy-ass world when even killer-thrillers revolve around group therapy sessions . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:215",
+      "state": "the best revenge may just be living well because this film , unlike other dumas adaptations , is far more likened to a treasure than a lengthy jail sentence . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:488",
+      "state": "a cartoon that 's truly cinematic in scope , and a story that 's compelling and heartfelt -- even if the heart belongs to a big , four-legged herbivore . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:218",
+      "state": "all that 's missing is the spontaneity , originality and delight . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:742",
+      "state": "it 's a demented kitsch mess ( although the smeary digital video does match the muddled narrative ) , but it 's savvy about celebrity and has more guts and energy than much of what will open this year . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:192",
+      "state": "a celebration of quirkiness , eccentricity , and certain individuals ' tendency to let it all hang out , and damn the consequences . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:282",
+      "state": "while there 's something intrinsically funny about sir anthony hopkins saying ` get in the car , bitch , ' this jerry bruckheimer production has little else to offer ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:285",
+      "state": "k-19 exploits our substantial collective fear of nuclear holocaust to generate cheap hollywood tension . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:446",
+      "state": "with its dogged hollywood naturalism and the inexorable passage of its characters toward sainthood , windtalkers is nothing but a sticky-sweet soap . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:662",
+      "state": "there 's not enough here to justify the almost two hours . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:757",
+      "state": "there 's enough melodrama in this magnolia primavera to make pta proud yet director muccino 's characters are less worthy of puccini than they are of daytime television . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:867",
+      "state": "has all the depth of a wading pool . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:777",
+      "state": "by candidly detailing the politics involved in the creation of an extraordinary piece of music , ( jones ) calls our attention to the inherent conflict between commerce and creativity . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:193",
+      "state": "morton uses her face and her body language to bring us morvern 's soul , even though the character is almost completely deadpan . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:429",
+      "state": "the film 's hackneyed message is not helped by the thin characterizations , nonexistent plot and pretentious visual style . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:297",
+      "state": "travels a fascinating arc from hope and euphoria to reality and disillusionment . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:369",
+      "state": "without ever becoming didactic , director carlos carrera expertly weaves this novelistic story of entangled interrelationships and complex morality . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:32",
+      "state": "a gorgeous , witty , seductive movie . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:747",
+      "state": "what 's surprising about full frontal is that despite its overt self-awareness , parts of the movie still manage to break past the artifice and thoroughly engage you . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:37",
+      "state": "( w ) hile long on amiable monkeys and worthy environmentalism , jane goodall 's wild chimpanzees is short on the thrills the oversize medium demands . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:169",
+      "state": "leigh 's film is full of memorable performances from top to bottom . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:780",
+      "state": "a grimly competent and stolid and earnest military courtroom drama . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:101",
+      "state": "his last movie was poetically romantic and full of indelible images , but his latest has nothing going for it . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:775",
+      "state": "not really bad so much as distasteful : we need kidnapping suspense dramas right now like we need doomsday thrillers . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:820",
+      "state": "it has the charm of the original american road movies , feasting on the gorgeous , ramshackle landscape of the filmmaker 's motherland . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:795",
+      "state": "the film contains no good jokes , no good scenes , barely a moment when carvey 's saturday night live-honed mimicry rises above the level of embarrassment . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:70",
+      "state": "for all its impressive craftsmanship , and despite an overbearing series of third-act crescendos , lily chou-chou never really builds up a head of emotional steam . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:100",
+      "state": "neither parker nor donovan is a typical romantic lead , but they bring a fresh , quirky charm to the formula . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:497",
+      "state": "the overall effect is less like a children 's movie than a recruitment film for future hollywood sellouts . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:463",
+      "state": "some of their jokes work , but most fail miserably and in the end , pumpkin is far more offensive than it is funny . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:322",
+      "state": "that 's pure pr hype . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:611",
+      "state": "the performances take the movie to a higher level . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:430",
+      "state": "a breezy romantic comedy that has the punch of a good sitcom , while offering exceptionally well-detailed characters . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:225",
+      "state": "far more imaginative and ambitious than the trivial , cash-in features nickelodeon has made from its other animated tv series . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:697",
+      "state": "not since tom cruise in risky business has an actor made such a strong impression in his underwear . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:247",
+      "state": "stealing harvard is evidence that the farrelly bros. -- peter and bobby -- and their brand of screen comedy are wheezing to an end , along with green 's half-hearted movie career . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:136",
+      "state": "looks and feels like a project better suited for the small screen . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:332",
+      "state": "broomfield turns his distinctive ` blundering ' style into something that could really help clear up the case . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:245",
+      "state": "it 's a work by an artist so in control of both his medium and his message that he can improvise like a jazzman . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:710",
+      "state": "less dizzying than just dizzy , the jaunt is practically over before it begins . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:684",
+      "state": "a study in shades of gray , offering itself up in subtle plot maneuvers ... ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:411",
+      "state": "i do n't mind having my heartstrings pulled , but do n't treat me like a fool . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:365",
+      "state": "portentous and pretentious , the weight of water is appropriately titled , given the heavy-handedness of it drama . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:487",
+      "state": "( e ) ventually , every idea in this film is flushed down the latrine of heroism . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:603",
+      "state": "first-time writer-director serry shows a remarkable gift for storytelling with this moving , effective little film . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:839",
+      "state": "but this films lacks the passion required to sell the material . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:482",
+      "state": "cq 's reflection of artists and the love of cinema-and-self suggests nothing less than a new voice that deserves to be considered as a possible successor to the best european directors . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:276",
+      "state": "for this reason and this reason only -- the power of its own steadfast , hoity-toity convictions -- chelsea walls deserves a medal . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:655",
+      "state": "birthday girl is an amusing joy ride , with some surprisingly violent moments . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:849",
+      "state": "trademark american triteness and simplicity are tossed out the window with the intelligent french drama that deftly explores the difficult relationship between a father and son . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:819",
+      "state": "the movie is dawn of the dead crossed with john carpenter 's ghosts of mars , with zombies not as ghoulish as the first and trains not as big as the second . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:327",
+      "state": "it proves quite compelling as an intense , brooding character study . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:803",
+      "state": "bogdanovich tantalizes by offering a peep show into the lives of the era 's creme de la celluloid . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:534",
+      "state": "i just loved every minute of this film . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:75",
+      "state": "among the year 's most intriguing explorations of alientation . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:162",
+      "state": "there seems to be no clear path as to where the story 's going , or how long it 's going to take to get there . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:796",
+      "state": "a fitfully amusing romp that , if nothing else , will appeal to fans of malcolm in the middle and its pubescent star , frankie muniz . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:582",
+      "state": "despite all evidence to the contrary , this clunker has somehow managed to pose as an actual feature movie , the kind that charges full admission and gets hyped on tv and purports to amuse small children and ostensible adults . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:404",
+      "state": "zhang ... has done an amazing job of getting realistic performances from his mainly nonprofessional cast . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:212",
+      "state": "the entire movie is about a boring , sad man being boring and sad . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:801",
+      "state": "this film seems thirsty for reflection , itself taking on adolescent qualities . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:862",
+      "state": "it 's inoffensive , cheerful , built to inspire the young people , set to an unending soundtrack of beach party pop numbers and aside from its remarkable camerawork and awesome scenery , it 's about as exciting as a sunburn . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:425",
+      "state": "while the ideas about techno-saturation are far from novel , they 're presented with a wry dark humor . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:308",
+      "state": "an intriguing cinematic omnibus and round-robin that occasionally is more interesting in concept than in execution . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:340",
+      "state": "the most hopelessly monotonous film of the year , noteworthy only for the gimmick of being filmed as a single unbroken 87-minute take . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:830",
+      "state": "woody allen 's latest is an ambling , broad comedy about all there is to love -- and hate -- about the movie biz . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:333",
+      "state": "a pleasant enough romance with intellectual underpinnings , the kind of movie that entertains even as it turns maddeningly predictable . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:248",
+      "state": "a full world has been presented onscreen , not some series of carefully structured plot points building to a pat resolution . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:773",
+      "state": "it 's a beautiful madness . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:633",
+      "state": "still , as a visual treat , the film is almost unsurpassed . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:802",
+      "state": "this nickleby thing might have more homosexual undertones than an eddie murphy film . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:822",
+      "state": "it 's a buggy drag . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:783",
+      "state": "the movie does a good job of laying out some of the major issues that we encounter as we journey through life . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:379",
+      "state": "tries to add some spice to its quirky sentiments but the taste is all too familiar . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:376",
+      "state": "to call the other side of heaven `` appalling '' would be to underestimate just how dangerous entertainments like it can be . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:42",
+      "state": "the subtle strength of `` elling '' is that it never loses touch with the reality of the grim situation . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:523",
+      "state": "a romantic comedy enriched by a sharp eye for manners and mores . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:452",
+      "state": "it 's clear the filmmakers were n't sure where they wanted their story to go , and even more clear that they lack the skills to get us to this undetermined destination . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:547",
+      "state": "the film is based on truth and yet there is something about it that feels incomplete , as if the real story starts just around the corner . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:723",
+      "state": "vera 's three actors -- mollà , gil and bardem -- excel in insightful , empathetic performances . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:823",
+      "state": "it wants to tweak them with a taste of tangy new humor . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:778",
+      "state": "one of the most significant moviegoing pleasures of the year . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:163",
+      "state": "slapstick buffoonery can tickle many a preschooler 's fancy , but when it costs a family of four about $ 40 to see a film in theaters , why spend money on a dog like this when you can rent a pedigree instead ? ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:728",
+      "state": "but taken as a stylish and energetic one-shot , the queen of the damned can not be said to suck . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:194",
+      "state": "instead of a hyperbolic beat-charged urban western , it 's an unpretentious , sociologically pointed slice of life . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:288",
+      "state": "the quality of the art combined with the humor and intelligence of the script allow the filmmakers to present the biblical message of forgiveness without it ever becoming preachy or syrupy . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:478",
+      "state": "a by-the-numbers patient/doctor pic that covers all the usual ground ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:456",
+      "state": "sticky sweet sentimentality , clumsy plotting and a rosily myopic view of life in the wwii-era mississippi delta undermine this adaptation . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:781",
+      "state": "at once half-baked and overheated . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:660",
+      "state": "like mike is a winner for kids , and no doubt a winner for lil bow wow , who can now add movies to the list of things he does well . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:350",
+      "state": "his comedy premises are often hackneyed or just plain crude , calculated to provoke shocked laughter , without following up on a deeper level . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:645",
+      "state": "the words , ` frankly , my dear , i do n't give a damn , ' have never been more appropriate . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:9",
+      "state": "in exactly 89 minutes , most of which passed as slowly as if i 'd been sitting naked on an igloo , formula 51 sank from quirky to jerky to utter turkey . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:227",
+      "state": "as the two leads , lathan and diggs are charming and have chemistry both as friends and lovers . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:141",
+      "state": "the character of zigzag is not sufficiently developed to support a film constructed around him . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:241",
+      "state": "it appears that something has been lost in the translation to the screen . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:557",
+      "state": "one of the best films of the year with its exploration of the obstacles to happiness faced by five contemporary individuals ... a psychological masterpiece . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:695",
+      "state": "sit through this one , and you wo n't need a magic watch to stop time ; your dvd player will do it for you . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:119",
+      "state": "comes ... uncomfortably close to coasting in the treads of the bicycle thief . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:537",
+      "state": "a simple , but gritty and well-acted ensemble drama that encompasses a potent metaphor for a country still dealing with its fascist past . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:324",
+      "state": "you 'll gasp appalled and laugh outraged and possibly , watching the spectacle of a promising young lad treading desperately in a nasty sea , shed an errant tear . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:438",
+      "state": "the movie has an infectious exuberance that will engage anyone with a passing interest in the skate/surf culture , the l.a. beach scene and the imaginative ( and sometimes illegal ) ways kids can make a playground out of the refuse of adults . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:636",
+      "state": "offers much to enjoy ... and a lot to mull over in terms of love , loyalty and the nature of staying friends . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:186",
+      "state": "pacino is brilliant as the sleep-deprived dormer , his increasing weariness as much existential as it is physical . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:606",
+      "state": "makes for a pretty unpleasant viewing experience . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:121",
+      "state": "it seems to me the film is about the art of ripping people off without ever letting them consciously know you have done so ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:445",
+      "state": "even in its most tedious scenes , russian ark is mesmerizing . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:408",
+      "state": "there are simply too many ideas floating around -- part farce , part sliding doors , part pop video -- and yet failing to exploit them . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:145",
+      "state": "the best that can be said about the work here of scottish director ritchie ... is that he obviously does n't have his heart in it . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:14",
+      "state": "even horror fans will most likely not find what they 're seeking with trouble every day ; the movie lacks both thrills and humor . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:716",
+      "state": "wince-inducing dialogue , thrift-shop costumes , prosthetic makeup by silly putty and kmart blue-light-special effects all conspire to test trekkie loyalty . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:266",
+      "state": "a coda in every sense , the pinochet case splits time between a minute-by-minute account of the british court 's extradition chess game and the regime 's talking-head survivors . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:676",
+      "state": "well-nigh unendurable ... though the picture strains to become cinematic poetry , it remains depressingly prosaic and dull . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:468",
+      "state": "the characters are interesting and often very creatively constructed from figure to backstory . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:838",
+      "state": "sometimes seems less like storytelling than something the otherwise compelling director needed to get off his chest . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:387",
+      "state": "director andrew niccol ... demonstrates a wry understanding of the quirks of fame . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:318",
+      "state": "hit and miss as far as the comedy goes and a big ole ' miss in the way of story . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:821",
+      "state": "exciting and direct , with ghost imagery that shows just enough to keep us on our toes . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:722",
+      "state": "too restrained to be a freak show , too mercenary and obvious to be cerebral , too dull and pretentious to be engaging ... the isle defies an easy categorization . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:267",
+      "state": "it 's played in the most straight-faced fashion , with little humor to lighten things up . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:870",
+      "state": "... is an arthritic attempt at directing by callie khouri . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:506",
+      "state": "crackerjack entertainment -- nonstop romance , music , suspense and action . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:597",
+      "state": "visually rather stunning , but ultimately a handsome-looking bore , the true creativity would have been to hide treasure planet entirely and completely reimagine it . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:504",
+      "state": "the film is powerful , accessible and funny . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:690",
+      "state": "stultifyingly , dumbfoundingly , mind-numbingly bad . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:394",
+      "state": "whether writer-director anne fontaine 's film is a ghost story , an account of a nervous breakdown , a trip down memory lane , all three or none of the above , it is as seductive as it is haunting . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:102",
+      "state": "does paint some memorable images ... , but makhmalbaf keeps her distance from the characters ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:604",
+      "state": "vera 's technical prowess ends up selling his film short ; he smoothes over hard truths even as he uncovers them . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:85",
+      "state": "the movie achieves as great an impact by keeping these thoughts hidden as ... ( quills ) did by showing them . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:483",
+      "state": "even if you do n't think ( kissinger 's ) any more guilty of criminal activity than most contemporary statesmen , he 'd sure make a courtroom trial great fun to watch . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:196",
+      "state": "so , too , is this comedy about mild culture clashing in today 's new delhi . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:739",
+      "state": "oscar wilde 's masterpiece , the importance of being earnest , may be the best play of the 19th century . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:126",
+      "state": "confirms the nagging suspicion that ethan hawke would be even worse behind the camera than he is in front of it . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:561",
+      "state": "another one of those estrogen overdose movies like `` divine secrets of the ya ya sisterhood , '' except that the writing , acting and character development are a lot better . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:864",
+      "state": "dull , lifeless , and amateurishly assembled . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:808",
+      "state": "enormously entertaining for moviegoers of any age . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:841",
+      "state": "there 's a wickedly subversive bent to the best parts of birthday girl . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:345",
+      "state": "this tenth feature is a big deal , indeed -- at least the third-best , and maybe even a notch above the previous runner-up , nicholas meyer 's star trek vi : the undiscovered country . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:693",
+      "state": "because of an unnecessary and clumsy last scene , ` swimfan ' left me with a very bad feeling . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:564",
+      "state": "the plot convolutions ultimately add up to nothing more than jerking the audience 's chain . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:224",
+      "state": "nothing 's at stake , just a twisty double-cross you can smell a mile away -- still , the derivative nine queens is lots of fun . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:157",
+      "state": "it takes talent to make a lifeless movie about the most heinous man who ever lived . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:103",
+      "state": "a gripping movie , played with performances that are all understated and touching . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:805",
+      "state": "irwin is a man with enough charisma and audacity to carry a dozen films , but this particular result is ultimately held back from being something greater . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:71",
+      "state": "exquisitely nuanced in mood tics and dialogue , this chamber drama is superbly acted by the deeply appealing veteran bouquet and the chilling but quite human berling . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:782",
+      "state": "the structure the film takes may find matt damon and ben affleck once again looking for residuals as this officially completes a good will hunting trilogy that was never planned . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:419",
+      "state": "i 'm just too bored to care . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:73",
+      "state": "one of creepiest , scariest movies to come along in a long , long time , easily rivaling blair witch or the others . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:132",
+      "state": "scooby dooby doo / and shaggy too / you both look and sound great . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:355",
+      "state": "there is no pleasure in watching a child suffer . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:142",
+      "state": "what better message than ` love thyself ' could young women of any size receive ? ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:300",
+      "state": "fun , flip and terribly hip bit of cinematic entertainment . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:161",
+      "state": "not exactly the bees knees ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:678",
+      "state": "the movie is n't just hilarious : it 's witty and inventive , too , and in hindsight , it is n't even all that dumb . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:84",
+      "state": "the band 's courage in the face of official repression is inspiring , especially for aging hippies ( this one included ) . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:469",
+      "state": "so unremittingly awful that labeling it a dog probably constitutes cruelty to canines . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:794",
+      "state": "it confirms fincher 's status as a film maker who artfully bends technical know-how to the service of psychological insight . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:680",
+      "state": "the vitality of the actors keeps the intensity of the film high , even as the strafings blend together . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:546",
+      "state": "on the heels of the ring comes a similarly morose and humorless horror movie that , although flawed , is to be commended for its straight-ahead approach to creepiness . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:608",
+      "state": "highbrow self-appointed guardians of culture need not apply , but those who loved cool as ice have at last found a worthy follow-up . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:533",
+      "state": "`` mostly martha '' is a bright , light modern day family parable that wears its heart on its sleeve for all to see . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:750",
+      "state": "nelson 's brutally unsentimental approach ... sucks the humanity from the film , leaving behind an horrific but weirdly unemotional spectacle . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:540",
+      "state": "binoche makes it interesting trying to find out . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:721",
+      "state": "a poignant , artfully crafted meditation on mortality . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:427",
+      "state": "an exhilarating futuristic thriller-noir , minority report twists the best of technology around a gripping story , delivering a riveting , pulse intensifying escapist adventure of the first order ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:296",
+      "state": "its well of thorn and vinegar ( and simple humanity ) has long been plundered by similar works featuring the insight and punch this picture so conspicuously lacks . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:374",
+      "state": "the movie is what happens when you blow up small potatoes to 10 times their natural size , and it ai n't pretty . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:725",
+      "state": "( grant 's ) bumbling magic takes over the film , and it turns out to be another winning star vehicle . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:381",
+      "state": "with tightly organized efficiency , numerous flashbacks and a constant edge of tension , miller 's film is one of 2002 's involvingly adult surprises . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:866",
+      "state": "the far future may be awesome to consider , but from period detail to matters of the heart , this film is most transporting when it stays put in the past . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:489",
+      "state": "it 's dumb , but more importantly , it 's just not scary . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:843",
+      "state": "a wildly inconsistent emotional experience . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:210",
+      "state": "not only is undercover brother as funny , if not more so , than both austin powers films , but it 's also one of the smarter , savvier spoofs to come along in some time . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:341",
+      "state": "it deserves to be seen by anyone with even a passing interest in the events shaping the world beyond their own horizons . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:287",
+      "state": "it 's a much more emotional journey than what shyamalan has given us in his past two movies , and gibson , stepping in for bruce willis , is the perfect actor to take us on the trip . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:515",
+      "state": "if looking for a thrilling sci-fi cinematic ride , do n't settle for this imposter . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:97",
+      "state": "no sophomore slump for director sam mendes , who segues from oscar winner to oscar-winning potential with a smooth sleight of hand . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:682",
+      "state": "in the end , the movie collapses on its shaky foundation despite the best efforts of director joe carnahan . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:638",
+      "state": "my wife is an actress is an utterly charming french comedy that feels so american in sensibility and style it 's virtually its own hollywood remake . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:138",
+      "state": "that is a compliment to kuras and miller . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:40",
+      "state": "there 's ... tremendous energy from the cast , a sense of playfulness and excitement that seems appropriate . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:848",
+      "state": "his healthy sense of satire is light and fun ... ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:199",
+      "state": "at the very least , if you do n't know anything about derrida when you walk into the theater , you wo n't know much more when you leave . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:573",
+      "state": "lovely and poignant . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:46",
+      "state": "a synthesis of cliches and absurdities that seems positively decadent in its cinematic flash and emptiness . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:208",
+      "state": "and the lesson , in the end , is nothing new . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:367",
+      "state": "there has always been something likable about the marquis de sade . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:529",
+      "state": "for close to two hours the audience is forced to endure three terminally depressed , mostly inarticulate , hyper dysfunctional families for the price of one . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:150",
+      "state": "overall very good for what it 's trying to do . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:209",
+      "state": "this is not the undisputed worst boxing movie ever , but it 's certainly not a champion - the big loser is the audience . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:764",
+      "state": "movie fans , get ready to take off ... the other direction . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:95",
+      "state": "this riveting world war ii moral suspense story deals with the shadow side of american culture : racial prejudice in its ugly and diverse forms . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:829",
+      "state": "teen movies have really hit the skids . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:596",
+      "state": "the director knows how to apply textural gloss , but his portrait of sex-as-war is strictly sitcom . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:481",
+      "state": "funny but perilously slight . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:736",
+      "state": "american chai encourages rueful laughter at stereotypes only an indian-american would recognize . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:12",
+      "state": "... the film suffers from a lack of humor ( something needed to balance out the violence ) ... ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:63",
+      "state": "on this tricky topic , tadpole is very much a step in the right direction , with its blend of frankness , civility and compassion . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:542",
+      "state": "there 's no emotional pulse to solaris . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:755",
+      "state": "... a fun little timewaster , helped especially by the cool presence of jean reno . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:65",
+      "state": "you wonder why enough was n't just a music video rather than a full-length movie . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:625",
+      "state": "for the most part stevens glides through on some solid performances and witty dialogue . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:490",
+      "state": "detox is ultimately a pointless endeavor . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:505",
+      "state": "and that 's a big part of why we go to the movies . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:667",
+      "state": "good film , but very glum . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:362",
+      "state": "as a first-time director , paxton has tapped something in himself as an actor that provides frailty with its dark soul . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:616",
+      "state": "there 's really only one good idea in this movie , but the director runs with it and presents it with an unforgettable visual panache . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:220",
+      "state": "the socio-histo-political treatise is told in earnest strides ... ( and ) personal illusion is deconstructed with poignancy . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:583",
+      "state": "it 's just filler . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:424",
+      "state": "a good piece of work more often than not . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:149",
+      "state": "the volatile dynamics of female friendship is the subject of this unhurried , low-key film that is so off-hollywood that it seems positively french in its rhythms and resonance . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:833",
+      "state": "ultimately feels empty and unsatisfying , like swallowing a communion wafer without the wine . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:649",
+      "state": "the film 's few ideas are stretched to the point of evaporation ; the whole central section is one big chase that seems to have no goal and no urgency . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:191",
+      "state": "the movie is beautiful to behold and engages one in a sense of epic struggle -- inner and outer -- that 's all too rare in hollywood 's hastier productions . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:3",
+      "state": "the acting , costumes , music , cinematography and sound are all astounding given the production 's austere locales . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:729",
+      "state": "the piece plays as well as it does thanks in large measure to anspaugh 's three lead actresses . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:265",
+      "state": "paid in full is so stale , in fact , that its most vibrant scene is one that uses clips from brian de palma 's scarface . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:27",
+      "state": "it 's an offbeat treat that pokes fun at the democratic exercise while also examining its significance for those who take part . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:501",
+      "state": "harrison 's flowers puts its heart in the right place , but its brains are in no particular place at all . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:610",
+      "state": "like you could n't smell this turkey rotting from miles away . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:165",
+      "state": "may reawaken discussion of the kennedy assassination but this fictional film looks made for cable rather than for the big screen . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:589",
+      "state": "if your taste runs to ` difficult ' films you absolutely ca n't miss it . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:436",
+      "state": "trite , banal , cliched , mostly inoffensive . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:617",
+      "state": "the so-inept - it 's - surreal dubbing ( featuring the voices of glenn close , regis philbin and breckin meyer ) brings back memories of cheesy old godzilla flicks . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:400",
+      "state": "it 's refreshing to see a girl-power movie that does n't feel it has to prove anything . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:118",
+      "state": "every nanosecond of the the new guy reminds you that you could be doing something else far more pleasurable . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:541",
+      "state": "the most compelling wiseman epic of recent years . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:581",
+      "state": "it can not be enjoyed , even on the level that one enjoys a bad slasher flick , primarily because it is dull . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:2",
+      "state": "allows us to hope that nolan is poised to embark a major career as a commercial yet inventive filmmaker . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:699",
+      "state": "... routine , harmless diversion and little else . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:1",
+      "state": "unflinchingly bleak and desperate ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:774",
+      "state": "when the film ended , i felt tired and drained and wanted to lie on my own deathbed for a while . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:384",
+      "state": "at times , the suspense is palpable , but by the end there 's a sense that the crux of the mystery hinges on a technicality that strains credulity and leaves the viewer haunted by the waste of potential . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:672",
+      "state": "in all , this is a watchable movie that 's not quite the memorable experience it might have been . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:0",
+      "state": "it 's a charming and often affecting journey . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:818",
+      "state": "the only excitement comes when the credits finally roll and you get to leave the theater . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:453",
+      "state": "( t ) his beguiling belgian fable , very much its own droll and delicate little film , has some touching things to say about what is important in life and why . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:154",
+      "state": "a solid examination of the male midlife crisis . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:845",
+      "state": "despite the evocative aesthetics evincing the hollow state of modern love life , the film never percolates beyond a monotonous whine . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:761",
+      "state": "the result is a gaudy bag of stale candy , something from a halloween that died . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:428",
+      "state": "beautifully observed , miraculously unsentimental comedy-drama . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:122",
+      "state": "old-form moviemaking at its best . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:458",
+      "state": "featuring a dangerously seductive performance from the great daniel auteuil , `` sade '' covers the same period as kaufmann 's `` quills '' with more unsettlingly realistic results . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:717",
+      "state": "a rigorously structured and exquisitely filmed drama about a father and son connection that is a brief shooting star of love . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:585",
+      "state": "one of those pictures whose promising , if rather precious , premise is undercut by amateurish execution . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:587",
+      "state": "director uwe boll and the actors provide scant reason to care in this crude '70s throwback . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:373",
+      "state": "not since freddy got fingered has a major release been so painful to sit through . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:727",
+      "state": "velocity represents everything wrong with '' independent film '' as a commodified , sold-out concept on the american filmmaking scene . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:498",
+      "state": "anchored by friel and williams 's exceptional performances , the film 's power lies in its complexity . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:51",
+      "state": "for the most part , director anne-sophie birot 's first feature is a sensitive , extraordinarily well-acted drama . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:520",
+      "state": "so refreshingly incisive is grant that for the first time he 'll probably appeal more to guys than to their girlfriends who drag them to this movie for the hugh factor . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:733",
+      "state": "the man from elysian fields is a cold , bliss-less work that groans along thinking itself some important comment on how life throws us some beguiling curves . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:23",
+      "state": "a delectable and intriguing thriller filled with surprises , read my lips is an original . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:342",
+      "state": "in an effort , i suspect , not to offend by appearing either too serious or too lighthearted , it offends by just being wishy-washy . ",
+      "answer": "negative"
+    },
+    {
+      "id": "sst2:validation:720",
+      "state": "worth watching for dong jie 's performance -- and for the way it documents a culture in the throes of rapid change . ",
+      "answer": "positive"
+    },
+    {
+      "id": "sst2:validation:859",
+      "state": "add yet another hat to a talented head , clooney 's a good director . ",
+      "answer": "positive"
+    }
+  ]
+}

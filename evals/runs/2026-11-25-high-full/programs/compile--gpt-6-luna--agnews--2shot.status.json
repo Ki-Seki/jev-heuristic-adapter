@@ -1,0 +1,9 @@
+{
+  "job": "compile--gpt-6-luna--agnews--2shot",
+  "method": "compile",
+  "model": "gpt-6-luna",
+  "dataset": "agnews",
+  "shots": 2,
+  "attempts": 1,
+  "error": null
+}

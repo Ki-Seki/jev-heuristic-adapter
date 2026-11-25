@@ -1,0 +1,10 @@
+{
+  "url": "https://openrouter.ai/api/alpha/decisions",
+  "status": 400,
+  "body": {
+    "error": {
+      "message": "Request path cannot be relayed",
+      "code": 400
+    }
+  }
+}

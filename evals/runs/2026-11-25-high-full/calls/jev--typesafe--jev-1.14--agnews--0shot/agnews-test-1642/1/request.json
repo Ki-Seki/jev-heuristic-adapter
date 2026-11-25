@@ -1,0 +1,22 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "payload": {
+    "model": "typesafe/jev-1.14",
+    "state": "Linux Promoters Challenge Microsoft (AP) AP - Seeking to be more competitive with Microsoft Corp., Linux backers have agreed on a standard version of the operating system so that programs written for one Linux distribution will work with others.",
+    "questions": {
+      "label": {
+        "criteria": {
+          "business": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector.",
+          "sci_tech": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research.",
+          "sports": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results.",
+          "world": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.00021764400000000002,
+  "started_at": 1795601838.4141395
+}

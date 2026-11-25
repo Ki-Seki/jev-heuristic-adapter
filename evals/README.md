@@ -59,6 +59,7 @@ generated `programs/`, per-example `predictions/`, and every request/response in
 the inputs and source revisions; `run.json` states whether the experiment finished.
 Everything remains readable on GitHub without unpacking an archive. Ruff skips
 `evals/runs/` so committing results never reformats or rejects generated code.
+HTML previews and execution logs stay local; the Markdown summary and data are versioned.
 
 The protocol follows [dhruvmehra/jevbench](https://github.com/dhruvmehra/jevbench/tree/c983cc4a7dd9fc142ca3b6c7a813cae0e963c902).
 Its published Jev results use a different 500-example cohort. This runner measures

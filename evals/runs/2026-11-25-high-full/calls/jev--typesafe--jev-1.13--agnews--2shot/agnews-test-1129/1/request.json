@@ -1,0 +1,22 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.13",
+  "payload": {
+    "model": "typesafe/jev-1.13",
+    "state": "Gerrard only a 50-50 chance VIENNA - England midfielder Steven Gerrard is a major doubt to face Austria in today #39;s opening 2006 World Cup qualifier. Gerrard has failed to shake off a groin injury suffered in training on Thursday and ",
+    "questions": {
+      "label": {
+        "criteria": {
+          "business": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector.",
+          "sci_tech": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research.",
+          "sports": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results.",
+          "world": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.\nUse the labeled examples as guidance for classifying only the current input. Examples:\n[{\"state\": \"New virus camouflaged as screensaver A virus that spies on keystrokes and downloads passwords and bank account details is circulating among emails, masquerading as a screensaver designed by internet portal Lycos to attack stammers, a watchdog warned on Thursday.\", \"answer\": \"sci_tech\"}, {\"state\": \"Stock Markets Fall as Oil Nears \\\\$50 a Barrel NEW YORK, Sept. 22 -- A surge in oil prices and a disappointing earnings report from Morgan Stanley were cited as factors in significant stock market losses Wednesday.\", \"answer\": \"business\"}]",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.00024494400000000003,
+  "started_at": 1795601807.5322094
+}

@@ -1,0 +1,44 @@
+{
+  "method": "decisions",
+  "model": "gpt-6-luna",
+  "payload": {
+    "model": "gpt-6-luna",
+    "input": [
+      {
+        "role": "developer",
+        "content": "Classify the final input. Labeled examples:\n[{\"state\": \"New virus camouflaged as screensaver A virus that spies on keystrokes and downloads passwords and bank account details is circulating among emails, masquerading as a screensaver designed by internet portal Lycos to attack stammers, a watchdog warned on Thursday.\", \"answer\": \"sci_tech\"}]"
+      },
+      {
+        "role": "user",
+        "content": "Australia #39;s Seven FY Net Jumps 59 To A\\$93.3M -2- SYDNEY (Dow Jones)--Australian television broadcaster Seven Network Ltd. (SEV) said Tuesday net profit jumped 59 to A\\$93.3 million for the fiscal year ended June 26, boosted by profit proceeds from the sell down of its stake in B Digital."
+      }
+    ],
+    "questions": [
+      {
+        "type": "choice",
+        "name": "label",
+        "instructions": "Which category best describes the text? Pick exactly one.",
+        "choices": [
+          {
+            "value": "business",
+            "description": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector."
+          },
+          {
+            "value": "sci_tech",
+            "description": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research."
+          },
+          {
+            "value": "sports",
+            "description": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results."
+          },
+          {
+            "value": "world",
+            "description": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+          }
+        ]
+      }
+    ]
+  },
+  "reserve_usd": 0.000719625,
+  "started_at": 1795601752.2630374
+}

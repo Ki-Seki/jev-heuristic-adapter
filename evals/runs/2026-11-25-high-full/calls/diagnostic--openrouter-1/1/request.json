@@ -1,0 +1,20 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "payload": {
+    "model": "typesafe/jev-1.14",
+    "state": "This is a connectivity check.",
+    "questions": {
+      "label": {
+        "type": "choice",
+        "instructions": "Choose the word mentioned in the input.",
+        "criteria": {
+          "check": "A connectivity check",
+          "other": "Anything else"
+        }
+      }
+    }
+  },
+  "reserve_usd": 0.000182448,
+  "started_at": 1795601461.114418
+}

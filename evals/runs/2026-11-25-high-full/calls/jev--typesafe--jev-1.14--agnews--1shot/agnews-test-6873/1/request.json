@@ -1,0 +1,22 @@
+{
+  "method": "jev",
+  "model": "typesafe/jev-1.14",
+  "payload": {
+    "model": "typesafe/jev-1.14",
+    "state": "Microsoft Updates SQL Server 2005 Microsoft today announced the availability of the second Community Technology Preview (CTP) for Microsoft SQL Server 2005 and the technical preview availability of SQL Server 2005 Express Manager, a new, free database management tool.",
+    "questions": {
+      "label": {
+        "criteria": {
+          "business": "Business news: stock markets, earnings, economy, oil and commodities, trade, mergers, airlines, retail and companies outside the technology sector.",
+          "sci_tech": "Science and technology news: technology companies and their products, earnings or lawsuits (e.g. Microsoft, Google, Apple, IBM, Intel), software, hardware, internet, telecom, video games, space, and scientific or medical research.",
+          "sports": "Sports news: games, matches, athletes, teams, leagues, scores, transfers and results.",
+          "world": "World news: international affairs, politics, governments, elections, wars, conflicts, disasters and crime. Not business, sports or technology."
+        },
+        "instructions": "Which category best describes the text? Pick exactly one.\nUse the labeled examples as guidance for classifying only the current input. Examples:\n[{\"state\": \"New virus camouflaged as screensaver A virus that spies on keystrokes and downloads passwords and bank account details is circulating among emails, masquerading as a screensaver designed by internet portal Lycos to attack stammers, a watchdog warned on Thursday.\", \"answer\": \"sci_tech\"}]",
+        "type": "choice"
+      }
+    }
+  },
+  "reserve_usd": 0.00023528400000000002,
+  "started_at": 1795601842.2124732
+}
