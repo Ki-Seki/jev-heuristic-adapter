@@ -114,6 +114,34 @@ def test_request_uses_plain_text_generation_and_preserves_status_usage_and_raw_d
     assert not sdk.is_closed()
 
 
+@pytest.mark.parametrize(
+    "options",
+    [
+        {},
+        {"reasoning_effort": None},
+        {"reasoning_effort": "none"},
+        {"reasoning_effort": "low"},
+        {"reasoning_effort": "medium"},
+    ],
+)
+def test_optional_reasoning_is_omitted_or_sent_explicitly(sdk_factory, options):
+    requests = []
+
+    def respond(request):
+        requests.append(json.loads(request.content))
+        return httpx2.Response(200, json=response_body())
+
+    provider = OpenAIProvider(sdk_factory(respond), "test-model", **options)
+    provider.request([])
+    assert len(requests) == 1
+    effort = options.get("reasoning_effort")
+    if effort is None:
+        assert "reasoning" not in requests[0]
+    else:
+        assert requests[0]["reasoning"] == {"effort": effort}
+    assert provider.cache_identity()["reasoning_effort"] == effort
+
+
 def test_identity_uses_generation_settings_and_excludes_credentials_and_retries(
     sdk_factory,
 ):
@@ -130,7 +158,7 @@ def test_identity_uses_generation_settings_and_excludes_credentials_and_retries(
         "api": "responses",
         "base_url": "https://api.example.invalid/v1/",
         "model": "test-model",
-        "reasoning_effort": "high",
+        "reasoning_effort": None,
         "max_output_tokens": 24_000,
     }
     assert "secret" not in json.dumps(identity)
@@ -140,7 +168,10 @@ def test_identity_uses_generation_settings_and_excludes_credentials_and_retries(
     "overrides",
     [
         {"model": "another-model"},
+        {"reasoning_effort": "none"},
         {"reasoning_effort": "low"},
+        {"reasoning_effort": "medium"},
+        {"reasoning_effort": "high"},
         {"max_output_tokens": 100},
     ],
 )
